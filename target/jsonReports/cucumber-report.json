@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-04T11:24:46.033Z",
-        "line": 11,
+        "start_timestamp": "2020-08-04T21:19:30.479Z",
+        "line": 14,
         "name": "Varify if user is able to login Successfully",
         "description": "",
-        "id": "validate-redfish-login--page;varify-if-user-is-able-to-login-successfully;;2",
+        "id": "validate-redfish-workflows--page;varify-if-user-is-able-to-login-successfully;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9063000000,
+              "duration": 11273000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2381000000,
+              "duration": 2805000000,
               "status": "passed"
             },
             "line": 5,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 8199000000,
+              "duration": 8294000000,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 1502000000,
+              "duration": 18000000,
               "status": "passed"
             },
             "line": 7,
@@ -80,15 +80,75 @@
               "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 161000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7953000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiries\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Enquiry\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RedfishLoginPage"
+          },
+          {
+            "name": "@Regression"
           }
         ]
       }
     ],
-    "name": "Validate Redfish Login  Page",
+    "name": "Validate Redfish Workflows  Page",
     "description": "",
-    "id": "validate-redfish-login--page",
+    "id": "validate-redfish-workflows--page",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/loginpageValidations.feature",
+    "uri": "file:src/test/java/features/RedfishWorkflow.feature",
     "tags": []
   }
 ]
