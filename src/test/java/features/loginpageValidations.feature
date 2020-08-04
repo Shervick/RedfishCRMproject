@@ -1,5 +1,5 @@
 Feature: Validate Redfish Login  Page
-
+@RedfishLoginPage @Regression
 Scenario Outline: Varify if user is able to login Successfully
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
