@@ -1,0 +1,94 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-04T11:24:46.033Z",
+        "line": 11,
+        "name": "Varify if user is able to login Successfully",
+        "description": "",
+        "id": "validate-redfish-login--page;varify-if-user-is-able-to-login-successfully;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9063000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2381000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open Web Application \"redfishUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUrl\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8199000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101NM\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1502000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify if the web page title actual \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Home\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Validate Redfish Login  Page",
+    "description": "",
+    "id": "validate-redfish-login--page",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/loginpageValidations.feature",
+    "tags": []
+  }
+]
