@@ -252,8 +252,14 @@ public class StepDefination extends Utils {
     	 finishverify.finish().click();
     	 String actualfinishtitle=driver.getTitle();
     	 assertEquals(actualfinishtitle,ChildProfileTitle);
-    	 finishverify.logout().click();
-    	 driver.close();
+    	
+     }
+     @Then("Logout from redfish and close browser")
+     public void Logout_from_redfish_and_close_browser() throws InterruptedException {
+    	 redfishNewRegisterpage redfishlogout=new redfishNewRegisterpage(driver);
+    	 redfishlogout.logout().click();
+ 		 Thread.sleep(9000);
+ 		 driver.close();
  		 driver.quit();
      }
 
