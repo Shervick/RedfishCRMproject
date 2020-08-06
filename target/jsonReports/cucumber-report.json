@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-06T13:31:04.603Z",
-        "line": 45,
-        "name": "Verify if user is able to create an enquiry for a single child",
+        "start_timestamp": "2020-08-06T20:12:33.902Z",
+        "line": 72,
+        "name": "Verify if user is able to use search function in redfish search page",
         "description": "",
-        "id": "validate-redfish-workflows--page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;2",
+        "id": "validate-redfish-workflows--page;verify-if-user-is-able-to-use-search-function-in-redfish-search-page;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 13646000000,
+              "duration": 9337000000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 63,
             "name": "Initialize the browser with chrome",
             "match": {
               "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
@@ -25,10 +25,10 @@
           },
           {
             "result": {
-              "duration": 10797000000,
+              "duration": 3192000000,
               "status": "passed"
             },
-            "line": 31,
+            "line": 64,
             "name": "Open Web Application \"redfishUrl\"",
             "match": {
               "arguments": [
@@ -43,10 +43,10 @@
           },
           {
             "result": {
-              "duration": 11140000000,
+              "duration": 42785000000,
               "status": "passed"
             },
-            "line": 32,
+            "line": 65,
             "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
             "match": {
               "arguments": [
@@ -65,10 +65,10 @@
           },
           {
             "result": {
-              "duration": 27000000,
+              "duration": 21000000,
               "status": "passed"
             },
-            "line": 33,
+            "line": 66,
             "name": "Verify if the web page title actual \"Home\"",
             "match": {
               "arguments": [
@@ -83,431 +83,54 @@
           },
           {
             "result": {
-              "duration": 358000000,
+              "duration": 3894000000,
               "status": "passed"
             },
-            "line": 34,
-            "name": "In home page verify if Enquiries and Enquiry in the main menu",
-            "match": {
-              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 17986000000,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "line": 67,
+            "name": "Verify search functionality with Child Name \"Javier Glawsop\" and Parent Name \"Carolyne Glawsop\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Enquiries\"",
-                  "offset": 21
+                  "val": "\"Javier Glawsop\"",
+                  "offset": 44
                 },
                 {
-                  "val": "\"Enquiry\"",
-                  "offset": 45
+                  "val": "\"Carolyne Glawsop\"",
+                  "offset": 77
                 }
               ],
-              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 16000000,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "Verify if the web page submenu title is \"New enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"New enquiry\"",
-                  "offset": 40
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_child_name_and_parent_name(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1660000000,
+              "duration": 3014000000,
               "status": "passed"
             },
-            "line": 37,
-            "name": "Parent First Name \"Samantha\" Parent Second Name \"Belfrage\" Address \"99-2050 St. Marys Road\" Postcode \"SO25 0LG\" MobileNumber \"07864416259\" Email id \"sbelfragerq@indiegogo.com\"",
+            "line": 68,
+            "name": "Verify search functionality with Invalid Child Name \"@#$\" and Invalid Parent Name \"@#$\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Samantha\"",
-                  "offset": 18
+                  "val": "\"@#$\"",
+                  "offset": 52
                 },
                 {
-                  "val": "\"Belfrage\"",
-                  "offset": 48
-                },
-                {
-                  "val": "\"99-2050 St. Marys Road\"",
-                  "offset": 67
-                },
-                {
-                  "val": "\"SO25 0LG\"",
-                  "offset": 101
-                },
-                {
-                  "val": "\"07864416259\"",
-                  "offset": 125
-                },
-                {
-                  "val": "\"sbelfragerq@indiegogo.com\"",
-                  "offset": 148
-                }
-              ],
-              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 220000000,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "The source is selected as \"BH Website\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"BH Website\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 8617000000,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "The First Child First Name \"Matelda\" First Child Second Name \"Belfrage\" First Child DOB \"10/05/2019\" Gender \"F\" Enrolment Start Date \"03/08/2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Matelda\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"Belfrage\"",
-                  "offset": 61
-                },
-                {
-                  "val": "\"10/05/2019\"",
-                  "offset": 88
-                },
-                {
-                  "val": "\"F\"",
-                  "offset": 108
-                },
-                {
-                  "val": "\"03/08/2020\"",
-                  "offset": 133
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1179000000,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"All Days\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 45520000000,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "Logout from redfish and close browser",
-            "match": {
-              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@RedfishSingleChildEnquiry"
-          },
-          {
-            "name": "@Regression"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-08-06T13:32:56.144Z",
-        "line": 46,
-        "name": "Verify if user is able to create an enquiry for a single child",
-        "description": "",
-        "id": "validate-redfish-workflows--page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 6571000000,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "Initialize the browser with chrome",
-            "match": {
-              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 16643000000,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "Open Web Application \"redfishUrl\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"redfishUrl\"",
-                  "offset": 21
-                }
-              ],
-              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8565000000,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"99160101NM\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Password1\"",
-                  "offset": 48
-                }
-              ],
-              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 17000000,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "Verify if the web page title actual \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 36
-                }
-              ],
-              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 134000000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "In home page verify if Enquiries and Enquiry in the main menu",
-            "match": {
-              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8770000000,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Enquiries\"",
-                  "offset": 21
-                },
-                {
-                  "val": "\"Enquiry\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 24000000,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "Verify if the web page submenu title is \"New enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"New enquiry\"",
-                  "offset": 40
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1556000000,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "Parent First Name \"Elonore\" Parent Second Name \"Cantua\" Address \"99-2051 St. Marys Road\" Postcode \"SO26 0LG\" MobileNumber \"07864416259\" Email id \"pcantuarr@upenn.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Elonore\"",
-                  "offset": 18
-                },
-                {
-                  "val": "\"Cantua\"",
-                  "offset": 47
-                },
-                {
-                  "val": "\"99-2051 St. Marys Road\"",
-                  "offset": 64
-                },
-                {
-                  "val": "\"SO26 0LG\"",
-                  "offset": 98
-                },
-                {
-                  "val": "\"07864416259\"",
-                  "offset": 122
-                },
-                {
-                  "val": "\"pcantuarr@upenn.com\"",
-                  "offset": 145
-                }
-              ],
-              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 159000000,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "The source is selected as \"BH Website\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"BH Website\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6793000000,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "The First Child First Name \"Dru\" First Child Second Name \"Cantua\" First Child DOB \"09/06/2019\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Dru\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"Cantua\"",
-                  "offset": 57
-                },
-                {
-                  "val": "\"09/06/2019\"",
+                  "val": "\"@#$\"",
                   "offset": 82
-                },
-                {
-                  "val": "\"F\"",
-                  "offset": 102
-                },
-                {
-                  "val": "\"04/08/2020\"",
-                  "offset": 127
                 }
               ],
-              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_invalid_child_name_and_invalid_parent_name(java.lang.String,java.lang.String)"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1116000000,
+              "duration": 11942000000,
               "status": "passed"
             },
-            "line": 40,
-            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"All Days\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 20239000000,
-              "status": "passed"
-            },
-            "line": 41,
+            "line": 69,
             "name": "Logout from redfish and close browser",
             "match": {
               "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
@@ -517,7 +140,7 @@
         ],
         "tags": [
           {
-            "name": "@RedfishSingleChildEnquiry"
+            "name": "@RedfishSearchpage"
           },
           {
             "name": "@Regression"

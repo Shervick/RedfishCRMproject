@@ -8,6 +8,8 @@ import resources.TestDataBuild;
 import resources.Utils;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -26,6 +28,7 @@ import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
 import com.redfishCRM.pageObjects.redfishNewEnquirypage;
 import com.redfishCRM.pageObjects.redfishNewRegisterpage;
+import com.redfishCRM.pageObjects.redfishsearchpage;
 public class StepDefination extends Utils {	
 	
 	
@@ -261,6 +264,40 @@ public class StepDefination extends Utils {
  		 Thread.sleep(9000);
  		 driver.close();
  		 driver.quit();
+     }
+     @Then("Verify search functionality with Child Name {string} and Parent Name {string}")
+     public void verify_search_functionality_with_child_name_and_parent_name(String expectedChildName, String expectedParentName) {
+    	 redfishsearchpage redfishsearch=new redfishsearchpage(driver);
+    	 redfishsearch.searchbox().click();
+    	 redfishsearch.searchbox().clear();
+    	 redfishsearch.searchbox().sendKeys(expectedChildName);
+    	 redfishsearch.clickonsearch().click();
+    	 String actualChildName=redfishsearch.clickonsearchresult().getText();
+    	 assertEquals(actualChildName,expectedChildName);
+    	 redfishsearch.searchbox().click();
+    	 redfishsearch.searchbox().clear();
+    	 redfishsearch.searchbox().sendKeys(expectedParentName);
+    	 redfishsearch.clickonsearch().click();
+    	 String actualParentName=redfishsearch.clickonsearchresult().getText();
+    	 assertEquals(actualParentName,expectedParentName);
+     }
+     @Then("Verify search functionality with Invalid Child Name {string} and Invalid Parent Name {string}")
+     public void verify_search_functionality_with_invalid_child_name_and_invalid_parent_name(String InvalidChildName, String InvalidParentName) {
+    	 redfishsearchpage redfishsearchpg=new redfishsearchpage(driver);
+    	 redfishsearchpg.searchboxinform().click();
+    	 redfishsearchpg.searchboxinform().clear();
+    	 redfishsearchpg.searchboxinform().sendKeys(InvalidChildName);
+    	 redfishsearchpg.clickonsearchlink().click();
+    	 String expectedchresult=redfishsearchpg.searchtext().getText();
+    	 String actualresult="with 0 result";
+    	 assertTrue(expectedchresult.contains(actualresult)); 
+    	 redfishsearchpg.searchboxinform().click();
+    	 redfishsearchpg.searchboxinform().clear();
+    	 redfishsearchpg.searchboxinform().sendKeys(InvalidParentName);
+    	 redfishsearchpg.clickonsearchlink().click();
+    	 String expectedprresult=redfishsearchpg.searchtext().getText();
+    	 assertTrue(expectedprresult.contains(actualresult));  
+    	 
      }
 
 }

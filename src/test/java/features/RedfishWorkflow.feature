@@ -44,3 +44,34 @@ Examples:
 	|UserName                    |Password  |application |expectedtitle |MainMenuItem |SubMenuItem |expectedenqtitle |ParentFirstName |ParentSecondName |Address 				|Postcode |MobileNumber |EmailId 			       |Source     |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
 	|99160101NM                  |Password1 |redfishUrl  |Home 			|Enquiries    |Enquiry     |New enquiry      |Samantha 	      |Belfrage         |99-2050 St. Marys Road |SO25 0LG |07864416259  |sbelfragerq@indiegogo.com |BH Website |Matelda             |Belfrage              |10/05/2019 |F                |03/08/2020              |All Days      |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000034   |Child             |
 	|99160101NM                  |Password1 |redfishUrl  |Home 			|Enquiries    |Enquiry     |New enquiry      |Elonore 	      |Cantua           |99-2051 St. Marys Road |SO26 0LG |07864416259  |pcantuarr@upenn.com       |BH Website |Dru                 |Cantua                |09/06/2019 |F                |04/08/2020              |All Days      |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000035   |Child             |
+
+@RedfishSearchhomepage @Regression 
+Scenario Outline: Verify if user is able to use search function in redfish homepage
+Given Initialize the browser with chrome
+And Open Web Application "<application>" 
+When User enters User Name "<UserName>" and Password "<Password>"
+Then Verify if the web page title actual "<expectedtitle>"
+Then Verify search functionality with Child Name "<ChildName>" and Parent Name "<ParentName>"
+Then Logout from redfish and close browser
+
+Examples:
+	|UserName                    |Password  |application |expectedtitle |ChildName      |ParentName       |expectedenqtitle |ParentFirstName |ParentSecondName |Address 				|Postcode |MobileNumber |EmailId 			   |Source     |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
+	|99160101NM                  |Password1 |redfishUrl  |Home 			|Javier Glawsop |Carolyne Glawsop |New enquiry      |Denni 	      |Tunney           |99-2042 St. Marys Road |SO19 0LG |07316826342  |dtunneyb4@mysql.com   |BH Website |Delinda             |Tunney                |10/08/2019 |F                |04/08/2020              |All Days      |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000028   |Child             |
+
+@RedfishSearchpage @Regression 
+Scenario Outline: Verify if user is able to use search function in redfish search page
+Given Initialize the browser with chrome
+And Open Web Application "<application>" 
+When User enters User Name "<UserName>" and Password "<Password>"
+Then Verify if the web page title actual "<expectedtitle>"
+Then Verify search functionality with Child Name "<ChildName>" and Parent Name "<ParentName>"
+Then Verify search functionality with Invalid Child Name "<InvalidChildName>" and Invalid Parent Name "<InvalidParentName>"
+Then Verify search functionality with only Parent Name "<ParentName>" in search page
+Then Verify search functionality with only Child Name "<ChildName>" in search page
+Then Verify Enquiry search functionality with only Parent Name "<EnquiryParentName>" in search page
+Then Logout from redfish and close browser
+Examples:
+	|UserName                    |Password  |application |expectedtitle |ChildName      |ParentName       |InvalidChildName |InvalidParentName |EnquiryParentName |Address 				|Postcode |MobileNumber |EmailId 			   |Source     |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
+	|99160101NM                  |Password1 |redfishUrl  |Home 			|Javier Glawsop |Carolyne Glawsop |@#$              |@#$ 	           |Samantha Belfrage |99-2042 St. Marys Road |SO19 0LG |07316826342  |dtunneyb4@mysql.com   |BH Website |Delinda             |Tunney                |10/08/2019 |F                |04/08/2020              |All Days      |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000028   |Child             |
+	
+	
