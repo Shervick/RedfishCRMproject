@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>07 Aug 2020, 01:44</td>
+      <td>07 Aug 2020, 15:51</td>
     </tr>
   </tbody>
 </table>
@@ -129,18 +129,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Regression</td>
-          <td      class="passed"    >7</td>
+          <td      class="passed"    >24</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">7</td>
+          <td class="total">24</td>
 
-          <td  class="passed"    >1</td>
+          <td  class="passed"    >2</td>
           <td >0</td>
-          <td class="total">1</td>
+          <td class="total">2</td>
 
-          <td class="duration" data-value="74185000000">1:14.185</td>
+          <td class="duration" data-value="135991000000">2:15.991</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_622776758.html">Validate Redfish Workflows  Page</a>
+      <a href="report-feature_622776758.html">Validate Redfish Workflows Page</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2742757151.html">@RedfishSearchpage</a>
+       <a href="report-tag_880258647.html">@RedfishSingleChildEnquiry</a>
        <a href="report-tag_2226523296.html">@Regression</a>
 </div>
 
 
-  <span class="lead-duration duration">1:14.185</span>
+  <span class="lead-duration duration">1:13.050</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Verify if user is able to use search function in redfish search page</span>
+  <span class="name">Verify if user is able to create an enquiry for a single child</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -227,7 +227,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">Initialize the browser with chrome</span>
 
-  <span class="lead-duration duration">9.337</span>
+  <span class="lead-duration duration">9.507</span>
 
 </div>
 
@@ -254,7 +254,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">Open Web Application <span class="argument">&quot;redfishUrl&quot;</span></span>
 
-  <span class="lead-duration duration">3.192</span>
+  <span class="lead-duration duration">3.305</span>
 
 </div>
 
@@ -281,7 +281,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters User Name <span class="argument">&quot;99160101NM&quot;</span> and Password <span class="argument">&quot;Password1&quot;</span></span>
 
-  <span class="lead-duration duration">42.785</span>
+  <span class="lead-duration duration">10.136</span>
 
 </div>
 
@@ -308,7 +308,61 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify if the web page title actual <span class="argument">&quot;Home&quot;</span></span>
 
-  <span class="lead-duration duration">0.021</span>
+  <span class="lead-duration duration">0.022</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">In home page verify if Enquiries and Enquiry in the main menu</span>
+
+  <span class="lead-duration duration">0.152</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Clicked on menu item <span class="argument">&quot;Enquiries&quot;</span> and submenu <span class="argument">&quot;Enquiry&quot;</span></span>
+
+  <span class="lead-duration duration">12.781</span>
 
 </div>
 
@@ -333,9 +387,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">Verify search functionality with Child Name <span class="argument">&quot;Javier Glawsop&quot;</span> and Parent Name <span class="argument">&quot;Carolyne Glawsop&quot;</span></span>
+  <span class="name">Verify if the web page submenu title is <span class="argument">&quot;New enquiry&quot;</span></span>
 
-  <span class="lead-duration duration">3.894</span>
+  <span class="lead-duration duration">0.022</span>
 
 </div>
 
@@ -358,11 +412,92 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">Verify search functionality with Invalid Child Name <span class="argument">&quot;@#$&quot;</span> and Invalid Parent Name <span class="argument">&quot;@#$&quot;</span></span>
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Parent First Name <span class="argument">&quot;Samantha&quot;</span> Parent Second Name <span class="argument">&quot;Belfrage&quot;</span> Address <span class="argument">&quot;99-2050 St. Marys Road&quot;</span> Postcode <span class="argument">&quot;SO25 0LG&quot;</span> MobileNumber <span class="argument">&quot;07864416259&quot;</span> Email id <span class="argument">&quot;sbelfragerq@indiegogo.com&quot;</span></span>
 
-  <span class="lead-duration duration">3.014</span>
+  <span class="lead-duration duration">1.326</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The source is selected as <span class="argument">&quot;BH Website&quot;</span></span>
+
+  <span class="lead-duration duration">0.144</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The First Child First Name <span class="argument">&quot;Matelda&quot;</span> First Child Second Name <span class="argument">&quot;Belfrage&quot;</span> First Child DOB <span class="argument">&quot;10/05/2019&quot;</span> Gender <span class="argument">&quot;F&quot;</span> Enrolment Start Date <span class="argument">&quot;03/08/2020&quot;</span></span>
+
+  <span class="lead-duration duration">7.839</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Booking Patten is <span class="argument">&quot;All Days&quot;</span> and Click on Add Enquiry</span>
+
+  <span class="lead-duration duration">1.011</span>
 
 </div>
 
@@ -389,7 +524,392 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Logout from redfish and close browser</span>
 
-  <span class="lead-duration duration">11.942</span>
+  <span class="lead-duration duration">26.805</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_622776758.html">Validate Redfish Workflows Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_880258647.html">@RedfishSingleChildEnquiry</a>
+       <a href="report-tag_2226523296.html">@Regression</a>
+</div>
+
+
+  <span class="lead-duration duration">1:2.941</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify if user is able to create an enquiry for a single child</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Initialize the browser with chrome</span>
+
+  <span class="lead-duration duration">8.430</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Open Web Application <span class="argument">&quot;redfishUrl&quot;</span></span>
+
+  <span class="lead-duration duration">4.585</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User enters User Name <span class="argument">&quot;99160101NM&quot;</span> and Password <span class="argument">&quot;Password1&quot;</span></span>
+
+  <span class="lead-duration duration">8.745</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if the web page title actual <span class="argument">&quot;Home&quot;</span></span>
+
+  <span class="lead-duration duration">0.027</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">In home page verify if Enquiries and Enquiry in the main menu</span>
+
+  <span class="lead-duration duration">0.151</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Clicked on menu item <span class="argument">&quot;Enquiries&quot;</span> and submenu <span class="argument">&quot;Enquiry&quot;</span></span>
+
+  <span class="lead-duration duration">8.095</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if the web page submenu title is <span class="argument">&quot;New enquiry&quot;</span></span>
+
+  <span class="lead-duration duration">0.015</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Parent First Name <span class="argument">&quot;Elonore&quot;</span> Parent Second Name <span class="argument">&quot;Cantua&quot;</span> Address <span class="argument">&quot;99-2051 St. Marys Road&quot;</span> Postcode <span class="argument">&quot;SO26 0LG&quot;</span> MobileNumber <span class="argument">&quot;07864416259&quot;</span> Email id <span class="argument">&quot;pcantuarr@upenn.com&quot;</span></span>
+
+  <span class="lead-duration duration">1.451</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The source is selected as <span class="argument">&quot;BH Website&quot;</span></span>
+
+  <span class="lead-duration duration">0.156</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The First Child First Name <span class="argument">&quot;Dru&quot;</span> First Child Second Name <span class="argument">&quot;Cantua&quot;</span> First Child DOB <span class="argument">&quot;09/06/2019&quot;</span> Gender <span class="argument">&quot;F&quot;</span> Enrolment Start Date <span class="argument">&quot;04/08/2020&quot;</span></span>
+
+  <span class="lead-duration duration">6.280</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Booking Patten is <span class="argument">&quot;All Days&quot;</span> and Click on Add Enquiry</span>
+
+  <span class="lead-duration duration">1.405</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Logout from redfish and close browser</span>
+
+  <span class="lead-duration duration">23.601</span>
 
 </div>
 

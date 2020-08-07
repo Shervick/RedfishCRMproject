@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.redfishCRM.pageObjects.crmloginpage;
+import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
 import com.redfishCRM.pageObjects.redfishNewEnquirypage;
@@ -261,7 +262,7 @@ public class StepDefination extends Utils {
      public void Logout_from_redfish_and_close_browser() throws InterruptedException {
     	 redfishNewRegisterpage redfishlogout=new redfishNewRegisterpage(driver);
     	 redfishlogout.logout().click();
- 		 Thread.sleep(9000);
+ 		 Thread.sleep(2000);
  		 driver.close();
  		 driver.quit();
      }
@@ -298,6 +299,20 @@ public class StepDefination extends Utils {
     	 String expectedprresult=redfishsearchpg.searchtext().getText();
     	 assertTrue(expectedprresult.contains(actualresult));  
     	 
+     }
+     @When("Verify if user can add a visit with visit date {string} and visit time {string} with main comment {string}")
+     public void verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(String VisitDate, String VisitTime, String ParentSecondName) {
+    	 redfishEnquiryManagementpage enqvisitadd= new redfishEnquiryManagementpage(driver);
+    	 enqvisitadd.addvisit().click();
+    	 enqvisitadd.visitdate().click();
+    	 enqvisitadd.visitdate().sendKeys(VisitDate);
+    	 enqvisitadd.visitdate().sendKeys(Keys.TAB);
+    	 enqvisitadd.visittime().click();
+    	 enqvisitadd.visittime().sendKeys(VisitTime);
+    	 enqvisitadd.visittime().sendKeys(Keys.TAB);
+    	 enqvisitadd.maincomment().click();
+    	 enqvisitadd.maincomment().sendKeys(ParentSecondName);
+    	 enqvisitadd.addvisitbutton().click();
      }
 
 }

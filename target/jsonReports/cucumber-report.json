@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-06T20:12:33.902Z",
-        "line": 72,
-        "name": "Verify if user is able to use search function in redfish search page",
+        "start_timestamp": "2020-08-07T21:00:53.958Z",
+        "line": 67,
+        "name": "Verify if user is able to create an enquiry for a single child",
         "description": "",
-        "id": "validate-redfish-workflows--page;verify-if-user-is-able-to-use-search-function-in-redfish-search-page;;2",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9337000000,
+              "duration": 8919000000,
               "status": "passed"
             },
-            "line": 63,
+            "line": 51,
             "name": "Initialize the browser with chrome",
             "match": {
               "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
@@ -25,15 +25,15 @@
           },
           {
             "result": {
-              "duration": 3192000000,
+              "duration": 3043000000,
               "status": "passed"
             },
-            "line": 64,
-            "name": "Open Web Application \"redfishUrl\"",
+            "line": 52,
+            "name": "Open Web Application \"redfishUAT\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"redfishUrl\"",
+                  "val": "\"redfishUAT\"",
                   "offset": 21
                 }
               ],
@@ -43,10 +43,10 @@
           },
           {
             "result": {
-              "duration": 42785000000,
+              "duration": 10627000000,
               "status": "passed"
             },
-            "line": 65,
+            "line": 53,
             "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
             "match": {
               "arguments": [
@@ -65,10 +65,10 @@
           },
           {
             "result": {
-              "duration": 21000000,
+              "duration": 30000000,
               "status": "passed"
             },
-            "line": 66,
+            "line": 54,
             "name": "Verify if the web page title actual \"Home\"",
             "match": {
               "arguments": [
@@ -83,54 +83,196 @@
           },
           {
             "result": {
-              "duration": 3894000000,
+              "duration": 155000000,
               "status": "passed"
             },
-            "line": 67,
-            "name": "Verify search functionality with Child Name \"Javier Glawsop\" and Parent Name \"Carolyne Glawsop\"",
+            "line": 55,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7924000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Javier Glawsop\"",
-                  "offset": 44
+                  "val": "\"Enquiries\"",
+                  "offset": 21
                 },
                 {
-                  "val": "\"Carolyne Glawsop\"",
-                  "offset": 77
+                  "val": "\"Enquiry\"",
+                  "offset": 45
                 }
               ],
-              "location": "stepDefinations.StepDefination.verify_search_functionality_with_child_name_and_parent_name(java.lang.String,java.lang.String)"
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3014000000,
+              "duration": 1273000000,
               "status": "passed"
             },
-            "line": 68,
-            "name": "Verify search functionality with Invalid Child Name \"@#$\" and Invalid Parent Name \"@#$\"",
+            "line": 58,
+            "name": "Parent First Name \"Corbie\" Parent Second Name \"Smidmor\" Address \"99-2060 St. Marys Road\" Postcode \"SO35 0LG\" MobileNumber \"07971852434\" Email id \"nsmidmorr6@youku.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"@#$\"",
-                  "offset": 52
+                  "val": "\"Corbie\"",
+                  "offset": 18
                 },
                 {
-                  "val": "\"@#$\"",
-                  "offset": 82
+                  "val": "\"Smidmor\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"99-2060 St. Marys Road\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"SO35 0LG\"",
+                  "offset": 98
+                },
+                {
+                  "val": "\"07971852434\"",
+                  "offset": 122
+                },
+                {
+                  "val": "\"nsmidmorr6@youku.com\"",
+                  "offset": 145
                 }
               ],
-              "location": "stepDefinations.StepDefination.verify_search_functionality_with_invalid_child_name_and_invalid_parent_name(java.lang.String,java.lang.String)"
+              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
-            "keyword": "Then "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 11942000000,
+              "duration": 144000000,
               "status": "passed"
             },
-            "line": 69,
+            "line": 59,
+            "name": "The source is selected as \"BH Website\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BH Website\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7844000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "The First Child First Name \"Shea\" First Child Second Name \"Smidmor\" First Child DOB \"12/04/2019\" Gender \"F\" Enrolment Start Date \"03/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Shea\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Smidmor\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"12/04/2019\"",
+                  "offset": 84
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 104
+                },
+                {
+                  "val": "\"03/08/2020\"",
+                  "offset": 129
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1118000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 18
+                }
+              ],
+              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20057000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "Verify if user can add a visit with visit date \"08/08/2020\" and visit time \"0930\" with main comment \"Smidmor\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"08/08/2020\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"0930\"",
+                  "offset": 75
+                },
+                {
+                  "val": "\"Smidmor\"",
+                  "offset": 100
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6598000000,
+              "status": "passed"
+            },
+            "line": 63,
             "name": "Logout from redfish and close browser",
             "match": {
               "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
@@ -140,7 +282,294 @@
         ],
         "tags": [
           {
-            "name": "@RedfishSearchpage"
+            "name": "@RedfishSingleChildEnquiryVisit"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-07T21:02:02.019Z",
+        "line": 68,
+        "name": "Verify if user is able to create an enquiry for a single child",
+        "description": "",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6365000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2890000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8532000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101NM\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Verify if the web page title actual \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Home\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 144000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7576000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiries\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Enquiry\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1342000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "Parent First Name \"Norry\" Parent Second Name \"Chstney\" Address \"99-2061 St. Marys Road\" Postcode \"SO36 0LG\" MobileNumber \"07065843586\" Email id \"cchstneyr7@google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Norry\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Chstney\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"99-2061 St. Marys Road\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"SO36 0LG\"",
+                  "offset": 97
+                },
+                {
+                  "val": "\"07065843586\"",
+                  "offset": 121
+                },
+                {
+                  "val": "\"cchstneyr7@google.com\"",
+                  "offset": 144
+                }
+              ],
+              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "The source is selected as \"BH Website\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BH Website\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7361000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "The First Child First Name \"Cristobal\" First Child Second Name \"Chstney\" First Child DOB \"15/03/2019\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cristobal\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Chstney\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"15/03/2019\"",
+                  "offset": 89
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 109
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 134
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1025000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 18
+                }
+              ],
+              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13018000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "Verify if user can add a visit with visit date \"10/08/2020\" and visit time \"0930\" with main comment \"Chstney\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10/08/2020\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"0930\"",
+                  "offset": 75
+                },
+                {
+                  "val": "\"Chstney\"",
+                  "offset": 100
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11174000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RedfishSingleChildEnquiryVisit"
           },
           {
             "name": "@Regression"
@@ -148,9 +577,9 @@
         ]
       }
     ],
-    "name": "Validate Redfish Workflows  Page",
+    "name": "Validate Redfish Workflows Page",
     "description": "",
-    "id": "validate-redfish-workflows--page",
+    "id": "validate-redfish-workflows-page",
     "keyword": "Feature",
     "uri": "file:src/test/java/features/RedfishWorkflow.feature",
     "tags": []
