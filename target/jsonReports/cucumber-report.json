@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-07T21:00:53.958Z",
+        "start_timestamp": "2020-08-08T22:59:53.481Z",
         "line": 67,
         "name": "Verify if user is able to create an enquiry for a single child",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8919000000,
+              "duration": 11524000000,
               "status": "passed"
             },
             "line": 51,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3043000000,
+              "duration": 14084000000,
               "status": "passed"
             },
             "line": 52,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 10627000000,
+              "duration": 11376000000,
               "status": "passed"
             },
             "line": 53,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 30000000,
+              "duration": 29000000,
               "status": "passed"
             },
             "line": 54,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 155000000,
+              "duration": 289000000,
               "status": "passed"
             },
             "line": 55,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 7924000000,
+              "duration": 14984000000,
               "status": "passed"
             },
             "line": 56,
@@ -117,7 +117,7 @@
           },
           {
             "result": {
-              "duration": 12000000,
+              "duration": 18000000,
               "status": "passed"
             },
             "line": 57,
@@ -135,36 +135,36 @@
           },
           {
             "result": {
-              "duration": 1273000000,
+              "duration": 1772000000,
               "status": "passed"
             },
             "line": 58,
-            "name": "Parent First Name \"Corbie\" Parent Second Name \"Smidmor\" Address \"99-2060 St. Marys Road\" Postcode \"SO35 0LG\" MobileNumber \"07971852434\" Email id \"nsmidmorr6@youku.com\"",
+            "name": "Parent First Name \"Churchman\" Parent Second Name \"Brigham\" Address \"99-2066 St. Marys Road\" Postcode \"SO41 0LG\" MobileNumber \"07211202066\" Email id \"aratequ@ucoz.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Corbie\"",
+                  "val": "\"Churchman\"",
                   "offset": 18
                 },
                 {
-                  "val": "\"Smidmor\"",
-                  "offset": 46
+                  "val": "\"Brigham\"",
+                  "offset": 49
                 },
                 {
-                  "val": "\"99-2060 St. Marys Road\"",
-                  "offset": 64
+                  "val": "\"99-2066 St. Marys Road\"",
+                  "offset": 67
                 },
                 {
-                  "val": "\"SO35 0LG\"",
-                  "offset": 98
+                  "val": "\"SO41 0LG\"",
+                  "offset": 101
                 },
                 {
-                  "val": "\"07971852434\"",
-                  "offset": 122
+                  "val": "\"07211202066\"",
+                  "offset": 125
                 },
                 {
-                  "val": "\"nsmidmorr6@youku.com\"",
-                  "offset": 145
+                  "val": "\"aratequ@ucoz.com\"",
+                  "offset": 148
                 }
               ],
               "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
@@ -173,7 +173,7 @@
           },
           {
             "result": {
-              "duration": 144000000,
+              "duration": 206000000,
               "status": "passed"
             },
             "line": 59,
@@ -191,32 +191,32 @@
           },
           {
             "result": {
-              "duration": 7844000000,
+              "duration": 7378000000,
               "status": "passed"
             },
             "line": 60,
-            "name": "The First Child First Name \"Shea\" First Child Second Name \"Smidmor\" First Child DOB \"12/04/2019\" Gender \"F\" Enrolment Start Date \"03/08/2020\"",
+            "name": "The First Child First Name \"Giustino\" First Child Second Name \"Brigham\" First Child DOB \"12/01/2019\" Gender \"M\" Enrolment Start Date \"03/08/2020\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Shea\"",
+                  "val": "\"Giustino\"",
                   "offset": 27
                 },
                 {
-                  "val": "\"Smidmor\"",
-                  "offset": 58
+                  "val": "\"Brigham\"",
+                  "offset": 62
                 },
                 {
-                  "val": "\"12/04/2019\"",
-                  "offset": 84
+                  "val": "\"12/01/2019\"",
+                  "offset": 88
                 },
                 {
-                  "val": "\"F\"",
-                  "offset": 104
+                  "val": "\"M\"",
+                  "offset": 108
                 },
                 {
                   "val": "\"03/08/2020\"",
-                  "offset": 129
+                  "offset": 133
                 }
               ],
               "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
@@ -225,7 +225,7 @@
           },
           {
             "result": {
-              "duration": 1118000000,
+              "duration": 2574000000,
               "status": "passed"
             },
             "line": 61,
@@ -243,11 +243,11 @@
           },
           {
             "result": {
-              "duration": 20057000000,
+              "duration": 14174000000,
               "status": "passed"
             },
             "line": 62,
-            "name": "Verify if user can add a visit with visit date \"08/08/2020\" and visit time \"0930\" with main comment \"Smidmor\"",
+            "name": "Verify if user can add a visit with visit date \"08/08/2020\" and visit time \"930\" with main comment \"Brigham\"",
             "match": {
               "arguments": [
                 {
@@ -255,12 +255,12 @@
                   "offset": 47
                 },
                 {
-                  "val": "\"0930\"",
+                  "val": "\"930\"",
                   "offset": 75
                 },
                 {
-                  "val": "\"Smidmor\"",
-                  "offset": 100
+                  "val": "\"Brigham\"",
+                  "offset": 99
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
@@ -269,7 +269,7 @@
           },
           {
             "result": {
-              "duration": 6598000000,
+              "duration": 6929000000,
               "status": "passed"
             },
             "line": 63,
@@ -290,7 +290,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-07T21:02:02.019Z",
+        "start_timestamp": "2020-08-08T23:01:19.215Z",
         "line": 68,
         "name": "Verify if user is able to create an enquiry for a single child",
         "description": "",
@@ -300,7 +300,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6365000000,
+              "duration": 7300000000,
               "status": "passed"
             },
             "line": 51,
@@ -312,7 +312,7 @@
           },
           {
             "result": {
-              "duration": 2890000000,
+              "duration": 2920000000,
               "status": "passed"
             },
             "line": 52,
@@ -330,7 +330,7 @@
           },
           {
             "result": {
-              "duration": 8532000000,
+              "duration": 8624000000,
               "status": "passed"
             },
             "line": 53,
@@ -352,7 +352,7 @@
           },
           {
             "result": {
-              "duration": 20000000,
+              "duration": 55000000,
               "status": "passed"
             },
             "line": 54,
@@ -370,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 144000000,
+              "duration": 285000000,
               "status": "passed"
             },
             "line": 55,
@@ -382,7 +382,7 @@
           },
           {
             "result": {
-              "duration": 7576000000,
+              "duration": 8714000000,
               "status": "passed"
             },
             "line": 56,
@@ -404,7 +404,7 @@
           },
           {
             "result": {
-              "duration": 16000000,
+              "duration": 23000000,
               "status": "passed"
             },
             "line": 57,
@@ -422,36 +422,36 @@
           },
           {
             "result": {
-              "duration": 1342000000,
+              "duration": 4038000000,
               "status": "passed"
             },
             "line": 58,
-            "name": "Parent First Name \"Norry\" Parent Second Name \"Chstney\" Address \"99-2061 St. Marys Road\" Postcode \"SO36 0LG\" MobileNumber \"07065843586\" Email id \"cchstneyr7@google.com\"",
+            "name": "Parent First Name \"Ruste\" Parent Second Name \"Rate\" Address \"99-2067 St. Marys Road\" Postcode \"SO42 0LG\" MobileNumber \"07905093429\" Email id \"gbrighamqv@thetimes.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Norry\"",
+                  "val": "\"Ruste\"",
                   "offset": 18
                 },
                 {
-                  "val": "\"Chstney\"",
+                  "val": "\"Rate\"",
                   "offset": 45
                 },
                 {
-                  "val": "\"99-2061 St. Marys Road\"",
-                  "offset": 63
+                  "val": "\"99-2067 St. Marys Road\"",
+                  "offset": 60
                 },
                 {
-                  "val": "\"SO36 0LG\"",
-                  "offset": 97
+                  "val": "\"SO42 0LG\"",
+                  "offset": 94
                 },
                 {
-                  "val": "\"07065843586\"",
-                  "offset": 121
+                  "val": "\"07905093429\"",
+                  "offset": 118
                 },
                 {
-                  "val": "\"cchstneyr7@google.com\"",
-                  "offset": 144
+                  "val": "\"gbrighamqv@thetimes.com\"",
+                  "offset": 141
                 }
               ],
               "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
@@ -460,7 +460,7 @@
           },
           {
             "result": {
-              "duration": 148000000,
+              "duration": 290000000,
               "status": "passed"
             },
             "line": 59,
@@ -478,32 +478,32 @@
           },
           {
             "result": {
-              "duration": 7361000000,
+              "duration": 7445000000,
               "status": "passed"
             },
             "line": 60,
-            "name": "The First Child First Name \"Cristobal\" First Child Second Name \"Chstney\" First Child DOB \"15/03/2019\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
+            "name": "The First Child First Name \"Auguste\" First Child Second Name \"Rate\" First Child DOB \"15/02/2019\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Cristobal\"",
+                  "val": "\"Auguste\"",
                   "offset": 27
                 },
                 {
-                  "val": "\"Chstney\"",
-                  "offset": 63
+                  "val": "\"Rate\"",
+                  "offset": 61
                 },
                 {
-                  "val": "\"15/03/2019\"",
-                  "offset": 89
+                  "val": "\"15/02/2019\"",
+                  "offset": 84
                 },
                 {
                   "val": "\"F\"",
-                  "offset": 109
+                  "offset": 104
                 },
                 {
                   "val": "\"04/08/2020\"",
-                  "offset": 134
+                  "offset": 129
                 }
               ],
               "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
@@ -512,7 +512,7 @@
           },
           {
             "result": {
-              "duration": 1025000000,
+              "duration": 1506000000,
               "status": "passed"
             },
             "line": 61,
@@ -530,11 +530,11 @@
           },
           {
             "result": {
-              "duration": 13018000000,
+              "duration": 10463000000,
               "status": "passed"
             },
             "line": 62,
-            "name": "Verify if user can add a visit with visit date \"10/08/2020\" and visit time \"0930\" with main comment \"Chstney\"",
+            "name": "Verify if user can add a visit with visit date \"10/08/2020\" and visit time \"930\" with main comment \"Rate\"",
             "match": {
               "arguments": [
                 {
@@ -542,12 +542,12 @@
                   "offset": 47
                 },
                 {
-                  "val": "\"0930\"",
+                  "val": "\"930\"",
                   "offset": 75
                 },
                 {
-                  "val": "\"Chstney\"",
-                  "offset": 100
+                  "val": "\"Rate\"",
+                  "offset": 99
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
@@ -556,7 +556,7 @@
           },
           {
             "result": {
-              "duration": 11174000000,
+              "duration": 10769000000,
               "status": "passed"
             },
             "line": 63,

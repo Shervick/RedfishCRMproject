@@ -303,16 +303,22 @@ public class StepDefination extends Utils {
      @When("Verify if user can add a visit with visit date {string} and visit time {string} with main comment {string}")
      public void verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(String VisitDate, String VisitTime, String ParentSecondName) {
     	 redfishEnquiryManagementpage enqvisitadd= new redfishEnquiryManagementpage(driver);
+    	 
     	 enqvisitadd.addvisit().click();
     	 enqvisitadd.visitdate().click();
     	 enqvisitadd.visitdate().sendKeys(VisitDate);
     	 enqvisitadd.visitdate().sendKeys(Keys.TAB);
     	 enqvisitadd.visittime().click();
+    	 System.out.println(VisitTime);
     	 enqvisitadd.visittime().sendKeys(VisitTime);
-    	 enqvisitadd.visittime().sendKeys(Keys.TAB);
+    	 
+    	 String actualtime=enqvisitadd.visittime().getText();
+    	 System.out.println(actualtime);
     	 enqvisitadd.maincomment().click();
     	 enqvisitadd.maincomment().sendKeys(ParentSecondName);
     	 enqvisitadd.addvisitbutton().click();
+    	 //assertEquals(actualtime,VisitTime);
+    	
      }
 
 }
