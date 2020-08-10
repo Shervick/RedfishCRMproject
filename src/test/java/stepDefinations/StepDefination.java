@@ -320,5 +320,41 @@ public class StepDefination extends Utils {
     	 //assertEquals(actualtime,VisitTime);
     	
      }
+     @Then("Verify search functionality with only Parent Name {string} in search page")
+     public void verify_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
+    	 
+     }
+     @Then("Verify Enquiry search functionality with only Parent Name {string} in search page")
+     public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String EnquiryParentName) {
+    	 
+     }
+     @Then("Verify Enquiry can be closed with reason code {string} Enquiry Management")
+     public void verify_enquiry_can_be_closed_with_reason_code_enquiry_management(String ClosedReason) {
+    	 
+     }
+     @Then("Verify closed Enquiry search functionality with only Parent Name {string} in search page")
+     public void verify_closed_enquiry_search_functionality_with_only_parent_name_in_search_page(String EnquiryParentName) {
+    	 
+     }
+     @Then("Verify Enquiry can be repoened in Enquiry Management")
+     public void verify_enquiry_can_be_repoened_in_enquiry_management() {
+    	 
+     }
+     @Then("Verify Enquiry General note can be updated as {string} in Enquiry")
+     public void verify_enquiry_general_note_can_be_updated_as_in_enquiry(String Generalnotes) {
+    	 
+     }
+     @Then("Verify Enquiry move to waiting list {string} Enquiry Management")
+     public void verify_enquiry_move_to_waiting_list_enquiry_management(String string) {
+    	 
+     }
+     @Then("Verify Enquiry can be moved to waiting list in Enquiry Management")
+     public void verify_enquiry_can_be_moved_to_waiting_list_in_enquiry_management() {
+    	 
+     }
+     @Then("Verify Enquiry can be removed from waiting list in Enquiry Management")
+     public void verify_enquiry_can_be_removed_from_waiting_list_in_enquiry_management() {
+    	 
+     }
 
 }

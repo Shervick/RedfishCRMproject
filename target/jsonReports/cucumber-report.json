@@ -3,576 +3,90 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-08T22:59:53.481Z",
-        "line": 67,
-        "name": "Verify if user is able to create an enquiry for a single child",
+        "start_timestamp": "2020-08-10T17:51:20.723Z",
+        "line": 82,
+        "name": "Verify if user is able to Management Enquiry by closing and adding to waithing list",
         "description": "",
-        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;2",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-management-enquiry-by-closing-and-adding-to-waithing-list;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 11524000000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 51,
-            "name": "Initialize the browser with chrome",
-            "match": {
-              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 14084000000,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "Open Web Application \"redfishUAT\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"redfishUAT\"",
-                  "offset": 21
-                }
-              ],
-              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 11376000000,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"99160101NM\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Password1\"",
-                  "offset": 48
-                }
-              ],
-              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 29000000,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "Verify if the web page title actual \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 36
-                }
-              ],
-              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
-            },
+            "line": 76,
+            "name": "Verify Enquiry can be repoened in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 289000000,
-              "status": "passed"
+              "duration": 6000000,
+              "status": "skipped"
             },
-            "line": 55,
-            "name": "In home page verify if Enquiries and Enquiry in the main menu",
-            "match": {
-              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 14984000000,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Enquiries\"",
-                  "offset": 21
-                },
-                {
-                  "val": "\"Enquiry\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 18000000,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "Verify if the web page submenu title is \"New enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"New enquiry\"",
-                  "offset": 40
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
-            },
+            "line": 77,
+            "name": "Verify Enquiry can be moved to waiting list in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1772000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 58,
-            "name": "Parent First Name \"Churchman\" Parent Second Name \"Brigham\" Address \"99-2066 St. Marys Road\" Postcode \"SO41 0LG\" MobileNumber \"07211202066\" Email id \"aratequ@ucoz.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Churchman\"",
-                  "offset": 18
-                },
-                {
-                  "val": "\"Brigham\"",
-                  "offset": 49
-                },
-                {
-                  "val": "\"99-2066 St. Marys Road\"",
-                  "offset": 67
-                },
-                {
-                  "val": "\"SO41 0LG\"",
-                  "offset": 101
-                },
-                {
-                  "val": "\"07211202066\"",
-                  "offset": 125
-                },
-                {
-                  "val": "\"aratequ@ucoz.com\"",
-                  "offset": 148
-                }
-              ],
-              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 206000000,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "The source is selected as \"BH Website\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"BH Website\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7378000000,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "The First Child First Name \"Giustino\" First Child Second Name \"Brigham\" First Child DOB \"12/01/2019\" Gender \"M\" Enrolment Start Date \"03/08/2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Giustino\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"Brigham\"",
-                  "offset": 62
-                },
-                {
-                  "val": "\"12/01/2019\"",
-                  "offset": 88
-                },
-                {
-                  "val": "\"M\"",
-                  "offset": 108
-                },
-                {
-                  "val": "\"03/08/2020\"",
-                  "offset": 133
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2574000000,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"All Days\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 14174000000,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "Verify if user can add a visit with visit date \"08/08/2020\" and visit time \"930\" with main comment \"Brigham\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"08/08/2020\"",
-                  "offset": 47
-                },
-                {
-                  "val": "\"930\"",
-                  "offset": 75
-                },
-                {
-                  "val": "\"Brigham\"",
-                  "offset": 99
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6929000000,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "Logout from redfish and close browser",
-            "match": {
-              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
-            },
+            "line": 78,
+            "name": "Verify Enquiry can be removed from waiting list in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@RedfishSingleChildEnquiryVisit"
-          },
-          {
-            "name": "@Regression"
+            "name": "@RedfishEnquiryManagement"
           }
         ]
       },
       {
-        "start_timestamp": "2020-08-08T23:01:19.215Z",
-        "line": 68,
-        "name": "Verify if user is able to create an enquiry for a single child",
+        "start_timestamp": "2020-08-10T17:51:20.971Z",
+        "line": 83,
+        "name": "Verify if user is able to Management Enquiry by closing and adding to waithing list",
         "description": "",
-        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-for-a-single-child;;3",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-management-enquiry-by-closing-and-adding-to-waithing-list;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 7300000000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 51,
-            "name": "Initialize the browser with chrome",
-            "match": {
-              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2920000000,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "Open Web Application \"redfishUAT\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"redfishUAT\"",
-                  "offset": 21
-                }
-              ],
-              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8624000000,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"99160101NM\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Password1\"",
-                  "offset": 48
-                }
-              ],
-              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 55000000,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "Verify if the web page title actual \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 36
-                }
-              ],
-              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
-            },
+            "line": 76,
+            "name": "Verify Enquiry can be repoened in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 285000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 55,
-            "name": "In home page verify if Enquiries and Enquiry in the main menu",
-            "match": {
-              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8714000000,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Enquiries\"",
-                  "offset": 21
-                },
-                {
-                  "val": "\"Enquiry\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 23000000,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "Verify if the web page submenu title is \"New enquiry\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"New enquiry\"",
-                  "offset": 40
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
-            },
+            "line": 77,
+            "name": "Verify Enquiry can be moved to waiting list in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4038000000,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
-            "line": 58,
-            "name": "Parent First Name \"Ruste\" Parent Second Name \"Rate\" Address \"99-2067 St. Marys Road\" Postcode \"SO42 0LG\" MobileNumber \"07905093429\" Email id \"gbrighamqv@thetimes.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Ruste\"",
-                  "offset": 18
-                },
-                {
-                  "val": "\"Rate\"",
-                  "offset": 45
-                },
-                {
-                  "val": "\"99-2067 St. Marys Road\"",
-                  "offset": 60
-                },
-                {
-                  "val": "\"SO42 0LG\"",
-                  "offset": 94
-                },
-                {
-                  "val": "\"07905093429\"",
-                  "offset": 118
-                },
-                {
-                  "val": "\"gbrighamqv@thetimes.com\"",
-                  "offset": 141
-                }
-              ],
-              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 290000000,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "The source is selected as \"BH Website\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"BH Website\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7445000000,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "The First Child First Name \"Auguste\" First Child Second Name \"Rate\" First Child DOB \"15/02/2019\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Auguste\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"Rate\"",
-                  "offset": 61
-                },
-                {
-                  "val": "\"15/02/2019\"",
-                  "offset": 84
-                },
-                {
-                  "val": "\"F\"",
-                  "offset": 104
-                },
-                {
-                  "val": "\"04/08/2020\"",
-                  "offset": 129
-                }
-              ],
-              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1506000000,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "Booking Patten is \"All Days\" and Click on Add Enquiry",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"All Days\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepDefinations.StepDefination.booking_patten_is_and_click_on_add_enquiry(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10463000000,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "Verify if user can add a visit with visit date \"10/08/2020\" and visit time \"930\" with main comment \"Rate\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"10/08/2020\"",
-                  "offset": 47
-                },
-                {
-                  "val": "\"930\"",
-                  "offset": 75
-                },
-                {
-                  "val": "\"Rate\"",
-                  "offset": 99
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10769000000,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "Logout from redfish and close browser",
-            "match": {
-              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
-            },
+            "line": 78,
+            "name": "Verify Enquiry can be removed from waiting list in Enquiry Management",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@RedfishSingleChildEnquiryVisit"
-          },
-          {
-            "name": "@Regression"
+            "name": "@RedfishEnquiryManagement"
           }
         ]
       }
