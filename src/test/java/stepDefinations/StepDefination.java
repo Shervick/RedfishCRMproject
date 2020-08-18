@@ -326,17 +326,21 @@ public class StepDefination extends Utils {
     	 redfishsearchenq.searchbox().click();
     	 redfishsearchenq.searchbox().sendKeys(ParentName);
     	 redfishsearchenq.searchboxinform().click();
-    	 redfishsearchenq.searchboxinform().clear();
-    	 redfishsearchenq.searchboxinform().sendKeys(ParentName);
-    	 redfishsearchenq.clickonsearchlink().click();
+    	 
+    	 
     	 
     	 
      }
      @Then("Verify Enquiry search functionality with only Parent Name {string} in search page")
-     public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String EnquiryParentName) {
+     public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
     	 redfishsearchpage redfishsearchenq1=new redfishsearchpage(driver);
+    	 redfishsearchenq1.clickonchildcheckbox().click();
+    	 redfishsearchenq1.clickonparentcheckbox().click();
     	 redfishsearchenq1.clickenquirycheckbox().click();
+    	 redfishsearchenq1.searchboxinform().clear();
+    	 redfishsearchenq1.searchboxinform().sendKeys(ParentName);
     	 redfishsearchenq1.clickonsearchlink().click();
+    	
     	 
     	
      }

@@ -29,26 +29,40 @@ Examples:
 
 @RedfishEnquirytwoChildRegister @Regression 
 Scenario Outline: Verify if user is able to create an enquiry with two children and register the two children
-Given Initialize the browser with chrome
-And Open Web Application "<application>" 
-When User enters User Name "<UserName>" and Password "<Password>"
-Then Verify if the web page title actual "<expectedtitle>"
-And In home page verify if Enquiries and Enquiry in the main menu 
-When Clicked on menu item "<MainMenuItem>" and submenu "<SubMenuItem>"
-Then Verify if the web page submenu title is "<expectedenqtitle>"
-When Parent First Name "<ParentFirstName>" Parent Second Name "<ParentSecondName>" Address "<Address>" Postcode "<Postcode>" MobileNumber "<MobileNumber>" Email id "<EmailId>"
-When The source is selected as "<Source>"
-When The First Child First Name "<FirstChildFirstName>" First Child Second Name "<SecondChildSecondName>" First Child DOB "<DOB>" Gender "<FirstChildGender>" Enrolment Start Date "<FirstEnrolmentStartDate>"   
-When First child Booking Patten is "<BookingPatten>"
-When The Second Child First Name "<SecondChildFirstName>" Second Child Second Name "<SecondChildSecondName>" First Child DOB "<SecondChildDOB>" Gender "<SecondChildGender>" Enrolment Start Date "<SecondEnrolmentStartDate>"
-When Second Child Booking Patten is "<SecondBookingPatten>" 
-Then Click on Add Enquiry
+#Given Initialize the browser with chrome
+#And Open Web Application "<application>" 
+#When User enters User Name "<UserName>" and Password "<Password>"
+#Then Verify if the web page title actual "<expectedtitle>"
+#And In home page verify if Enquiries and Enquiry in the main menu 
+#When Clicked on menu item "<MainMenuItem>" and submenu "<SubMenuItem>"
+#Then Verify if the web page submenu title is "<expectedenqtitle>"
+#When Parent First Name "<ParentFirstName>" Parent Second Name "<ParentSecondName>" Address "<Address>" Postcode "<Postcode>" MobileNumber "<MobileNumber>" Email id "<EmailId>"
+#When The source is selected as "<Source>"
+#When The First Child First Name "<FirstChildFirstName>" First Child Second Name "<SecondChildSecondName>" First Child DOB "<DOB>" Gender "<FirstChildGender>" Enrolment Start Date "<FirstEnrolmentStartDate>"   
+#When First child Booking Patten is "<BookingPatten>"
+#When The Second Child First Name "<SecondChildFirstName>" Second Child Second Name "<SecondChildSecondName>" First Child DOB "<SecondChildDOB>" Gender "<SecondChildGender>" Enrolment Start Date "<SecondEnrolmentStartDate>"
+#When Second Child Booking Patten is "<SecondBookingPatten>" 
+#Then Click on Add Enquiry
+#Then Verify if the Enquiry is created and Enquiry Details "<EnquiryDetails>" is displayed on the Parent Name Click on
+#When Clicked on register first child with sibling "<Sibling>"
+#When Selecting the Relationship status as "<Relationship>" and Parental Parental Responsibility as "<ParentalResponsibility>"	
+#When Selecting the PhotoPreference as "<PhotoPreference>"
+#When The TFC Reference "<TFCReference>" and LEAFEETReference "<LEAFEETReference>" and hrFundingCode "<hrFundingCode>"
+#Then Verify if the child is registered "<ChildProfileTitle>" 
+#Then Verify search functionality with only Parent Name "<ParentName>" in search page
+#Then Verify Enquiry search functionality with only Parent Name "<ParentName>" in search page
+When Clicked on register Second child with sibling "<Sibling>"
+#When Selecting the Relationship status as "<Relationship>" and Parental Parental Responsibility as "<ParentalResponsibility>"	
+#When Selecting the PhotoPreference as "<PhotoPreference>"
+#When The TFC Reference "<TFCReference>" and LEAFEETReference "<LEAFEETReference>" and hrFundingCode "<hrFundingCode>"
+#Then Verify if the child is registered "<ChildProfileTitle>" 
 
 Examples:
-	|UserName   |Password  |application |expectedtitle |MainMenuItem |SubMenuItem |expectedenqtitle |ParentFirstName |ParentSecondName |Address 			   |Postcode |MobileNumber |EmailId 			        |Source                    |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |SecondChildFirstName |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
-    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Madella         |Bricknell        |99-2057 St. Marys Road |SO46 0LG |07154264962  |mbricknellq7@indiatimes.com |Company Referral (Client) |Trumaine            |Bricknell             |07/01/2019 |M                |04/08/2020              |All Days      |                     |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000044   |Child             |
-    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Dodi 	         |Carabine         |99-2058 St. Marys Road |SO47 0LG |07964491646  |dcarabineq6@tmall.com       |BH Website                |Ingmar              |Lett                  |03/02/2019 |M                |04/09/2020              |All Days      |                     |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000045   |Child             |
-	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Krispin         |Lett             |99-2056 St. Marys Road |SO45 0LG |07413262177  |klettq8@pen.com             |BH Website                |Ced                 |Carabine              |03/12/2018 |M                |04/08/2020              |All Days      |                     |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000043   |Child             |
+	|UserName   |Password  |application |expectedtitle |MainMenuItem |SubMenuItem |expectedenqtitle |ParentFirstName |ParentSecondName |ParentName       |Address 			     |Postcode |MobileNumber |EmailId 			          |Source     |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |SecondChildFirstName |SecondChildSecondName |SecondChildDOB |SecondChildGender |SecondEnrolmentStartDate |SecondBookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
+    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Quint           |Halling          |Quint Halling    |99-2059 St. Marys Road |SO48 0LG |07587350665  |qhallingps@indiatimes.com   |BH Website |Fredra              |Halling               |07/01/2019 |F                |04/08/2020              |All Days      |Connie               |Halling               |04/08/2018     |F                 |04/08/2020               |All Days            |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000047   |Child             |
+    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Kendra          |Grosvener        |Kendra Grosvener |99-2060 St. Marys Road |SO49 0LG |07418037412  |kgrosvenerpr@altervista.com |BH Website |Camala              |Grosvener             |03/02/2019 |F                |04/09/2020              |All Days      |Anson                |Grosvener             |03/02/2018     |F                 |04/08/2020               |All Days            |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000048   |Child             |
+	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Eudora          |Pulsford         |Eudora Pulsford  |99-2061 St. Marys Road |SO50 0LG |07140006403  |epulsfordpq@yolasite.com    |BH Website |Conny               |Pulsford              |03/12/2018 |M                |04/08/2020              |All Days      |Aube                 |Pulsford              |03/12/2017     |M                 |04/08/2020               |All Days            |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000049   |Child             |
+
 
 @RedfishSingleChildEnquiry  @Regression
 Scenario Outline: Verify if user is able to create an enquiry for a single child
@@ -172,9 +186,10 @@ Then Click on Add Enquiry
 Then Logout from redfish and close browser
 
 Examples:
-	|UserName   |Password  |application |expectedtitle |MainMenuItem |SubMenuItem |expectedenqtitle |ParentFirstName |ParentSecondName |Address 			   |Postcode |MobileNumber |EmailId 			    |Source     |FirstChildFirstName |FirstChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |SecondChildFirstName |SecondChildSecondName |SecondChildDOB |SecondChildGender |SecondEnrolmentStartDate |SecondBookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
-	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Erroll 	     |Onians           |99-2054 St. Marys Road |SO45 0LG |07475991379  |eonianspy@irs.com       |BH Website |Ezequiel            |Onians               |10/01/2018 |M                |03/08/2020              |All Days      |Shaw                 |Onians                |10/01/2019     |M                 |10/08/2020               |All Days            |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000044   |Child             |
-	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Harwell  	     |Ayerst           |99-2053 St. Marys Road |SO44 0LG |07419998271  |hayerstpz@goodreads.com |BH Website |Gottfried           |Ayerst               |09/02/2019 |M                |04/08/2020              |All Days      |Coraline             |Ayerst                |09/02/2018     |F                 |10/08/2020               |All Days            |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000045   |Child             |
-	
+	|UserName   |Password  |application |expectedtitle |MainMenuItem |SubMenuItem |expectedenqtitle |ParentFirstName |ParentSecondName |Address 			   |Postcode |MobileNumber |EmailId 			        |Source     |FirstChildFirstName |SecondChildSecondName |DOB        |FirstChildGender |FirstEnrolmentStartDate |BookingPatten |SecondChildFirstName |SecondChildSecondName |SecondChildDOB |SecondChildGender |SecondEnrolmentStartDate |SecondBookingPatten |EnquiryDetails  |Sibling |Relationship |ParentalResponsibility |PhotoPreference |TFCReference |LEAFEETReference |hrFundingCode |ChildProfileTitle |							  
+    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Quint           |Halling          |99-2059 St. Marys Road |SO48 0LG |07587350665  |qhallingps@indiatimes.com   |BH Website |Fredra              |Halling               |07/01/2019 |F                |04/08/2020              |All Days      |Connie               |Halling               |04/08/2018     |F                 |04/08/2020               |All Days            |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000047   |Child             |
+    |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Kendra          |Grosvener        |99-2060 St. Marys Road |SO49 0LG |07418037412  |kgrosvenerpr@altervista.com |BH Website |Camala              |Grosvener             |03/02/2019 |F                |04/09/2020              |All Days      |Anson                |Grosvener             |03/02/2018     |F                 |04/08/2020               |All Days            |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000048   |Child             |
+	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Eudora          |Pulsford         |99-2061 St. Marys Road |SO50 0LG |07140006403  |epulsfordpq@yolasite.com    |BH Website |Conny               |Pulsford              |03/12/2018 |M                |04/08/2020              |All Days      |Aube                 |Pulsford              |03/12/2017     |M                 |04/08/2020               |All Days            |Enquiry Details |No      |Mother       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000049   |Child             |
+
 	
 	
