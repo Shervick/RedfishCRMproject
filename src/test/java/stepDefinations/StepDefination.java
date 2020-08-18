@@ -125,8 +125,8 @@ public class StepDefination extends Utils {
  		childinfo.startdate().sendKeys(FirstEnrolmentStartDate);
  		childinfo.startdate().sendKeys(Keys.ENTER);
      }
-     @When("Booking Patten is {string} and Click on Add Enquiry")
-     public void booking_patten_is_and_click_on_add_enquiry(String BookingPatten) {
+     @When("First child Booking Patten is {string}")
+     public void first_child_booking_patten_is(String BookingPatten) {
     	 
     	 redfishNewEnquirypage bookingaddenq = new redfishNewEnquirypage(driver);
     	 if(BookingPatten.equalsIgnoreCase("All Days")) {
@@ -174,7 +174,7 @@ public class StepDefination extends Utils {
  			bookingaddenq.Alldaybooking().click();
  			
  		}
-    	 bookingaddenq.addenquiry().click();
+    	 
      }
      @Then("Verify if the Enquiry is created and Enquiry Details {string} is displayed on the Parent Name Click on")
      public void verify_if_the_enquiry_is_created_and_enquiry_details_is_displayed_on_the_parent_name_click_on(String exptenqdet) {
@@ -322,14 +322,28 @@ public class StepDefination extends Utils {
      }
      @Then("Verify search functionality with only Parent Name {string} in search page")
      public void verify_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
+    	 redfishsearchpage redfishsearchenq=new redfishsearchpage(driver); 
+    	 redfishsearchenq.searchbox().click();
+    	 redfishsearchenq.searchbox().sendKeys(ParentName);
+    	 redfishsearchenq.searchboxinform().click();
+    	 redfishsearchenq.searchboxinform().clear();
+    	 redfishsearchenq.searchboxinform().sendKeys(ParentName);
+    	 redfishsearchenq.clickonsearchlink().click();
+    	 
     	 
      }
      @Then("Verify Enquiry search functionality with only Parent Name {string} in search page")
      public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String EnquiryParentName) {
+    	 redfishsearchpage redfishsearchenq1=new redfishsearchpage(driver);
+    	 redfishsearchenq1.clickenquirycheckbox().click();
+    	 redfishsearchenq1.clickonsearchlink().click();
     	 
+    	
      }
      @Then("Verify Enquiry can be closed with reason code {string} Enquiry Management")
      public void verify_enquiry_can_be_closed_with_reason_code_enquiry_management(String ClosedReason) {
+    	 redfishEnquiryManagementpage redfishsearchenqmg = new redfishEnquiryManagementpage(driver);
+    	 redfishsearchenqmg.closeenquirybutton().click();
     	 
      }
      @Then("Verify closed Enquiry search functionality with only Parent Name {string} in search page")
@@ -356,5 +370,79 @@ public class StepDefination extends Utils {
      public void verify_enquiry_can_be_removed_from_waiting_list_in_enquiry_management() {
     	 
      }
+     @When("The Second Child First Name {string} Second Child Second Name {string} First Child DOB {string} Gender {string} Enrolment Start Date {string}")
+     public void the_second_child_first_name_second_child_second_name_first_child_dob_gender_enrolment_start_date(String SecondChildFirstName, String SecondChildSecondName, String SecondChildDOB, String SecondChildGender, String SecondEnrolmentStartDate) {
+    	 redfishNewEnquirypage secondchildinfo = new redfishNewEnquirypage(driver);
+    	 secondchildinfo.addsecondchild().click();
+    	 secondchildinfo.secondchildfirstname().click();
+    	 secondchildinfo.secondchildfirstname().sendKeys(SecondChildFirstName);
+    	 secondchildinfo.secondchildsecondname().click();
+    	 secondchildinfo.secondchildsecondname().sendKeys(SecondChildSecondName);
+    	 secondchildinfo.secondDOB().sendKeys(SecondChildDOB);
+    	 secondchildinfo.secondDOB().sendKeys(Keys.ENTER);
+ 		if (SecondChildDOB.equalsIgnoreCase("M")) {
+ 			secondchildinfo.secondGenderm().click();
+ 			
+ 		}else {
+ 			secondchildinfo.Genderf().click();
+ 		}
+ 		secondchildinfo.secondstartdate().sendKeys(SecondEnrolmentStartDate);
+ 		secondchildinfo.startdate().sendKeys(Keys.ENTER);
+     }
+     @When("Second Child Booking Patten is {string}")
+     public void second_child_booking_patten_is(String SecondBookingPatten) {
+    	 redfishNewEnquirypage secondbookingaddenq = new redfishNewEnquirypage(driver);
+    	 if(SecondBookingPatten.equalsIgnoreCase("All Days")) {
+    		 secondbookingaddenq.secondAMmonday().click();
+    		 secondbookingaddenq.secondPMmonday().click();
+    		 secondbookingaddenq.secondAMtuesday().click();
+    		 secondbookingaddenq.secondPMtuesday().click();
+    		 secondbookingaddenq.secondAMwednesday().click();
+    		 secondbookingaddenq.secondPMwednesday().click();
+    		 secondbookingaddenq.secondAMthusday().click();
+    		 secondbookingaddenq.secondPMthusday().click();
+    		 secondbookingaddenq.secondAMfriday().click();
+    		 secondbookingaddenq.secondPMfriday().click();
+ 			
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("AMM PMT AMW PMTH PMF")) {
+ 			secondbookingaddenq.secondAMmonday().click();
+ 			secondbookingaddenq.secondPMtuesday().click();
+ 			secondbookingaddenq.secondAMwednesday().click();
+ 			secondbookingaddenq.secondPMthusday().click();
+ 			secondbookingaddenq.secondPMfriday().click();
+ 			
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("All AM")) {
+ 			secondbookingaddenq.secondAMmonday().click();
+ 			secondbookingaddenq.secondAMtuesday().click();
+ 			secondbookingaddenq.secondAMwednesday().click();
+ 			secondbookingaddenq.secondAMthusday().click();
+ 			secondbookingaddenq.secondAMfriday().click();
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("All PM")) {
+ 			secondbookingaddenq.secondPMmonday().click();
+ 			secondbookingaddenq.secondPMtuesday().click();
+ 			secondbookingaddenq.secondPMwednesday().click();
+ 			secondbookingaddenq.secondPMthusday().click();
+ 			secondbookingaddenq.secondPMfriday().click();
+ 			
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("FM WM FRM")) {
+ 			secondbookingaddenq.secondmondayampm().click();
+ 			secondbookingaddenq.secondwednesdayampm().click();
+ 			secondbookingaddenq.secondfridayampm().click();
+ 			
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("FT FTH")) {
+ 			secondbookingaddenq.secondtuesdayampm().click();
+ 			secondbookingaddenq.secondthusdayampm().click();
+ 			
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("All")) {
+ 			secondbookingaddenq.secondAlldaybooking().click();
+ 			
+ 		}
+     }
+     @Then("Click on Add Enquiry")
+     public void click_on_add_enquiry() {
+    	 redfishNewEnquirypage addenquiry = new redfishNewEnquirypage(driver);
+    	 addenquiry.addenquiry().click();
+     }
+     
 
 }

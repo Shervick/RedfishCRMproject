@@ -131,6 +131,7 @@ WebDriver driver;
 	public WebElement secondPMwednesday() {return driver.findElement(secondPMwednesday);}
 	public WebElement secondPMthusday() {return driver.findElement(secondPMthusday);}
 	public WebElement secondPMfriday() {return driver.findElement(secondPMfriday);}
+	public WebElement addsecondchild() {return driver.findElement(addsecondchild);}
 	public WebElement addenquiry() {return driver.findElement(addenquiry);}
 	public WebElement enquirydetails() {return driver.findElement(enquirydetails);}
 
