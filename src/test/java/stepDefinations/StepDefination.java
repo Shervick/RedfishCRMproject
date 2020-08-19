@@ -325,7 +325,7 @@ public class StepDefination extends Utils {
     	 redfishsearchpage redfishsearchenq=new redfishsearchpage(driver); 
     	 redfishsearchenq.searchbox().click();
     	 redfishsearchenq.searchbox().sendKeys(ParentName);
-    	 redfishsearchenq.searchboxinform().click();
+    	 redfishsearchenq.searchbox().sendKeys(Keys.ENTER);
     	 
     	 
     	 
@@ -339,7 +339,7 @@ public class StepDefination extends Utils {
     	 redfishsearchenq1.clickenquirycheckbox().click();
     	 redfishsearchenq1.searchboxinform().clear();
     	 redfishsearchenq1.searchboxinform().sendKeys(ParentName);
-    	 redfishsearchenq1.clickonsearchlink().click();
+    	 redfishsearchenq1.searchboxinform().sendKeys(Keys.ENTER);
     	
     	 
     	
@@ -384,7 +384,7 @@ public class StepDefination extends Utils {
     	 secondchildinfo.secondchildsecondname().sendKeys(SecondChildSecondName);
     	 secondchildinfo.secondDOB().sendKeys(SecondChildDOB);
     	 secondchildinfo.secondDOB().sendKeys(Keys.ENTER);
- 		if (SecondChildDOB.equalsIgnoreCase("M")) {
+ 		if (SecondChildGender.equalsIgnoreCase("M")) {
  			secondchildinfo.secondGenderm().click();
  			
  		}else {
@@ -446,6 +446,20 @@ public class StepDefination extends Utils {
      public void click_on_add_enquiry() {
     	 redfishNewEnquirypage addenquiry = new redfishNewEnquirypage(driver);
     	 addenquiry.addenquiry().click();
+     }
+     @When("Clicked on register Second child with sibling {string}")
+     public void clicked_on_register_second_child_with_sibling(String Sibling) {
+    	 redfishNewRegisterpage secondchildsibling=new redfishNewRegisterpage(driver);
+    	 redfishNewEnquirypage secondchildreg = new redfishNewEnquirypage(driver);
+    	 secondchildreg.secondchildreg().click();
+    	 secondchildsibling.register2nchild().click();
+    	 if (Sibling.equalsIgnoreCase("Yes")) {
+    		 secondchildsibling.siblingyes().click();
+ 			
+ 		}else {
+ 			secondchildsibling.siblingno().click();
+ 		}
+    	 secondchildsibling.nextfromsibling().click();
      }
      
 

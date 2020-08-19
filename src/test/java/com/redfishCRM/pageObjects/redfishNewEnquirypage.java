@@ -72,6 +72,7 @@ WebDriver driver;
 	By secondPMfriday=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_lvEnquiryChildren_ctrl2_WeekCalendar_cbPMFri");
 	By addsecondchild=By.cssSelector("a#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_lbAddEnquiryChild");
 	By addenquiry=By.id("ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_bAdd_lText");
+	By secondchildreg=By.cssSelector("a#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_rSearch_ctl00_hlItem");
 	By enquirydetails=By.cssSelector("#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_lbPageTitle");
 	
 	public WebElement forename() {return driver.findElement(forename);}
@@ -133,6 +134,7 @@ WebDriver driver;
 	public WebElement secondPMfriday() {return driver.findElement(secondPMfriday);}
 	public WebElement addsecondchild() {return driver.findElement(addsecondchild);}
 	public WebElement addenquiry() {return driver.findElement(addenquiry);}
+	public WebElement secondchildreg() {return driver.findElement(secondchildreg);}
 	public WebElement enquirydetails() {return driver.findElement(enquirydetails);}
 
 }
