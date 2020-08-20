@@ -1,0 +1,1752 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-20T06:35:22.637Z",
+        "line": 63,
+        "name": "Verify if user is able to create an enquiry with two children and register the two children",
+        "description": "",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-with-two-children-and-register-the-two-children;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10961000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14306000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13073000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101NM\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify if the web page title actual \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Home\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 300000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39156000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiries\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Enquiry\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1400000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Parent First Name \"Coretta\" Parent Second Name \"Gave\" Address \"99-2062 St. Marys Road\" Postcode \"SO52 0LG\" MobileNumber \"07824656282\" Email id \"cgavepg@apple.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Coretta\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Gave\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"99-2062 St. Marys Road\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"SO52 0LG\"",
+                  "offset": 96
+                },
+                {
+                  "val": "\"07824656282\"",
+                  "offset": 120
+                },
+                {
+                  "val": "\"cgavepg@apple.com\"",
+                  "offset": 143
+                }
+              ],
+              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 247000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "The source is selected as \"BH Website\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BH Website\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8402000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The First Child First Name \"Maryanne\" First Child Second Name \"Gave\" First Child DOB \"20/08/2018\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Maryanne\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Gave\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"20/08/2018\"",
+                  "offset": 85
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 105
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 130
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1019000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "First child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.first_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11842000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The Second Child First Name \"Egan\" Second Child Second Name \"Gave\" First Child DOB \"20/08/2017\" Gender \"M\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Egan\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Gave\"",
+                  "offset": 60
+                },
+                {
+                  "val": "\"20/08/2017\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"M\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 128
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_second_child_first_name_second_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 906000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Second Child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinations.StepDefination.second_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 103000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Click on Add Enquiry",
+            "match": {
+              "location": "stepDefinations.StepDefination.click_on_add_enquiry()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39763000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Verify if the Enquiry is created and Enquiry Details \"Enquiry Details\" is displayed on the Parent Name Click on",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry Details\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_enquiry_is_created_and_enquiry_details_is_displayed_on_the_parent_name_click_on(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9418000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Clicked on register first child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_first_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8609000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24234000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000050\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000050\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 18282000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2831000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Verify search functionality with only Parent Name \"Coretta Gave\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Coretta Gave\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3943000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Verify Enquiry search functionality with only Parent Name \"Coretta Gave\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Coretta Gave\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_enquiry_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10355000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Clicked on register Second child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_second_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8149000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23809000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000050\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000050\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11265000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4232000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RedfishEnquirytwoChildRegister"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-20T06:39:49.747Z",
+        "line": 64,
+        "name": "Verify if user is able to create an enquiry with two children and register the two children",
+        "description": "",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-with-two-children-and-register-the-two-children;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6170000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2831000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8737000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101NM\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify if the web page title actual \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Home\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 144000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8596000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiries\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Enquiry\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1324000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Parent First Name \"Kendra\" Parent Second Name \"Grosvener\" Address \"99-2060 St. Marys Road\" Postcode \"SO49 0LG\" MobileNumber \"07418037412\" Email id \"kgrosvenerpr@altervista.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kendra\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Grosvener\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"99-2060 St. Marys Road\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"SO49 0LG\"",
+                  "offset": 100
+                },
+                {
+                  "val": "\"07418037412\"",
+                  "offset": 124
+                },
+                {
+                  "val": "\"kgrosvenerpr@altervista.com\"",
+                  "offset": 147
+                }
+              ],
+              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 124000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "The source is selected as \"BH Website\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BH Website\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7723000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The First Child First Name \"Camala\" First Child Second Name \"Grosvener\" First Child DOB \"03/02/2019\" Gender \"F\" Enrolment Start Date \"04/09/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Camala\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Grosvener\"",
+                  "offset": 60
+                },
+                {
+                  "val": "\"03/02/2019\"",
+                  "offset": 88
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 108
+                },
+                {
+                  "val": "\"04/09/2020\"",
+                  "offset": 133
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 909000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "First child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.first_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11352000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The Second Child First Name \"Anson\" Second Child Second Name \"Grosvener\" First Child DOB \"03/02/2018\" Gender \"F\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Anson\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Grosvener\"",
+                  "offset": 61
+                },
+                {
+                  "val": "\"03/02/2018\"",
+                  "offset": 89
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 109
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 134
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_second_child_first_name_second_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 908000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Second Child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinations.StepDefination.second_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Click on Add Enquiry",
+            "match": {
+              "location": "stepDefinations.StepDefination.click_on_add_enquiry()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10346000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Verify if the Enquiry is created and Enquiry Details \"Enquiry Details\" is displayed on the Parent Name Click on",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry Details\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_enquiry_is_created_and_enquiry_details_is_displayed_on_the_parent_name_click_on(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7453000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Clicked on register first child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_first_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16851000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24083000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000048\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000048\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10535000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2395000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Verify search functionality with only Parent Name \"Kendra Grosvener\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kendra Grosvener\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_search_child\"}\n  (Session info: chrome\u003d84.0.4147.125)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LP000214\u0027, ip: \u0027192.17.11.20\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_251\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\\Users\\E001291\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56447}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 17f7d8070a3c9b411f3bf2887fdaddfe\n*** Element info: {Using\u003dcss selector, value\u003dinput#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_search_child}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.redfishCRM.pageObjects.redfishsearchpage.clickonchildcheckbox(redfishsearchpage.java:35)\r\n\tat stepDefinations.StepDefination.verify_enquiry_search_functionality_with_only_parent_name_in_search_page(StepDefination.java:337)\r\n\tat ✽.Verify Enquiry search functionality with only Parent Name \"Kendra Grosvener\" in search page(file:///C:/Users/E001291/Desktop/BH/Red%20Fish/RedFish%20Automation/Script/RedfishCRMproject/src/test/java/features/RedfishWorkflow.feature:53)\r\n",
+              "duration": 10103000000,
+              "status": "failed"
+            },
+            "line": 53,
+            "name": "Verify Enquiry search functionality with only Parent Name \"Kendra Grosvener\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kendra Grosvener\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_enquiry_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 54,
+            "name": "Clicked on register Second child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_second_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 55,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000048\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000048\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 59,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RedfishEnquirytwoChildRegister"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-20T06:42:00.507Z",
+        "line": 65,
+        "name": "Verify if user is able to create an enquiry with two children and register the two children",
+        "description": "",
+        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-with-two-children-and-register-the-two-children;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6293000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3159000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8193000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User enters User Name \"99160101NM\" and Password \"Password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101NM\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify if the web page title actual \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Home\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 106000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "In home page verify if Enquiries and Enquiry in the main menu",
+            "match": {
+              "location": "stepDefinations.StepDefination.In_home_page_verify_if_Enquiries_and_Enquiry_in_the_main_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7602000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Clicked on menu item \"Enquiries\" and submenu \"Enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiries\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Enquiry\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_menu_item_and_submenu(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Verify if the web page submenu title is \"New enquiry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New enquiry\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_web_page_submenu_title_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1277000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Parent First Name \"Eudora\" Parent Second Name \"Pulsford\" Address \"99-2061 St. Marys Road\" Postcode \"SO50 0LG\" MobileNumber \"07140006403\" Email id \"epulsfordpq@yolasite.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eudora\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Pulsford\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"99-2061 St. Marys Road\"",
+                  "offset": 65
+                },
+                {
+                  "val": "\"SO50 0LG\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"07140006403\"",
+                  "offset": 123
+                },
+                {
+                  "val": "\"epulsfordpq@yolasite.com\"",
+                  "offset": 146
+                }
+              ],
+              "location": "stepDefinations.StepDefination.parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "The source is selected as \"BH Website\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BH Website\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_source_is_selected_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7885000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The First Child First Name \"Conny\" First Child Second Name \"Pulsford\" First Child DOB \"03/12/2018\" Gender \"M\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Conny\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Pulsford\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"03/12/2018\"",
+                  "offset": 86
+                },
+                {
+                  "val": "\"M\"",
+                  "offset": 106
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 131
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 901000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "First child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.first_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11651000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The Second Child First Name \"Aube\" Second Child Second Name \"Pulsford\" First Child DOB \"03/12/2017\" Gender \"M\" Enrolment Start Date \"04/08/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Aube\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Pulsford\"",
+                  "offset": 60
+                },
+                {
+                  "val": "\"03/12/2017\"",
+                  "offset": 87
+                },
+                {
+                  "val": "\"M\"",
+                  "offset": 107
+                },
+                {
+                  "val": "\"04/08/2020\"",
+                  "offset": 132
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_second_child_first_name_second_child_second_name_first_child_dob_gender_enrolment_start_date(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 870000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Second Child Booking Patten is \"All Days\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Days\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinations.StepDefination.second_child_booking_patten_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Click on Add Enquiry",
+            "match": {
+              "location": "stepDefinations.StepDefination.click_on_add_enquiry()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11167000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Verify if the Enquiry is created and Enquiry Details \"Enquiry Details\" is displayed on the Parent Name Click on",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry Details\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_enquiry_is_created_and_enquiry_details_is_displayed_on_the_parent_name_click_on(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8238000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Clicked on register first child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_first_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10702000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27230000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000049\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000049\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11117000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2050000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Verify search functionality with only Parent Name \"Eudora Pulsford\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eudora Pulsford\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3150000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Verify Enquiry search functionality with only Parent Name \"Eudora Pulsford\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eudora Pulsford\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_enquiry_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9865000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Clicked on register Second child with sibling \"No\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.clicked_on_register_second_child_with_sibling(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8207000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Selecting the Relationship status as \"Mother\" and Parental Parental Responsibility as \"Yes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mother\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Yes\"",
+                  "offset": 86
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Selecting the PhotoPreference as \"All\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinations.StepDefination.selecting_the_photo_preference_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23776000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "The TFC Reference \"DAST25416TFC\" and LEAFEETReference \"MIOS62391TFC\" and hrFundingCode \"50700000049\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DAST25416TFC\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"MIOS62391TFC\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"50700000049\"",
+                  "offset": 87
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_tfc_reference_and_leafeet_reference_and_hr_funding_code(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10817000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "Verify if the child is registered \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6768000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RedfishEnquirytwoChildRegister"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Redfish Workflows Page",
+    "description": "",
+    "id": "validate-redfish-workflows-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/RedfishWorkflow.feature",
+    "tags": []
+  }
+]
