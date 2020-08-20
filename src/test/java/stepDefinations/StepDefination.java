@@ -10,6 +10,7 @@ import resources.Utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.*;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -22,8 +23,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.redfishCRM.pageObjects.crmloginpage;
+import com.redfishCRM.pageObjects.crmHomepage;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
@@ -461,6 +464,36 @@ public class StepDefination extends Utils {
  		}
     	 secondchildsibling.nextfromsibling().click();
      }
-     
+     @When("User enters RedfishCRM User Name {string} and Password {string}")
+     public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) {
+    	 crmloginpage loginredfishCRM=new crmloginpage(driver);
+    	 loginredfishCRM.crmUsername().click();
+    	 loginredfishCRM.crmUsername().sendKeys(UserName);
+    	 loginredfishCRM.crmPassword().click();
+    	 loginredfishCRM.crmPassword().sendKeys(Password);
+    	 loginredfishCRM.crmsignin().click();
+ 		
+     }
+     @Then("Verify if the RedfishCRM web page title actual {string}")
+     public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException {
+    	 WebDriverWait wait = new WebDriverWait(driver, 15);
+    	 wait.until(ExpectedConditions.titleContains(expectedtitle));
+    	 String actualCRMtitle=driver.getTitle();
+    	 assertThat(actualCRMtitle).contains(expectedtitle);
+    	 assertEquals(actualCRMtitle,expectedtitle);
+    	 
+     }
+     @Then("Logout from redfishCRM and close browser")
+     public void logout_from_redfish_crm_and_close_browser() throws InterruptedException {
+    	 crmHomepage redfishCRMlogout=new crmHomepage(driver);
+    	 WebDriverWait wait = new WebDriverWait(driver, 15);
+    	 redfishCRMlogout.crmprofile().click();
+    	 redfishCRMlogout.crmsignout().click();
+    	 Thread.sleep(10000);
+    	 redfishCRMlogout.crmsignout().sendKeys(Keys.ENTER);
+    	 wait.until(ExpectedConditions.titleContains("Sign out"));
+ 		 driver.close();
+ 		 driver.quit();
+     }
 
 }
