@@ -18,12 +18,13 @@ protected static WebDriver driver;
 	{
 		this.driver=driver;
 	}
-	By crmsearchbox=By.xpath("/html/body/div/div[1]/table/tbody/tr/td/span/table/tbody/tr/td[3]/table/tbody/tr/td[1]/div[2]/input");
+	By crmsearchbox=By.cssSelector("input#crmGrid_findCriteria");
 	By crmclickonsearchresult=By.cssSelector("#gridBodyTable > tbody > tr:nth-child(1) > td:nth-child(2)");
 	By crmeditbutton=By.cssSelector("span[command=\"contact|NoRelationship|HomePageGrid|Mscrm.EditSelectedRecord\"]");
 	By crmsearchbutton=By.cssSelector("td.AppQuickFind_Render_td > a.ms-crm-FindButton");
 	By crmclickenquiry= By.cssSelector("a[class='ms-crm-List-Link'][title*='Enquiry']");
 	By crmclickonnew=By.cssSelector("span.ms-crm-CommandBar-Menu");
+	By crmcustomScriptsFrame=By.cssSelector("iframe#customScriptsFrame");
 	By crmprofile= By.cssSelector("span#navTabButtonChangeProfileImageLink>img.navTabButtonUserInfoProfileImage");
 	By crmsignout=By.linkText("Sign out");
 	By crmsingoutsmenu=By.cssSelector("span#navTabButtonUserInfoDropDownId");
@@ -34,6 +35,7 @@ protected static WebDriver driver;
 	public WebElement crmsearchbutton() {return driver.findElement(crmsearchbutton);}
 	public WebElement crmclickenquiry() {return driver.findElement(crmclickenquiry);}
 	public WebElement crmclickonnew() {return driver.findElement(crmclickonnew);}
+	public WebElement crmcustomScriptsFrame() {return driver.findElement(crmcustomScriptsFrame);}
 	public WebElement crmprofile() {return driver.findElement(crmprofile);}
 	public WebElement crmsignout() {return driver.findElement(crmsignout);}
 	public WebElement crmsingoutsmenu() {return driver.findElement(crmsingoutsmenu);}

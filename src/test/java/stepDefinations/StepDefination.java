@@ -12,12 +12,18 @@ import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import static org.assertj.core.api.Assertions.*;
 
+import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,6 +32,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.redfishCRM.pageObjects.crmloginpage;
+import com.redfishCRM.pageObjects.crmContactpage;
 import com.redfishCRM.pageObjects.crmHomepage;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
@@ -247,13 +254,22 @@ public class StepDefination extends Utils {
     	 phptopref.nextchild().click();
     	 phptopref.nextHealthcare().click();
     	 phptopref.nextDietary().click();
-    	 phptopref.Donotaddanotherparent().click();
-    	 phptopref.nextenrolment().click();
-    	 phptopref.nextfunding().click();
-    	 phptopref.nextvouchers().click();
+    	 phptopref.Donotaddanotherparent().click();   	 
+    	 
+     }
+     @When("The Enrolment Leave date is {string}")
+     public void the_enrolment_leave_date_is(String FirstEnrolmentEndDate) {
+    	 redfishNewRegisterpage enorl=new redfishNewRegisterpage(driver);
+    	 
+    	 enorl.enrolmentenddate().click();
+    	 enorl.enrolmentenddate().clear();
+    	 enorl.enrolmentenddate().sendKeys(FirstEnrolmentEndDate);
+    	 enorl.enrolmentenddate().sendKeys(Keys.ENTER);
+    	 enorl.nextenrolment().click();
+    	 enorl.nextfunding().click();
+    	 enorl.nextvouchers().click();
      }
      @Then("Verify if the child is registered {string}")
-    
      public void verify_if_the_child_is_registered(String ChildProfileTitle) {
     	 redfishNewRegisterpage finishverify=new redfishNewRegisterpage(driver);
     	 finishverify.finish().click();
@@ -324,8 +340,9 @@ public class StepDefination extends Utils {
     	
      }
      @Then("Verify search functionality with only Parent Name {string} in search page")
-     public void verify_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
+     public void verify_search_functionality_with_only_parent_name_in_search_page(String ParentName) throws InterruptedException {
     	 redfishsearchpage redfishsearchenq=new redfishsearchpage(driver); 
+    	 Thread.sleep(2000);
     	 redfishsearchenq.searchbox().click();
     	 redfishsearchenq.searchbox().sendKeys(ParentName);
     	 redfishsearchenq.searchbox().sendKeys(Keys.ENTER);
@@ -391,7 +408,7 @@ public class StepDefination extends Utils {
  			secondchildinfo.secondGenderm().click();
  			
  		}else {
- 			secondchildinfo.Genderf().click();
+ 			secondchildinfo.secondGenderf().click();
  		}
  		secondchildinfo.secondstartdate().sendKeys(SecondEnrolmentStartDate);
  		secondchildinfo.startdate().sendKeys(Keys.ENTER);
@@ -465,8 +482,9 @@ public class StepDefination extends Utils {
     	 secondchildsibling.nextfromsibling().click();
      }
      @When("User enters RedfishCRM User Name {string} and Password {string}")
-     public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) {
+     public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) throws IOException {
     	 crmloginpage loginredfishCRM=new crmloginpage(driver);
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\loginscreenshot.png");
     	 loginredfishCRM.crmUsername().click();
     	 loginredfishCRM.crmUsername().sendKeys(UserName);
     	 loginredfishCRM.crmPassword().click();
@@ -475,16 +493,16 @@ public class StepDefination extends Utils {
  		
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
-     public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException {
+     public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException, IOException {
     	 WebDriverWait wait = new WebDriverWait(driver, 15);
     	 wait.until(ExpectedConditions.titleContains(expectedtitle));
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
-    	 
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\homescreenshot.png");
      }
      @Then("Logout from redfishCRM and close browser")
-     public void logout_from_redfish_crm_and_close_browser() throws InterruptedException {
+     public void logout_from_redfish_crm_and_close_browser() throws InterruptedException, IOException {
     	 crmHomepage redfishCRMlogout=new crmHomepage(driver);
     	 WebDriverWait wait = new WebDriverWait(driver, 15);
     	 redfishCRMlogout.crmprofile().click();
@@ -492,8 +510,77 @@ public class StepDefination extends Utils {
     	 Thread.sleep(10000);
     	 redfishCRMlogout.crmsignout().sendKeys(Keys.ENTER);
     	 wait.until(ExpectedConditions.titleContains("Sign out"));
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\logoutscreenshot.png");
  		 driver.close();
  		 driver.quit();
+     }
+     @SuppressWarnings("deprecation")
+	@Then("Verify if user able to search with parent email id {string}")
+     public void verify_if_user_able_to_search_with_parent_email_id(String EmailId) throws IOException, InterruptedException {
+    	 crmHomepage redfishCRMsearch=new crmHomepage(driver);
+    	 WebDriverWait wait = new WebDriverWait(driver, 15);
+    	 Thread.sleep(15000);
+    	 driver.switchTo().frame("contentIFrame0");
+    	 wait.until(ExpectedConditions.elementToBeClickable(redfishCRMsearch.crmsearchbox()));
+    	 redfishCRMsearch.crmsearchbox().click();
+    	 redfishCRMsearch.crmsearchbox().clear();
+    	 redfishCRMsearch.crmsearchbox().sendKeys(EmailId);
+    	 redfishCRMsearch.crmsearchbox().sendKeys(Keys.ENTER);
+    	 redfishCRMsearch.crmclickonsearchresult().click();
+    	 wait.until(ExpectedConditions.titleContains("Contact:"));
+    	 Thread.sleep(10000);
+    	 
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\searchscreenshot.png");
+    	 driver.switchTo().parentFrame();
+    	 
+    	 
+     }
+     @Then("Verify if user able to see the parent first name in the contact screen {string}")
+     public void verify_if_user_able_to_see_the_parent_first_name_in_the_contact_screen(String ParentFirstName) throws InterruptedException, IOException {
+    	 crmContactpage redfishCRMcolntact=new crmContactpage(driver);
+    	 driver.switchTo().frame("contentIFrame1");
+    	 Thread.sleep(5000);
+    	 //redfishCRMcolntact.crmForename().click();
+    	 File actualfirstname=redfishCRMcolntact.crmForename().getScreenshotAs(OutputType.FILE);
+    	 FileUtils.copyFile(actualfirstname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\firstname.png"));
+    	 
+     }
+     @Then("Verify if user able to see the parent Surname in the contact screen {string}")
+     public void verify_if_user_able_to_see_the_parent_surname_in_the_contact_screen(String ParentSecondName) throws IOException, InterruptedException {
+    	 crmContactpage redfishCRMcolntactsurname=new crmContactpage(driver);
+    	 Thread.sleep(5000);
+    	 //redfishCRMcolntactsurname.crmlastname().click();
+    	 File actuallastname=redfishCRMcolntactsurname.crmlastname().getScreenshotAs(OutputType.FILE);
+    	 FileUtils.copyFile(actuallastname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\lastname.png"));
+    	 
+     }
+     @Then("Verify if user able to see the parent email id in the contact screen {string}")
+     public void verify_if_user_able_to_see_the_parent_email_id_in_the_contact_screen(String ParentEmailID) throws IOException, InterruptedException {
+    	 crmContactpage redfishCRMcolntactemail=new crmContactpage(driver);
+    	 Thread.sleep(5000);
+    	 File actualemaiid=redfishCRMcolntactemail.crmemailaddress1().getScreenshotAs(OutputType.FILE);
+    	 FileUtils.copyFile(actualemaiid,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\emailaddress1.png"));
+    	 
+     }
+     @Then("Verify if user able to see the Enquiry Type in the contact screen {string}")
+     public void verify_if_user_able_to_see_the_enquiry_type_in_the_contact_screen(String EnquiryType) throws IOException, InterruptedException {
+    	 crmContactpage redfishCRMcolntactenq=new crmContactpage(driver);
+    	 Thread.sleep(15000);
+    	 File actualenquiry=redfishCRMcolntactenq.crmemailaddress1().getScreenshotAs(OutputType.FILE);
+    	 FileUtils.copyFile(actualenquiry,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\emailaddress1.png"));
+    	 
+     }
+     @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table")
+     public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table() throws InterruptedException, IOException {
+    	 crmContactpage CRMConpgenq=new crmContactpage(driver);
+    	 Thread.sleep(5000);
+    	 
+    	 driver.switchTo().frame("contentIFrame1");
+    	 WebElement pagesSection=CRMConpgenq.crmcontactfram();
+    	 File src=pagesSection.getScreenshotAs(OutputType.FILE);
+    	 File trg=new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\enqtablescreenshot.png");
+    	 FileUtils.copyFile(src, trg);
+    	 driver.switchTo().parentFrame();
      }
 
 }

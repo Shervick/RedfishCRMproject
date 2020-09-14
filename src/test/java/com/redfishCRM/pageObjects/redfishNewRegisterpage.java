@@ -28,6 +28,7 @@ WebDriver driver;
 	By regemailid=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_MainParent_EMAIL");
 	By regdob=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_Child_DOB");
 	By nextparent=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_StepNavigationTemplateContainerID_bNext");
+	By enrolmentenddate=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_Enrolment_LEAVE_DATE");
 	By nextchild=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_StepNavigationTemplateContainerID_bNext");
 	By PhotoPreferenceall=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_Child_rblPhoto_0");
 	By PhotoPreferenceIndividual=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_wRegister_Child_rblPhoto_1");
@@ -61,6 +62,7 @@ WebDriver driver;
 	public WebElement nextchild() {return driver.findElement(nextchild);}
 	public WebElement nextHealthcare() {return driver.findElement(nextHealthcare);}
 	public WebElement nextDietary() {return driver.findElement(nextDietary);}
+	public WebElement enrolmentenddate() {return driver.findElement(enrolmentenddate);}
 	public WebElement Donotaddanotherparent() {return driver.findElement(Donotaddanotherparent);}
 	public WebElement nextenrolment() {return driver.findElement(nextenrolment);}
 	public WebElement nextfunding() {return driver.findElement(nextfunding);}
