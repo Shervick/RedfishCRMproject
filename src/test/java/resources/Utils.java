@@ -18,19 +18,19 @@ public class Utils {
 	public WebDriver driver;
 	public static String getGlobalValue(String application) throws IOException
 	{
-		FileInputStream fis =new FileInputStream("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream("./src/test/java/resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(application);
 	}
 	
 	public static String getProperty(String browserProperty) throws IOException {
-		FileInputStream fis =new FileInputStream("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream("./src/test/java/resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(browserProperty);
 	}
 	
 	public WebDriver initializerDriver(String Browser) throws IOException{
-		FileInputStream fis =new FileInputStream("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream("./src/test/java/resources\\global.properties");
 		prop.load(fis);
 		String browsername=prop.getProperty("Browser");
 		

@@ -485,7 +485,7 @@ public class StepDefination extends Utils {
      @When("User enters RedfishCRM User Name {string} and Password {string}")
      public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) throws IOException, InterruptedException {
     	 crmloginpage loginredfishCRM=new crmloginpage(driver);
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\loginscreenshot.png");
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/loginscreenshot.png");
     	 loginredfishCRM.crmUsername().click();
     	 loginredfishCRM.crmUsername().sendKeys(UserName);
     	 loginredfishCRM.crmPassword().click();
@@ -501,7 +501,7 @@ public class StepDefination extends Utils {
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\homescreenshot.png");
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/homescreenshot.png");
      }
      @Then("Logout from redfishCRM and close browser {string}")
      public void logout_from_redfish_crm_and_close_browser(String CRMlogoutfilename) throws InterruptedException, IOException {
@@ -512,7 +512,7 @@ public class StepDefination extends Utils {
     	 Thread.sleep(10000);
     	 redfishCRMlogout.crmsignout().sendKeys(Keys.ENTER);
     	 wait.until(ExpectedConditions.titleContains("Sign out"));
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+CRMlogoutfilename+".png");
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+CRMlogoutfilename+".png");
  		 driver.close();
  		 driver.quit();
      }
@@ -531,7 +531,7 @@ public class StepDefination extends Utils {
     	 redfishCRMsearch.crmclickonsearchresult().click();
     	 wait.until(ExpectedConditions.titleContains("Contact:"));
     	 Thread.sleep(10000);
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+contactfilename+".png");
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactfilename+".png");
     	 driver.switchTo().parentFrame();
     	 
     	 
@@ -540,10 +540,10 @@ public class StepDefination extends Utils {
      public void verify_if_user_able_to_see_the_parent_first_name_in_the_contact_screen(String ParentFirstName, String filename) throws InterruptedException, IOException {
     	 crmContactpage redfishCRMcolntact=new crmContactpage(driver);
     	 driver.switchTo().frame("contentIFrame1");
-    	 Thread.sleep(5000);
+    	 Thread.sleep(15000);
     	 //redfishCRMcolntact.crmForename().click();
     	 File actualfirstname=redfishCRMcolntact.crmForename().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualfirstname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\"+filename+".png"));
+    	 FileUtils.copyFile(actualfirstname,new File("./target/cucumber-html-reports/Screenshots/"+filename+".png"));
     	 
      }
      @Then("Verify if user able to see the parent Surname in the contact screen {string}")
@@ -552,7 +552,7 @@ public class StepDefination extends Utils {
     	 Thread.sleep(5000);
     	 //redfishCRMcolntactsurname.crmlastname().click();
     	 File actuallastname=redfishCRMcolntactsurname.crmlastname().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actuallastname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\lastname.png"));
+    	 FileUtils.copyFile(actuallastname,new File("./target/cucumber-html-reports/Screenshots/lastname.png"));
     	 
      }
      @Then("Verify if user able to see the parent email id in the contact screen {string}")
@@ -560,7 +560,7 @@ public class StepDefination extends Utils {
     	 crmContactpage redfishCRMcolntactemail=new crmContactpage(driver);
     	 Thread.sleep(5000);
     	 File actualemaiid=redfishCRMcolntactemail.crmemailaddress1().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualemaiid,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\emailaddress1.png"));
+    	 FileUtils.copyFile(actualemaiid,new File("./target/cucumber-html-reports/Screenshots/emailaddress1.png"));
     	 
      }
      @Then("Verify if user able to see the Enquiry Type in the contact screen {string}")
@@ -568,7 +568,7 @@ public class StepDefination extends Utils {
     	 crmContactpage redfishCRMcolntactenq=new crmContactpage(driver);
     	 Thread.sleep(15000);
     	 File actualenquiry=redfishCRMcolntactenq.crmemailaddress1().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualenquiry,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\emailaddress1.png"));
+    	 FileUtils.copyFile(actualenquiry,new File("./target/cucumber-html-reports/Screenshots/emailaddress1.png"));
     	 
      }
      @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table {string}")
@@ -580,7 +580,7 @@ public class StepDefination extends Utils {
     	 driver.manage().window().setSize(d);
     	 //((JavascriptExecutor)driver).executeScript("scroll(0,400)");
     	 //crmcntenq.crmcontactenqlable().click();
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+contactwithenqfilename+".png");
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactwithenqfilename+".png");
     	 //driver.switchTo().parentFrame();
      }
 
