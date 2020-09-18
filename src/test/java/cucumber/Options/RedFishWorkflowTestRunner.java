@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 features="src/test/java/features/RedfishWorkflow.feature"
 ,plugin="json:target/jsonReports/cucumber-report.json"
 ,glue= "stepDefinations"
-,tags = "@RedfishEnquirytwoChildRegister"
+,tags = ("@SmokeTest")
 )
 public class RedFishWorkflowTestRunner {
 

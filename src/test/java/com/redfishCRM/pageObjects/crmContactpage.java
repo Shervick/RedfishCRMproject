@@ -33,6 +33,7 @@ protected static WebDriver driver;
 	By crmForename=By.cssSelector("#firstname");
 	By crmenquerytable=By.cssSelector("div#contactopportunitiesgrid");
 	By crmcontactfram=By.cssSelector("div.crmContentPanel");
+	By crmcontactenqlable=By.cssSelector("table#gridBodyTable tr:nth-child(5) > td:nth-child(2) > nobr > a > span");
 	
 	
 	public WebElement crmprofile() {return driver.findElement(crmprofile);}
@@ -42,6 +43,7 @@ protected static WebDriver driver;
 	public WebElement crmforename() {return driver.findElement(crmforename);}
 	public WebElement crmlastname() {return driver.findElement(crmlastname);}
 	public WebElement crmemailaddress1() {return driver.findElement(crmemailaddress1);}
+	public WebElement crmcontactenqlable() {return driver.findElement(crmcontactenqlable);}
 	public WebElement crmmobilephone() {return driver.findElement(crmemailaddress1);}
 	public WebElement crmenquirytab() {return driver.findElement(crmenquirytab);}
 	public WebElement crmForename() {return driver.findElement(crmForename);}

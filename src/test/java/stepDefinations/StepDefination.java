@@ -22,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -482,7 +483,7 @@ public class StepDefination extends Utils {
     	 secondchildsibling.nextfromsibling().click();
      }
      @When("User enters RedfishCRM User Name {string} and Password {string}")
-     public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) throws IOException {
+     public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) throws IOException, InterruptedException {
     	 crmloginpage loginredfishCRM=new crmloginpage(driver);
     	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\loginscreenshot.png");
     	 loginredfishCRM.crmUsername().click();
@@ -490,6 +491,7 @@ public class StepDefination extends Utils {
     	 loginredfishCRM.crmPassword().click();
     	 loginredfishCRM.crmPassword().sendKeys(Password);
     	 loginredfishCRM.crmsignin().click();
+    	 Thread.sleep(5000);
  		
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
@@ -501,8 +503,8 @@ public class StepDefination extends Utils {
     	 assertEquals(actualCRMtitle,expectedtitle);
     	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\homescreenshot.png");
      }
-     @Then("Logout from redfishCRM and close browser")
-     public void logout_from_redfish_crm_and_close_browser() throws InterruptedException, IOException {
+     @Then("Logout from redfishCRM and close browser {string}")
+     public void logout_from_redfish_crm_and_close_browser(String CRMlogoutfilename) throws InterruptedException, IOException {
     	 crmHomepage redfishCRMlogout=new crmHomepage(driver);
     	 WebDriverWait wait = new WebDriverWait(driver, 15);
     	 redfishCRMlogout.crmprofile().click();
@@ -510,13 +512,13 @@ public class StepDefination extends Utils {
     	 Thread.sleep(10000);
     	 redfishCRMlogout.crmsignout().sendKeys(Keys.ENTER);
     	 wait.until(ExpectedConditions.titleContains("Sign out"));
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\logoutscreenshot.png");
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+CRMlogoutfilename+".png");
  		 driver.close();
  		 driver.quit();
      }
      @SuppressWarnings("deprecation")
-	@Then("Verify if user able to search with parent email id {string}")
-     public void verify_if_user_able_to_search_with_parent_email_id(String EmailId) throws IOException, InterruptedException {
+	@Then("Verify if user able to search with parent email id {string} {string}")
+     public void verify_if_user_able_to_search_with_parent_email_id(String EmailId, String contactfilename) throws IOException, InterruptedException {
     	 crmHomepage redfishCRMsearch=new crmHomepage(driver);
     	 WebDriverWait wait = new WebDriverWait(driver, 15);
     	 Thread.sleep(15000);
@@ -529,20 +531,19 @@ public class StepDefination extends Utils {
     	 redfishCRMsearch.crmclickonsearchresult().click();
     	 wait.until(ExpectedConditions.titleContains("Contact:"));
     	 Thread.sleep(10000);
-    	 
-    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\searchscreenshot.png");
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+contactfilename+".png");
     	 driver.switchTo().parentFrame();
     	 
     	 
      }
-     @Then("Verify if user able to see the parent first name in the contact screen {string}")
-     public void verify_if_user_able_to_see_the_parent_first_name_in_the_contact_screen(String ParentFirstName) throws InterruptedException, IOException {
+     @Then("Verify if user able to see the parent first name in the contact screen {string} {string}")
+     public void verify_if_user_able_to_see_the_parent_first_name_in_the_contact_screen(String ParentFirstName, String filename) throws InterruptedException, IOException {
     	 crmContactpage redfishCRMcolntact=new crmContactpage(driver);
     	 driver.switchTo().frame("contentIFrame1");
     	 Thread.sleep(5000);
     	 //redfishCRMcolntact.crmForename().click();
     	 File actualfirstname=redfishCRMcolntact.crmForename().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualfirstname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\firstname.png"));
+    	 FileUtils.copyFile(actualfirstname,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\"+filename+".png"));
     	 
      }
      @Then("Verify if user able to see the parent Surname in the contact screen {string}")
@@ -570,17 +571,17 @@ public class StepDefination extends Utils {
     	 FileUtils.copyFile(actualenquiry,new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\emailaddress1.png"));
     	 
      }
-     @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table")
-     public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table() throws InterruptedException, IOException {
-    	 crmContactpage CRMConpgenq=new crmContactpage(driver);
+     @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table {string}")
+     public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(String contactwithenqfilename) throws InterruptedException, IOException {
+    	 //crmContactpage crmcntenq = new crmContactpage(driver);
     	 Thread.sleep(5000);
-    	 
-    	 driver.switchTo().frame("contentIFrame1");
-    	 WebElement pagesSection=CRMConpgenq.crmcontactfram();
-    	 File src=pagesSection.getScreenshotAs(OutputType.FILE);
-    	 File trg=new File("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\enqtablescreenshot.png");
-    	 FileUtils.copyFile(src, trg);
-    	 driver.switchTo().parentFrame();
+    	 //driver.switchTo().frame("contentIFrame1");
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 //((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+    	 //crmcntenq.crmcontactenqlable().click();
+    	 fullpagescreenshot("C:\\Users\\E001291\\Desktop\\BH\\Red Fish\\RedFish Automation\\Script\\RedfishCRMproject\\target\\cucumber-html-reports\\Screenshots\\"+contactwithenqfilename+".png");
+    	 //driver.switchTo().parentFrame();
      }
 
 }

@@ -1,5 +1,5 @@
 Feature: Validate Redfish Workflows Page
-@RedfishEnquirySingleChildRegister @Regression 
+@RedfishEnquirySingleChildRegister 
 Scenario Outline: Verify if user is able to create an enquiry and register the child
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
@@ -27,7 +27,7 @@ Examples:
     |99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Stanton         |Birmingham       |99-2063 St. Marys Road |SO52 0LG |07041596398  |sbirminghamo7@infoseek.com  |BH Website                |Steffen             |Birmingham            |01/09/2016 |M                |04/09/2020              |All Days      |                     |                      |               |                  |                         |                    |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000045   |Child             |
 	|99160101NM |Password1 |redfishUAT  |Home 		   |Enquiries    |Enquiry     |New enquiry      |Sunny           |Pringuer         |99-2064 St. Marys Road |SO53 0LG |07565695332  |springuero6@gizmodo.com     |BH Website                |Quintin             |Pringuer              |07/09/2016 |M                |04/09/2020              |All Days      |                     |                      |               |                  |                         |                    |Enquiry Details |No      |Father       |Yes                    |All             |DAST25416TFC |MIOS62391TFC     |50700000043   |Child             |
 
-@RedfishEnquirytwoChildRegister @Regression 
+@RedfishEnquirytwoChildRegister @SmokeTest 
 Scenario Outline: Verify if user is able to create an enquiry with two children and register the two children
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
@@ -62,16 +62,34 @@ Then Logout from redfish and close browser
 
 Examples:
 	|UserName|Password|application|expectedtitle|MainMenuItem|SubMenuItem|expectedenqtitle|ParentFirstName|ParentSecondName|ParentName|Address|Postcode|MobileNumber|EmailId|Source|FirstChildFirstName|SecondChildSecondName|DOB|FirstChildGender|FirstEnrolmentStartDate|FirstEnrolmentEndDate|BookingPatten|SecondChildFirstName|SecondChildSecondName|SecondChildDOB|SecondChildGender|SecondEnrolmentStartDate|SecondBookingPatten|EnquiryDetails|Sibling|Relationship|ParentalResponsibility|PhotoPreference|TFCReference|LEAFEETReference|hrFundingCode|ChildProfileTitle|
-    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Thom|Camsey|Thom Camsey|99-2082 St. Marys Road|SO69 0LG|07346777963|tcamseymd@constantcontact.com|BH Website|Jennee|Camsey|02/01/2017|F|14/09/2020|07/09/2021|All Days|Olva|Camsey|03/01/2018|F|14/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000119|Child|
-    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Eduard|Clementucci|Eduard Clementucci|99-2083 St. Marys Road|SO70 0LG|07363081117|eclementuccime@fc2.com|BH Website|Amabel|Clementucci|02/01/2017|F|14/09/2020|07/09/2021|All Days|Johny|Clementucci|03/01/2018|M|14/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000120|Child|
-    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Emery|Lideard|Emery Lideard|99-2084 St. Marys Road|SO71 0LG|07567088018|elideardmf@indiegogo.com|BH Website|Pietrek|Lideard|02/01/2017|F|14/09/2020|07/09/2021|All Days|Harald|Lideard|03/01/2018|M|14/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000121|Child|
-	
+    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Horatius|Quinton|Horatius Quinton|99-2094 St. Marys Road|SO84 0LG|07537695686|hquintonlg@parallels.com|BH Website|Terrance|Quinton|18/10/2017|M|18/09/2020|07/09/2021|All Days|Jenna|Quinton|18/09/2018|F|18/09/2020|All Days|Enquiry Details|No|Father|Yes|All|DAST25417TFC|MIOS62392TFC|50700000131|Child|
+    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Lars|Bangley|Lars Bangley|99-2095 St. Marys Road|SO85 0LG|07999426974|lbangleylh@businesswire.com|BH Website|Marven|Bangley|18/10/2017|M|18/09/2020|07/09/2021|All Days|Valle|Bangley|18/09/2018|M|18/09/2020|All Days|Enquiry Details|No|Father|Yes|All|DAST25417TFC|MIOS62392TFC|50700000132|Child|
+    |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Sue|Elcoate|Sue Elcoate|99-2096 St. Marys Road|SO86 0LG|07162057452|selcoateli@woothemes.com|BH Website|Clarinda|Elcoate|18/10/2017|F|18/09/2020|07/09/2021|All Days|Stoddard|Elcoate|18/09/2018|F|18/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000133|Child|
+
+@RedfishCRMContactSearch @SmokeTest 
+Scenario Outline: Verify if user is able to create an enquiry and register the child
+Given Initialize the browser with chrome
+And Open Web Application "<application>" 
+When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>"
+Then Verify if Enquiry is created by taking the screen shot of the enquiry table "<contactwithenqfilename>"
+Then Logout from redfishCRM and close browser "<CRMlogoutfilename>"
+
+Examples:
+	|UserName|Password|application|expectedtitle|ParentEmailID|ParentFirstName|ParentSecondName|EnquiryType|MobileNumber|contactfilename|contactwithenqfilename|CRMlogoutfilename|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|hquintonlg@parallels.com|Horatius|Quinton|RedFish|07537695686|contactHoratiusQuinton|contactenqHoratiusQuinton|contactlogoutHoratiusQuinton|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|lbangleylh@businesswire.com|Lars|Bangley|RedFish|07999426974|contactLarsBangley|contactenqLarsBangley|contactlogoutLarsBangley|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|selcoateli@woothemes.com|Sue|Elcoate|RedFish|07162057452|contactSueElcoate|contactenqSueElcoate|contactlogoutSueElcoate|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scbgounell9@yelp.com|Beryle|Gounel|Web|07989155859|contactBeryleGounel|contactenqBeryleGounel|contactlogoutBeryleGounel|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scgmccrannl7@1688.com|Ginevra|McCrann|Web|07164198897|contactGinevraMcCrann|contactenqGinevraMcCrann|contactlogoutGinevraMcCrann|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scmclutterhaml6@dyndns.com|Martyn|Clutterham|Web|07552586392|contactMartynClutterham|contactenqMartynClutterham|contactlogoutMartynClutterham|
+
 
 	
 	
-	
 
-@RedfishSingleChildEnquiry  @Regression
+@RedfishSingleChildEnquiry  
 Scenario Outline: Verify if user is able to create an enquiry for a single child
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
@@ -94,7 +112,7 @@ Examples:
 	
 
 
-@RedfishSingleChildEnquiryVisit  @Regression
+@RedfishSingleChildEnquiryVisit 
 Scenario Outline: Verify if user is able to create an enquiry for a single child
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
@@ -174,7 +192,7 @@ Examples:
 	|UserName   |Password  |application |expectedtitle |ChildName      |ParentName       |InvalidChildName |InvalidParentName |EnquiryParentName |EnquiryChildName |Nursery   |					  
 	|99160101NM |Password1 |redfishUAT  |Home 		   |Javier Glawsop |Carolyne Glawsop |@#$              |@#$ 	          |Samantha Belfrage |Matelda Belfrage |Abbeymore | 
 
-@RedfishtwoChildEnquiry  @Regression
+@RedfishtwoChildEnquiry  
 Scenario Outline: Verify if user is able to create an enquiry for a two children
 Given Initialize the browser with chrome
 And Open Web Application "<application>" 
