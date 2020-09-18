@@ -491,7 +491,7 @@ public class StepDefination extends Utils {
     	 loginredfishCRM.crmPassword().click();
     	 loginredfishCRM.crmPassword().sendKeys(Password);
     	 loginredfishCRM.crmsignin().click();
-    	 Thread.sleep(5000);
+    	 Thread.sleep(15000);
  		
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
@@ -549,7 +549,7 @@ public class StepDefination extends Utils {
      @Then("Verify if user able to see the parent Surname in the contact screen {string}")
      public void verify_if_user_able_to_see_the_parent_surname_in_the_contact_screen(String ParentSecondName) throws IOException, InterruptedException {
     	 crmContactpage redfishCRMcolntactsurname=new crmContactpage(driver);
-    	 Thread.sleep(5000);
+    	 Thread.sleep(15000);
     	 //redfishCRMcolntactsurname.crmlastname().click();
     	 File actuallastname=redfishCRMcolntactsurname.crmlastname().getScreenshotAs(OutputType.FILE);
     	 FileUtils.copyFile(actuallastname,new File("./target/cucumber-html-reports/Screenshots/lastname.png"));
@@ -558,7 +558,7 @@ public class StepDefination extends Utils {
      @Then("Verify if user able to see the parent email id in the contact screen {string}")
      public void verify_if_user_able_to_see_the_parent_email_id_in_the_contact_screen(String ParentEmailID) throws IOException, InterruptedException {
     	 crmContactpage redfishCRMcolntactemail=new crmContactpage(driver);
-    	 Thread.sleep(5000);
+    	 Thread.sleep(15000);
     	 File actualemaiid=redfishCRMcolntactemail.crmemailaddress1().getScreenshotAs(OutputType.FILE);
     	 FileUtils.copyFile(actualemaiid,new File("./target/cucumber-html-reports/Screenshots/emailaddress1.png"));
     	 
@@ -574,7 +574,7 @@ public class StepDefination extends Utils {
      @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table {string}")
      public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(String contactwithenqfilename) throws InterruptedException, IOException {
     	 //crmContactpage crmcntenq = new crmContactpage(driver);
-    	 Thread.sleep(5000);
+    	 Thread.sleep(15000);
     	 //driver.switchTo().frame("contentIFrame1");
     	 Dimension d = new Dimension(1920,1080);
     	 driver.manage().window().setSize(d);
