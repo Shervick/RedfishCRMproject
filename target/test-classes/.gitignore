@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /cucumber/
 /stepDefinations/
 /resources/
 /features/
+=======
+/features/
+/stepDefinations/
+/com/
+/cucumber/
+/resources/
+>>>>>>> 90c67fc7d22a1a49df8b7386c5249fd943a53650

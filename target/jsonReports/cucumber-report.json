@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-09-18T10:31:30.738Z",
+        "start_timestamp": "2020-09-20T18:04:38.791Z",
         "line": 84,
         "name": "Verify if user is able to create an enquiry and register the child",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4666789700,
+              "duration": 4480711900,
               "status": "passed"
             },
             "line": 71,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1609896200,
+              "duration": 2029869600,
               "status": "passed"
             },
             "line": 72,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 10198562400,
+              "duration": 20014719900,
               "status": "passed"
             },
             "line": 73,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 548959400,
+              "duration": 487961100,
               "status": "passed"
             },
             "line": 74,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 31676571700,
+              "duration": 32915882900,
               "status": "passed"
             },
             "line": 75,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 5722769600,
+              "duration": 15732988700,
               "status": "passed"
             },
             "line": 76,
@@ -123,7 +123,7 @@
           },
           {
             "result": {
-              "duration": 14573413900,
+              "duration": 14028098800,
               "status": "passed"
             },
             "line": 77,
@@ -132,300 +132,6 @@
               "arguments": [
                 {
                   "val": "\"contactlogoutBeryleGounel\"",
-                  "offset": 41
-                }
-              ],
-              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@RedfishCRMContactSearch"
-          },
-          {
-            "name": "@SmokeTest"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-09-18T10:32:39.951Z",
-        "line": 85,
-        "name": "Verify if user is able to create an enquiry and register the child",
-        "description": "",
-        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-and-register-the-child;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 3632835100,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "Initialize the browser with chrome",
-            "match": {
-              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1308943200,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "Open Web Application \"UATCRMUrl\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"UATCRMUrl\"",
-                  "offset": 21
-                }
-              ],
-              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9011591800,
-              "status": "passed"
-            },
-            "line": 73,
-            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"99160101@brighthorizons.com\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"Sam18You\"",
-                  "offset": 76
-                }
-              ],
-              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 382983500,
-              "status": "passed"
-            },
-            "line": 74,
-            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
-                  "offset": 47
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 31675570500,
-              "status": "passed"
-            },
-            "line": 75,
-            "name": "Verify if user able to search with parent email id \"scgmccrannl7@1688.com\" \"contactGinevraMcCrann\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"scgmccrannl7@1688.com\"",
-                  "offset": 51
-                },
-                {
-                  "val": "\"contactGinevraMcCrann\"",
-                  "offset": 75
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5710740400,
-              "status": "passed"
-            },
-            "line": 76,
-            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqGinevraMcCrann\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"contactenqGinevraMcCrann\"",
-                  "offset": 76
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 14662359400,
-              "status": "passed"
-            },
-            "line": 77,
-            "name": "Logout from redfishCRM and close browser \"contactlogoutGinevraMcCrann\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"contactlogoutGinevraMcCrann\"",
-                  "offset": 41
-                }
-              ],
-              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@RedfishCRMContactSearch"
-          },
-          {
-            "name": "@SmokeTest"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-09-18T10:33:46.356Z",
-        "line": 86,
-        "name": "Verify if user is able to create an enquiry and register the child",
-        "description": "",
-        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-and-register-the-child;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 3685862400,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "Initialize the browser with chrome",
-            "match": {
-              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1593896200,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "Open Web Application \"UATCRMUrl\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"UATCRMUrl\"",
-                  "offset": 21
-                }
-              ],
-              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9882565900,
-              "status": "passed"
-            },
-            "line": 73,
-            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"99160101@brighthorizons.com\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"Sam18You\"",
-                  "offset": 76
-                }
-              ],
-              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 404973000,
-              "status": "passed"
-            },
-            "line": 74,
-            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
-                  "offset": 47
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 31576575700,
-              "status": "passed"
-            },
-            "line": 75,
-            "name": "Verify if user able to search with parent email id \"scmclutterhaml6@dyndns.com\" \"contactMartynClutterham\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"scmclutterhaml6@dyndns.com\"",
-                  "offset": 51
-                },
-                {
-                  "val": "\"contactMartynClutterham\"",
-                  "offset": 80
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5772737800,
-              "status": "passed"
-            },
-            "line": 76,
-            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqMartynClutterham\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"contactenqMartynClutterham\"",
-                  "offset": 76
-                }
-              ],
-              "location": "stepDefinations.StepDefination.verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 14651345400,
-              "status": "passed"
-            },
-            "line": 77,
-            "name": "Logout from redfishCRM and close browser \"contactlogoutMartynClutterham\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"contactlogoutMartynClutterham\"",
                   "offset": 41
                 }
               ],
