@@ -3,6 +3,8 @@ package resources;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -11,6 +13,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 
 public class Utils {
@@ -58,6 +64,17 @@ public class Utils {
 		File trg=new File(path);
 		FileUtils.copyFile(src, trg);
 		
+	}
+	public ExtentReports extent;
+	public void configrep() {
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String reportpath=System.getProperty("user.dir")+"\\reports\\index.html";
+		ExtentSparkReporter report = new ExtentSparkReporter(reportpath);
+		report.config().setReportName("RedfishAutomation");
+		report.config().setReportName("TestResult "+timeStamp);
+		extent = new ExtentReports();
+		extent.attachReporter(report);
+		extent.setSystemInfo("TesterName", "Shervick Samson");
 	}
 
 }

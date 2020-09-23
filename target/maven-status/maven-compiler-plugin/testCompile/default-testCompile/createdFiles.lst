@@ -1,0 +1,14 @@
+cucumber\Options\RedFishCRMWorkflowTestRunner.class
+com\redfishCRM\pageObjects\redfishNewRegisterpage.class
+com\QERedfishRegression\app\AppTest.class
+com\redfishCRM\pageObjects\redfishHomepage.class
+com\redfishCRM\pageObjects\redfishsearchpage.class
+resources\TestDataBuild.class
+com\redfishCRM\pageObjects\crmContactpage.class
+com\redfishCRM\pageObjects\crmHomepage.class
+com\redfishCRM\pageObjects\crmloginpage.class
+com\redfishCRM\pageObjects\redfishLoginpage.class
+com\redfishCRM\pageObjects\redfishEnquiryManagementpage.class
+com\redfishCRM\pageObjects\redfishNewEnquirypage.class
+resources\Utils.class
+stepDefinations\StepDefination.class

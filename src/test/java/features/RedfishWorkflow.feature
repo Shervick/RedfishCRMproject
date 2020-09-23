@@ -1,4 +1,4 @@
-Feature: Validate Redfish Workflows Page
+Feature: Validate Redfish Enquiry/Registration workflow
 @RedfishEnquirySingleChildRegister 
 Scenario Outline: Verify if user is able to create an enquiry and register the child
 Given Initialize the browser with chrome
@@ -85,9 +85,6 @@ Examples:
    #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scgmccrannl7@1688.com|Ginevra|McCrann|Web|07164198897|contactGinevraMcCrann|contactenqGinevraMcCrann|contactlogoutGinevraMcCrann|
    #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scmclutterhaml6@dyndns.com|Martyn|Clutterham|Web|07552586392|contactMartynClutterham|contactenqMartynClutterham|contactlogoutMartynClutterham|
 
-
-	
-	
 
 @RedfishSingleChildEnquiry  
 Scenario Outline: Verify if user is able to create an enquiry for a single child

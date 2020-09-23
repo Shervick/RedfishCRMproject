@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-09-20T18:04:38.791Z",
+        "start_timestamp": "2020-09-23T07:42:53.805Z",
         "line": 84,
         "name": "Verify if user is able to create an enquiry and register the child",
         "description": "",
-        "id": "validate-redfish-workflows-page;verify-if-user-is-able-to-create-an-enquiry-and-register-the-child;;2",
+        "id": "validate-redfish-enquiry/registration-workflow;verify-if-user-is-able-to-create-an-enquiry-and-register-the-child;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4480711900,
+              "duration": 8201000000,
               "status": "passed"
             },
             "line": 71,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2029869600,
+              "duration": 3604000000,
               "status": "passed"
             },
             "line": 72,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 20014719900,
+              "duration": 22147000000,
               "status": "passed"
             },
             "line": 73,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 487961100,
+              "duration": 639000000,
               "status": "passed"
             },
             "line": 74,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 32915882900,
+              "duration": 36206000000,
               "status": "passed"
             },
             "line": 75,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 15732988700,
+              "duration": 15898000000,
               "status": "passed"
             },
             "line": 76,
@@ -123,7 +123,7 @@
           },
           {
             "result": {
-              "duration": 14028098800,
+              "duration": 13575000000,
               "status": "passed"
             },
             "line": 77,
@@ -150,9 +150,9 @@
         ]
       }
     ],
-    "name": "Validate Redfish Workflows Page",
+    "name": "Validate Redfish Enquiry/Registration workflow",
     "description": "",
-    "id": "validate-redfish-workflows-page",
+    "id": "validate-redfish-enquiry/registration-workflow",
     "keyword": "Feature",
     "uri": "file:src/test/java/features/RedfishWorkflow.feature",
     "tags": []

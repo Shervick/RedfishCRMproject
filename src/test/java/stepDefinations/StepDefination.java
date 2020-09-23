@@ -31,6 +31,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
 
 import com.redfishCRM.pageObjects.crmloginpage;
 import com.redfishCRM.pageObjects.crmContactpage;
@@ -48,12 +49,15 @@ public class StepDefination extends Utils {
 	
 	@Given("Initialize the browser with chrome")
     public void initialize_the_browser_with_chrome() throws Throwable {
+		
 		driver=initializerDriver("chrome");
 		
     }
 	@Given("Open Web Application {string}")
 	public void open_web_application(String application) throws Throwable {
+		
 		driver.get(getGlobalValue(application));
+		
 	}
 	
 	@When("User enters User Name {string} and Password {string}")
