@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -76,5 +77,21 @@ public class Utils {
 		extent.attachReporter(report);
 		extent.setSystemInfo("TesterName", "Shervick Samson");
 	}
+	public void clickelement(WebElement locator) {
+		locator.click();
+	}
+    public void typekey(WebElement keys,String value) {
+    	keys.sendKeys(value);
+	}
+    public void clearinputfield(WebElement field) {
+    	field.click();
+    	
+    }
+    public void keyboardenter(WebElement actionkeysenter) {
+    	actionkeysenter.sendKeys(Keys.ENTER);
+    }
+    public void keyboardtab(WebElement actionkeystab) {
+    	actionkeystab.sendKeys(Keys.TAB);
+    }
 
 }

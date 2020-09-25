@@ -63,11 +63,11 @@ public class StepDefination extends Utils {
 	@When("User enters User Name {string} and Password {string}")
 	public void user_enters_user_name_and_password(String username, String password) throws Throwable {	 
 		redfishLoginpage loginredfish=new redfishLoginpage(driver);
-		loginredfish.Username().click();
-		loginredfish.Username().sendKeys(username);
-		loginredfish.Password().click();
-		loginredfish.Password().sendKeys(password);
-		loginredfish.Login().click();
+		clickelement(loginredfish.Username());
+		typekey(loginredfish.Username(),username);
+		clickelement(loginredfish.Password());
+		typekey(loginredfish.Password(),password);
+		clickelement(loginredfish.Login());
 	
 	    }
      @Then("Verify if the web page title actual {string}")
@@ -87,10 +87,10 @@ public class StepDefination extends Utils {
     	 redfishHomepage hpaction =new redfishHomepage(driver);
     	 
     	 if (MainMenuItem.equalsIgnoreCase("Enquiries")) {
-    		 hpaction.Enquiriesmainmenulink().click();
+    		 clickelement(hpaction.Enquiriesmainmenulink());
     	 }
     	 if (SubMenuItem.equalsIgnoreCase("Enquiry")){
-    	 hpaction.Enquiriesubmenulink().click();
+    		 clickelement(hpaction.Enquiriesubmenulink());
     	 }
      }
      @Then("Verify if the web page submenu title is {string}")
@@ -102,18 +102,18 @@ public class StepDefination extends Utils {
      @When("Parent First Name {string} Parent Second Name {string} Address {string} Postcode {string} MobileNumber {string} Email id {string}")
      public void parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(String FirstName , String SecondName, String Address, String Postcode, String MobileNumber, String Emailid) {
     	 redfishNewEnquirypage parentinfo = new redfishNewEnquirypage(driver);
-    	 parentinfo.forename().click();
-    	 parentinfo.forename().sendKeys(FirstName);
-    	 parentinfo.surname().click();
-    	 parentinfo.surname().sendKeys(SecondName);
-    	 parentinfo.addressline1().click();
-    	 parentinfo.addressline1().sendKeys(Address);
-    	 parentinfo.postcode().click();
-    	 parentinfo.postcode().sendKeys(Postcode);
-    	 parentinfo.mobilenumber().click();
-    	 parentinfo.mobilenumber().sendKeys(MobileNumber);
-    	 parentinfo.emailid().click();
-    	 parentinfo.emailid().sendKeys(Emailid);    	 
+    	 clickelement(parentinfo.forename());
+    	 typekey(parentinfo.forename(),FirstName);
+    	 clickelement(parentinfo.surname());
+    	 typekey(parentinfo.surname(),SecondName);
+    	 clickelement(parentinfo.addressline1());
+    	 typekey(parentinfo.addressline1(),Address);
+    	 clickelement(parentinfo.postcode());
+    	 typekey(parentinfo.postcode(),Postcode);
+    	 clickelement(parentinfo.mobilenumber());
+    	 typekey(parentinfo.mobilenumber(),MobileNumber);
+    	 clickelement(parentinfo.emailid());
+    	 typekey(parentinfo.emailid(),Emailid);    	 
     	 
      }
      @When("The source is selected as {string}")
@@ -125,68 +125,68 @@ public class StepDefination extends Utils {
      @When("The First Child First Name {string} First Child Second Name {string} First Child DOB {string} Gender {string} Enrolment Start Date {string}")
      public void the_first_child_first_name_first_child_second_name_first_child_dob_gender_enrolment_start_date(String FirstChildFirstName, String FirstChildSecondName, String FirstChildDOB, String FirstChildGender, String FirstEnrolmentStartDate) {
     	 redfishNewEnquirypage childinfo = new redfishNewEnquirypage(driver);
-    	 childinfo.childfistname().click();
-    	 childinfo.childfistname().sendKeys(FirstChildFirstName);
-    	 childinfo.childsecondname().click();
-    	 childinfo.childsecondname().sendKeys(FirstChildSecondName);
-    	 childinfo.childDOB().sendKeys(FirstChildDOB);
-    	 childinfo.childDOB().sendKeys(Keys.ENTER);
+    	 clickelement(childinfo.childfistname());
+    	 typekey(childinfo.childfistname(),FirstChildFirstName);
+    	 clickelement(childinfo.childsecondname());
+    	 typekey(childinfo.childsecondname(),FirstChildSecondName);
+    	 typekey(childinfo.childDOB(),FirstChildDOB);
+    	 keyboardenter(childinfo.childDOB());
  		if (FirstChildGender.equalsIgnoreCase("M")) {
- 			childinfo.Genderm().click();
+ 			clickelement(childinfo.Genderm());
  			
  		}else {
- 			childinfo.Genderf().click();
+ 			clickelement(childinfo.Genderf());
  		}
- 		childinfo.startdate().sendKeys(FirstEnrolmentStartDate);
- 		childinfo.startdate().sendKeys(Keys.ENTER);
+ 		typekey(childinfo.startdate(),FirstEnrolmentStartDate);
+ 		keyboardenter(childinfo.startdate());
      }
      @When("First child Booking Patten is {string}")
      public void first_child_booking_patten_is(String BookingPatten) {
     	 
     	 redfishNewEnquirypage bookingaddenq = new redfishNewEnquirypage(driver);
     	 if(BookingPatten.equalsIgnoreCase("All Days")) {
-    		bookingaddenq.AMmonday().click();
-    		bookingaddenq.PMmonday().click();
-    		bookingaddenq.AMtuesday().click();
-    		bookingaddenq.PMtuesday().click();
-    		bookingaddenq.AMwednesday().click();
-    		bookingaddenq.PMwednesday().click();
-    		bookingaddenq.AMthusday().click();
- 			bookingaddenq.PMthusday().click();
- 			bookingaddenq.AMfriday().click();
- 			bookingaddenq.PMfriday().click();
+    		clickelement(bookingaddenq.AMmonday());
+    		clickelement(bookingaddenq.PMmonday());
+    		clickelement(bookingaddenq.AMtuesday());
+    		clickelement(bookingaddenq.PMtuesday());
+    		clickelement(bookingaddenq.AMwednesday());
+    		clickelement(bookingaddenq.PMwednesday());
+    		clickelement(bookingaddenq.AMthusday());
+    		clickelement(bookingaddenq.PMthusday());
+    		clickelement(bookingaddenq.AMfriday());
+    		clickelement(bookingaddenq.PMfriday());
  			
  		}else if(BookingPatten.equalsIgnoreCase("AMM PMT AMW PMTH PMF")) {
- 			bookingaddenq.AMmonday().click();
- 			bookingaddenq.PMtuesday().click();
- 			bookingaddenq.AMwednesday().click();
- 			bookingaddenq.PMthusday().click();
- 			bookingaddenq.PMfriday().click();
+ 			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.PMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMthusday());
+ 			clickelement(bookingaddenq.PMfriday());
  			
  		}else if(BookingPatten.equalsIgnoreCase("All AM")) {
- 			bookingaddenq.AMmonday().click();
- 			bookingaddenq.AMtuesday().click();
- 			bookingaddenq.AMwednesday().click();
- 			bookingaddenq.AMthusday().click();
- 			bookingaddenq.AMfriday().click();
+ 			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.AMfriday());
  		}else if(BookingPatten.equalsIgnoreCase("All PM")) {
- 			bookingaddenq.PMmonday().click();
- 			bookingaddenq.PMtuesday().click();
- 			bookingaddenq.PMwednesday().click();
- 			bookingaddenq.PMthusday().click();
- 			bookingaddenq.PMfriday().click();
+ 			clickelement(bookingaddenq.PMmonday());
+ 			clickelement(bookingaddenq.PMtuesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.PMthusday());
+ 			clickelement(bookingaddenq.PMfriday());
  			
  		}else if(BookingPatten.equalsIgnoreCase("FM WM FRM")) {
- 			bookingaddenq.mondayampm().click();
- 			bookingaddenq.wednesdayampm().click();
- 			bookingaddenq.fridayampm().click();
+ 			clickelement(bookingaddenq.mondayampm());
+ 			clickelement(bookingaddenq.wednesdayampm());
+ 			clickelement(bookingaddenq.fridayampm());
  			
  		}else if(BookingPatten.equalsIgnoreCase("FT FTH")) {
- 			bookingaddenq.tuesdayampm().click();
- 			bookingaddenq.thusdayampm().click();
+ 			clickelement(bookingaddenq.tuesdayampm());
+ 			clickelement(bookingaddenq.thusdayampm());
  			
  		}else if(BookingPatten.equalsIgnoreCase("All")) {
- 			bookingaddenq.Alldaybooking().click();
+ 			clickelement(bookingaddenq.Alldaybooking());
  			
  		}
     	 
@@ -201,14 +201,14 @@ public class StepDefination extends Utils {
      @When("Clicked on register first child with sibling {string}")
      public void clicked_on_register_first_child_with_sibling(String Sibling) {
     	 redfishNewRegisterpage sibling=new redfishNewRegisterpage(driver);
-    	 sibling.registerchild().click();
+    	 clickelement(sibling.registerchild());
     	 if (Sibling.equalsIgnoreCase("Yes")) {
-    		 sibling.siblingyes().click();
+    		 clickelement(sibling.siblingyes());
  			
  		}else {
- 			sibling.siblingno().click();
+ 			clickelement(sibling.siblingno());
  		}
-    	 sibling.nextfromsibling().click();
+    	 clickelement(sibling.nextfromsibling());
      }
      @When("Selecting the Relationship status as {string} and Parental Parental Responsibility as {string}")
      public void selecting_the_relationship_status_as_and_parental_parental_responsibility_as(String Relationship,String ParentalResponsibility) {
@@ -218,7 +218,7 @@ public class StepDefination extends Utils {
     	relation.selectByVisibleText(Relationship);
  		//relation.selectByValue(Relationship);
  		if (ParentalResponsibility.equalsIgnoreCase("Yes")) {
- 			repprrep.parentalresponsibility().click();
+ 			clickelement(repprrep.parentalresponsibility());
 			String parentWindowHandler = driver.getWindowHandle();// Store your parent window
 			String subWindowHandler = null;
 			Set<String> handles = driver.getWindowHandles();// get all window handles
@@ -232,17 +232,17 @@ public class StepDefination extends Utils {
 		} else {
 			 System.out.println(driver.getTitle());
 		}
- 		repprrep.nextparent().click();
+ 		clickelement(repprrep.nextparent());
      }
      @When("Selecting the PhotoPreference as {string}")
      public void selecting_the_photo_preference_as(String PhotoPreference) {
     	 redfishNewRegisterpage phptopref=new redfishNewRegisterpage(driver);
     	 if (PhotoPreference.equalsIgnoreCase("0")) {
-    		 phptopref.PhotoPreferenceall().click();
+    		 clickelement(phptopref.PhotoPreferenceall());
 			}else if(PhotoPreference.equalsIgnoreCase("1")){
-				phptopref.PhotoPreferenceIndividual().click();
+				clickelement(phptopref.PhotoPreferenceIndividual());
 			}else if(PhotoPreference.equalsIgnoreCase("2")){
-				phptopref.PhotoPreferenceNA().click();
+				clickelement(phptopref.PhotoPreferenceNA());
 			}
     	
      }
@@ -250,34 +250,34 @@ public class StepDefination extends Utils {
      //The TFC Reference "<TFCReference>" and LEAFEETReference "<LEAFEETReference>" and hrFundingCode "<hrFundingCode>"
      public void the_tfc_reference_and_leafeet_reference_and_hr_funding_code(String TFCReference,String LEAFEETReference,String hrFundingCode) {
     	 redfishNewRegisterpage phptopref=new redfishNewRegisterpage(driver);
-    	 phptopref.tfcreference().click();
-    	 phptopref.tfcreference().sendKeys(TFCReference);
-    	 phptopref.LEAFEETReference().click();
-    	 phptopref.LEAFEETReference().sendKeys(LEAFEETReference);
-    	 phptopref.hrFundingCode().click();
-    	 phptopref.hrFundingCode().sendKeys(hrFundingCode);
-    	 phptopref.nextchild().click();
-    	 phptopref.nextHealthcare().click();
-    	 phptopref.nextDietary().click();
-    	 phptopref.Donotaddanotherparent().click();   	 
+    	 clickelement(phptopref.tfcreference());
+    	 typekey(phptopref.tfcreference(),TFCReference);
+    	 clickelement(phptopref.LEAFEETReference());
+    	 typekey(phptopref.LEAFEETReference(),LEAFEETReference);
+    	 clickelement(phptopref.hrFundingCode());
+    	 typekey(phptopref.hrFundingCode(),hrFundingCode);
+    	 clickelement(phptopref.nextchild());
+    	 clickelement(phptopref.nextHealthcare());
+    	 clickelement(phptopref.nextDietary());
+    	 clickelement(phptopref.Donotaddanotherparent());   	 
     	 
      }
      @When("The Enrolment Leave date is {string}")
      public void the_enrolment_leave_date_is(String FirstEnrolmentEndDate) {
     	 redfishNewRegisterpage enorl=new redfishNewRegisterpage(driver);
     	 
-    	 enorl.enrolmentenddate().click();
-    	 enorl.enrolmentenddate().clear();
-    	 enorl.enrolmentenddate().sendKeys(FirstEnrolmentEndDate);
-    	 enorl.enrolmentenddate().sendKeys(Keys.ENTER);
-    	 enorl.nextenrolment().click();
-    	 enorl.nextfunding().click();
-    	 enorl.nextvouchers().click();
+    	 clickelement(enorl.enrolmentenddate());
+    	 clearinputfield(enorl.enrolmentenddate());
+    	 typekey(enorl.enrolmentenddate(),FirstEnrolmentEndDate);
+    	 keyboardenter(enorl.enrolmentenddate());
+    	 clickelement(enorl.nextenrolment());
+    	 clickelement(enorl.nextfunding());
+    	 clickelement(enorl.nextvouchers());
      }
      @Then("Verify if the child is registered {string}")
      public void verify_if_the_child_is_registered(String ChildProfileTitle) {
     	 redfishNewRegisterpage finishverify=new redfishNewRegisterpage(driver);
-    	 finishverify.finish().click();
+    	 clickelement(finishverify.finish());
     	 String actualfinishtitle=driver.getTitle();
     	 assertEquals(actualfinishtitle,ChildProfileTitle);
     	
@@ -285,7 +285,7 @@ public class StepDefination extends Utils {
      @Then("Logout from redfish and close browser")
      public void Logout_from_redfish_and_close_browser() throws InterruptedException {
     	 redfishNewRegisterpage redfishlogout=new redfishNewRegisterpage(driver);
-    	 redfishlogout.logout().click();
+    	 clickelement(redfishlogout.logout());
  		 Thread.sleep(2000);
  		 driver.close();
  		 driver.quit();
@@ -293,33 +293,33 @@ public class StepDefination extends Utils {
      @Then("Verify search functionality with Child Name {string} and Parent Name {string}")
      public void verify_search_functionality_with_child_name_and_parent_name(String expectedChildName, String expectedParentName) {
     	 redfishsearchpage redfishsearch=new redfishsearchpage(driver);
-    	 redfishsearch.searchbox().click();
-    	 redfishsearch.searchbox().clear();
-    	 redfishsearch.searchbox().sendKeys(expectedChildName);
-    	 redfishsearch.clickonsearch().click();
+    	 clickelement(redfishsearch.searchbox());
+    	 clearinputfield(redfishsearch.searchbox());
+    	 typekey(redfishsearch.searchbox(),expectedChildName);
+    	 clickelement(redfishsearch.clickonsearch());
     	 String actualChildName=redfishsearch.clickonsearchresult().getText();
     	 assertEquals(actualChildName,expectedChildName);
-    	 redfishsearch.searchbox().click();
-    	 redfishsearch.searchbox().clear();
-    	 redfishsearch.searchbox().sendKeys(expectedParentName);
-    	 redfishsearch.clickonsearch().click();
+    	 clickelement(redfishsearch.searchbox());
+    	 clearinputfield(redfishsearch.searchbox());
+    	 typekey(redfishsearch.searchbox(),expectedParentName);
+    	 clickelement(redfishsearch.clickonsearch());
     	 String actualParentName=redfishsearch.clickonsearchresult().getText();
     	 assertEquals(actualParentName,expectedParentName);
      }
      @Then("Verify search functionality with Invalid Child Name {string} and Invalid Parent Name {string}")
      public void verify_search_functionality_with_invalid_child_name_and_invalid_parent_name(String InvalidChildName, String InvalidParentName) {
     	 redfishsearchpage redfishsearchpg=new redfishsearchpage(driver);
-    	 redfishsearchpg.searchboxinform().click();
-    	 redfishsearchpg.searchboxinform().clear();
-    	 redfishsearchpg.searchboxinform().sendKeys(InvalidChildName);
-    	 redfishsearchpg.clickonsearchlink().click();
+    	 clickelement(redfishsearchpg.searchboxinform());
+    	 clearinputfield(redfishsearchpg.searchboxinform());
+    	 typekey(redfishsearchpg.searchboxinform(),InvalidChildName);
+    	 clickelement(redfishsearchpg.clickonsearchlink());
     	 String expectedchresult=redfishsearchpg.searchtext().getText();
     	 String actualresult="with 0 result";
     	 assertTrue(expectedchresult.contains(actualresult)); 
-    	 redfishsearchpg.searchboxinform().click();
-    	 redfishsearchpg.searchboxinform().clear();
-    	 redfishsearchpg.searchboxinform().sendKeys(InvalidParentName);
-    	 redfishsearchpg.clickonsearchlink().click();
+    	 clickelement(redfishsearchpg.searchboxinform());
+    	 clearinputfield(redfishsearchpg.searchboxinform());
+    	 typekey(redfishsearchpg.searchboxinform(),InvalidParentName);
+    	 clickelement(redfishsearchpg.clickonsearchlink());
     	 String expectedprresult=redfishsearchpg.searchtext().getText();
     	 assertTrue(expectedprresult.contains(actualresult));  
     	 
@@ -328,29 +328,25 @@ public class StepDefination extends Utils {
      public void verify_if_user_can_add_a_visit_with_visit_date_and_visit_time_with_main_comment(String VisitDate, String VisitTime, String ParentSecondName) {
     	 redfishEnquiryManagementpage enqvisitadd= new redfishEnquiryManagementpage(driver);
     	 
-    	 enqvisitadd.addvisit().click();
-    	 enqvisitadd.visitdate().click();
-    	 enqvisitadd.visitdate().sendKeys(VisitDate);
-    	 enqvisitadd.visitdate().sendKeys(Keys.TAB);
-    	 enqvisitadd.visittime().click();
-    	 System.out.println(VisitTime);
-    	 enqvisitadd.visittime().sendKeys(VisitTime);
-    	 
-    	 String actualtime=enqvisitadd.visittime().getText();
-    	 System.out.println(actualtime);
-    	 enqvisitadd.maincomment().click();
-    	 enqvisitadd.maincomment().sendKeys(ParentSecondName);
-    	 enqvisitadd.addvisitbutton().click();
-    	 //assertEquals(actualtime,VisitTime);
+    	 clickelement(enqvisitadd.addvisit());
+    	 clickelement(enqvisitadd.visitdate());
+    	 typekey(enqvisitadd.visitdate(),VisitDate);
+    	 keyboardtab(enqvisitadd.visitdate());
+    	 clickelement(enqvisitadd.visittime());
+    	 typekey(enqvisitadd.visittime(),VisitTime);
+    	 clickelement(enqvisitadd.maincomment());
+    	 typekey(enqvisitadd.maincomment(),ParentSecondName);
+    	 clickelement(enqvisitadd.addvisitbutton());
+    	
     	
      }
      @Then("Verify search functionality with only Parent Name {string} in search page")
      public void verify_search_functionality_with_only_parent_name_in_search_page(String ParentName) throws InterruptedException {
     	 redfishsearchpage redfishsearchenq=new redfishsearchpage(driver); 
     	 Thread.sleep(2000);
-    	 redfishsearchenq.searchbox().click();
-    	 redfishsearchenq.searchbox().sendKeys(ParentName);
-    	 redfishsearchenq.searchbox().sendKeys(Keys.ENTER);
+    	 clickelement(redfishsearchenq.searchbox());
+    	 typekey(redfishsearchenq.searchbox(),ParentName);
+    	 keyboardenter(redfishsearchenq.searchbox());
     	 
     	 
     	 
@@ -359,12 +355,12 @@ public class StepDefination extends Utils {
      @Then("Verify Enquiry search functionality with only Parent Name {string} in search page")
      public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
     	 redfishsearchpage redfishsearchenq1=new redfishsearchpage(driver);
-    	 redfishsearchenq1.clickonchildcheckbox().click();
-    	 redfishsearchenq1.clickonparentcheckbox().click();
-    	 redfishsearchenq1.clickenquirycheckbox().click();
-    	 redfishsearchenq1.searchboxinform().clear();
-    	 redfishsearchenq1.searchboxinform().sendKeys(ParentName);
-    	 redfishsearchenq1.searchboxinform().sendKeys(Keys.ENTER);
+    	 clickelement(redfishsearchenq1.clickonchildcheckbox());
+    	 clickelement(redfishsearchenq1.clickonparentcheckbox());
+    	 clickelement(redfishsearchenq1.clickenquirycheckbox());
+    	 clearinputfield(redfishsearchenq1.searchboxinform());
+    	 typekey(redfishsearchenq1.searchboxinform(),ParentName);
+    	 keyboardenter(redfishsearchenq1.searchboxinform());
     	
     	 
     	
@@ -372,7 +368,7 @@ public class StepDefination extends Utils {
      @Then("Verify Enquiry can be closed with reason code {string} Enquiry Management")
      public void verify_enquiry_can_be_closed_with_reason_code_enquiry_management(String ClosedReason) {
     	 redfishEnquiryManagementpage redfishsearchenqmg = new redfishEnquiryManagementpage(driver);
-    	 redfishsearchenqmg.closeenquirybutton().click();
+    	 clickelement(redfishsearchenqmg.closeenquirybutton());
     	 
      }
      @Then("Verify closed Enquiry search functionality with only Parent Name {string} in search page")
@@ -402,119 +398,142 @@ public class StepDefination extends Utils {
      @When("The Second Child First Name {string} Second Child Second Name {string} First Child DOB {string} Gender {string} Enrolment Start Date {string}")
      public void the_second_child_first_name_second_child_second_name_first_child_dob_gender_enrolment_start_date(String SecondChildFirstName, String SecondChildSecondName, String SecondChildDOB, String SecondChildGender, String SecondEnrolmentStartDate) {
     	 redfishNewEnquirypage secondchildinfo = new redfishNewEnquirypage(driver);
-    	 secondchildinfo.addsecondchild().click();
-    	 secondchildinfo.secondchildfirstname().click();
-    	 secondchildinfo.secondchildfirstname().sendKeys(SecondChildFirstName);
-    	 secondchildinfo.secondchildsecondname().click();
-    	 secondchildinfo.secondchildsecondname().sendKeys(SecondChildSecondName);
-    	 secondchildinfo.secondDOB().sendKeys(SecondChildDOB);
-    	 secondchildinfo.secondDOB().sendKeys(Keys.ENTER);
+    	 clickelement(secondchildinfo.addsecondchild());
+    	 clickelement(secondchildinfo.secondchildfirstname());
+    	 typekey(secondchildinfo.secondchildfirstname(),SecondChildFirstName);
+    	 clickelement(secondchildinfo.secondchildsecondname());
+    	 typekey(secondchildinfo.secondchildsecondname(),SecondChildSecondName);
+    	 typekey(secondchildinfo.secondDOB(),SecondChildDOB);
+    	 keyboardenter(secondchildinfo.secondDOB());
  		if (SecondChildGender.equalsIgnoreCase("M")) {
- 			secondchildinfo.secondGenderm().click();
+ 			clickelement(secondchildinfo.secondGenderm());
  			
  		}else {
- 			secondchildinfo.secondGenderf().click();
+ 			clickelement(secondchildinfo.secondGenderf());
  		}
- 		secondchildinfo.secondstartdate().sendKeys(SecondEnrolmentStartDate);
- 		secondchildinfo.startdate().sendKeys(Keys.ENTER);
+ 		typekey(secondchildinfo.secondstartdate(),SecondEnrolmentStartDate);
+ 		keyboardenter(secondchildinfo.startdate());
      }
      @When("Second Child Booking Patten is {string}")
      public void second_child_booking_patten_is(String SecondBookingPatten) {
     	 redfishNewEnquirypage secondbookingaddenq = new redfishNewEnquirypage(driver);
     	 if(SecondBookingPatten.equalsIgnoreCase("All Days")) {
-    		 secondbookingaddenq.secondAMmonday().click();
-    		 secondbookingaddenq.secondPMmonday().click();
-    		 secondbookingaddenq.secondAMtuesday().click();
-    		 secondbookingaddenq.secondPMtuesday().click();
-    		 secondbookingaddenq.secondAMwednesday().click();
-    		 secondbookingaddenq.secondPMwednesday().click();
-    		 secondbookingaddenq.secondAMthusday().click();
-    		 secondbookingaddenq.secondPMthusday().click();
-    		 secondbookingaddenq.secondAMfriday().click();
-    		 secondbookingaddenq.secondPMfriday().click();
+    		 clickelement(secondbookingaddenq.secondAMmonday());
+    		 clickelement(secondbookingaddenq.secondPMmonday());
+    		 clickelement(secondbookingaddenq.secondAMtuesday());
+    		 clickelement(secondbookingaddenq.secondPMtuesday());
+    		 clickelement(secondbookingaddenq.secondAMwednesday());
+    		 clickelement(secondbookingaddenq.secondPMwednesday());
+    		 clickelement(secondbookingaddenq.secondAMthusday());
+    		 clickelement(secondbookingaddenq.secondPMthusday());
+    		 clickelement(secondbookingaddenq.secondAMfriday());
+    		 clickelement(secondbookingaddenq.secondPMfriday());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("AMM PMT AMW PMTH PMF")) {
- 			secondbookingaddenq.secondAMmonday().click();
- 			secondbookingaddenq.secondPMtuesday().click();
- 			secondbookingaddenq.secondAMwednesday().click();
- 			secondbookingaddenq.secondPMthusday().click();
- 			secondbookingaddenq.secondPMfriday().click();
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondPMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+ 			clickelement(secondbookingaddenq.secondPMfriday());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("All AM")) {
- 			secondbookingaddenq.secondAMmonday().click();
- 			secondbookingaddenq.secondAMtuesday().click();
- 			secondbookingaddenq.secondAMwednesday().click();
- 			secondbookingaddenq.secondAMthusday().click();
- 			secondbookingaddenq.secondAMfriday().click();
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondAMfriday());
  		}else if(SecondBookingPatten.equalsIgnoreCase("All PM")) {
- 			secondbookingaddenq.secondPMmonday().click();
- 			secondbookingaddenq.secondPMtuesday().click();
- 			secondbookingaddenq.secondPMwednesday().click();
- 			secondbookingaddenq.secondPMthusday().click();
- 			secondbookingaddenq.secondPMfriday().click();
+ 			clickelement(secondbookingaddenq.secondPMmonday());
+ 			clickelement(secondbookingaddenq.secondPMtuesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+ 			clickelement(secondbookingaddenq.secondPMfriday());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("FM WM FRM")) {
- 			secondbookingaddenq.secondmondayampm().click();
- 			secondbookingaddenq.secondwednesdayampm().click();
- 			secondbookingaddenq.secondfridayampm().click();
+ 			clickelement(secondbookingaddenq.secondmondayampm());
+ 			clickelement(secondbookingaddenq.secondwednesdayampm());
+ 			clickelement(secondbookingaddenq.secondfridayampm());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("FT FTH")) {
- 			secondbookingaddenq.secondtuesdayampm().click();
- 			secondbookingaddenq.secondthusdayampm().click();
+ 			clickelement(secondbookingaddenq.secondtuesdayampm());
+ 			clickelement(secondbookingaddenq.secondthusdayampm());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("All")) {
- 			secondbookingaddenq.secondAlldaybooking().click();
+ 			clickelement(secondbookingaddenq.secondAlldaybooking());
  			
  		}
      }
      @Then("Click on Add Enquiry")
      public void click_on_add_enquiry() {
     	 redfishNewEnquirypage addenquiry = new redfishNewEnquirypage(driver);
-    	 addenquiry.addenquiry().click();
+    	 clickelement(addenquiry.addenquiry());
      }
      @When("Clicked on register Second child with sibling {string}")
      public void clicked_on_register_second_child_with_sibling(String Sibling) {
     	 redfishNewRegisterpage secondchildsibling=new redfishNewRegisterpage(driver);
     	 redfishNewEnquirypage secondchildreg = new redfishNewEnquirypage(driver);
-    	 secondchildreg.secondchildreg().click();
-    	 secondchildsibling.register2nchild().click();
+    	 clickelement(secondchildreg.secondchildreg());
+    	 clickelement(secondchildsibling.register2nchild());
     	 if (Sibling.equalsIgnoreCase("Yes")) {
-    		 secondchildsibling.siblingyes().click();
+    		 clickelement(secondchildsibling.siblingyes());
  			
  		}else {
- 			secondchildsibling.siblingno().click();
+ 			clickelement(secondchildsibling.siblingno());
  		}
-    	 secondchildsibling.nextfromsibling().click();
+    	 clickelement(secondchildsibling.nextfromsibling());
      }
      @When("User enters RedfishCRM User Name {string} and Password {string}")
      public void user_enters_redfish_crm_user_name_and_password(String UserName, String Password) throws IOException, InterruptedException {
     	 crmloginpage loginredfishCRM=new crmloginpage(driver);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/loginscreenshot.png");
-    	 loginredfishCRM.crmUsername().click();
-    	 loginredfishCRM.crmUsername().sendKeys(UserName);
-    	 loginredfishCRM.crmPassword().click();
-    	 loginredfishCRM.crmPassword().sendKeys(Password);
-    	 loginredfishCRM.crmsignin().click();
+    	 clickelement(loginredfishCRM.crmUsername());
+    	 typekey(loginredfishCRM.crmUsername(),UserName);
+    	 clickelement(loginredfishCRM.crmPassword());
+    	 typekey(loginredfishCRM.crmPassword(),Password);
+    	 clickelement(loginredfishCRM.crmsignin());
     	 Thread.sleep(15000);
  		
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
      public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException, IOException {
-    	 WebDriverWait wait = new WebDriverWait(driver, 15);
-    	 wait.until(ExpectedConditions.titleContains(expectedtitle));
+    	 Thread.sleep(15000);
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/homescreenshot.png");
      }
+     @Then("Verify if user able to open the enquiry and verify the title as {string} screenshot in {string}")
+     public void verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(String expectedEnquiryTitle, String Enquiryfilename) throws InterruptedException, IOException {
+    	 crmContactpage enqclick=new crmContactpage(driver);
+    	 Thread.sleep(15000);
+    	 driver.switchTo().frame("contentIFrame1");
+    	 clickelement(enqclick.crmcontactenq());
+    	 Thread.sleep(15000);
+    	 String actualCRMtitle=driver.getTitle();
+    	 assertThat(actualCRMtitle).contains(expectedEnquiryTitle);
+    	 //assertEquals(actualCRMtitle,expectedEnquiryTitle);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Enquiryfilename+".png");
+     }
+     @Then("Verify if the CRMcontact screen has the expected first name {string}")
+     public void verify_if_the_cr_mcontact_screen_has_the_expected_first_name(String ParentFirstName) {
+    	 crmContactpage crmfirstnamelb=new crmContactpage(driver);
+    	 
+    	 driver.switchTo().frame("contentIFrame0");
+    	
+    	 String actualParentFirstName=crmfirstnamelb.crmforenamelabel().getText();
+    	 assertThat(actualParentFirstName).contains(ParentFirstName);
+     }
      @Then("Logout from redfishCRM and close browser {string}")
      public void logout_from_redfish_crm_and_close_browser(String CRMlogoutfilename) throws InterruptedException, IOException {
     	 crmHomepage redfishCRMlogout=new crmHomepage(driver);
     	 WebDriverWait wait = new WebDriverWait(driver, 15);
-    	 redfishCRMlogout.crmprofile().click();
-    	 redfishCRMlogout.crmsignout().click();
+    	 driver.switchTo().parentFrame();
+    	 clickelement(redfishCRMlogout.crmprofile());
+    	 clickelement(redfishCRMlogout.crmsignout());
     	 Thread.sleep(10000);
-    	 redfishCRMlogout.crmsignout().sendKeys(Keys.ENTER);
+    	 keyboardenter(redfishCRMlogout.crmsignout());
     	 wait.until(ExpectedConditions.titleContains("Sign out"));
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+CRMlogoutfilename+".png");
  		 driver.close();
@@ -528,11 +547,11 @@ public class StepDefination extends Utils {
     	 Thread.sleep(15000);
     	 driver.switchTo().frame("contentIFrame0");
     	 wait.until(ExpectedConditions.elementToBeClickable(redfishCRMsearch.crmsearchbox()));
-    	 redfishCRMsearch.crmsearchbox().click();
-    	 redfishCRMsearch.crmsearchbox().clear();
-    	 redfishCRMsearch.crmsearchbox().sendKeys(EmailId);
-    	 redfishCRMsearch.crmsearchbox().sendKeys(Keys.ENTER);
-    	 redfishCRMsearch.crmclickonsearchresult().click();
+    	 clickelement(redfishCRMsearch.crmsearchbox());
+    	 clearinputfield(redfishCRMsearch.crmsearchbox());
+    	 typekey(redfishCRMsearch.crmsearchbox(),EmailId);
+    	 keyboardenter(redfishCRMsearch.crmsearchbox());
+    	 clickelement(redfishCRMsearch.crmclickonsearchresult());
     	 wait.until(ExpectedConditions.titleContains("Contact:"));
     	 Thread.sleep(10000);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactfilename+".png");
@@ -545,7 +564,7 @@ public class StepDefination extends Utils {
     	 crmContactpage redfishCRMcolntact=new crmContactpage(driver);
     	 driver.switchTo().frame("contentIFrame1");
     	 Thread.sleep(15000);
-    	 //redfishCRMcolntact.crmForename().click();
+    	 
     	 File actualfirstname=redfishCRMcolntact.crmForename().getScreenshotAs(OutputType.FILE);
     	 FileUtils.copyFile(actualfirstname,new File("./target/cucumber-html-reports/Screenshots/"+filename+".png"));
     	 
@@ -554,7 +573,7 @@ public class StepDefination extends Utils {
      public void verify_if_user_able_to_see_the_parent_surname_in_the_contact_screen(String ParentSecondName) throws IOException, InterruptedException {
     	 crmContactpage redfishCRMcolntactsurname=new crmContactpage(driver);
     	 Thread.sleep(15000);
-    	 //redfishCRMcolntactsurname.crmlastname().click();
+    	 
     	 File actuallastname=redfishCRMcolntactsurname.crmlastname().getScreenshotAs(OutputType.FILE);
     	 FileUtils.copyFile(actuallastname,new File("./target/cucumber-html-reports/Screenshots/lastname.png"));
     	 
@@ -583,7 +602,7 @@ public class StepDefination extends Utils {
     	 Dimension d = new Dimension(1920,1080);
     	 driver.manage().window().setSize(d);
     	 //((JavascriptExecutor)driver).executeScript("scroll(0,400)");
-    	 //crmcntenq.crmcontactenqlable().click();
+    	 
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactwithenqfilename+".png");
     	 //driver.switchTo().parentFrame();
      }
