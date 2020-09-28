@@ -34,11 +34,12 @@ WebDriver driver;
 	By removewaiting=By.cssSelector("span#ctl00_ctl00_ctl00_MainContent_MainContent_MainContent_repEnquiry_ctl00_repChild_ctl01_bWaiting_lText");
 	By watingText=By.cssSelector("div#childDetails tr.childBottomTR > td:nth-child(1) > span");
 	
+	
 	public WebElement clickonthismonth() {return driver.findElement(clickonthismonth);}
 	public WebElement submitdaterange() {return driver.findElement(submitdaterange);}
 	public WebElement repoenenquiry() {return driver.findElement(repoenenquiry);}
 	public WebElement generalnotes() {return driver.findElement(generalnotes);}
-	public WebElement generalnotessubmit() {return driver.findElement(generalnotes);}
+	public WebElement generalnotessubmit() {return driver.findElement(generalnotessubmit);}
 	public WebElement addvisit() {return driver.findElement(addvisit);}
 	public WebElement visitdate() {return driver.findElement(visitdate);}
 	public WebElement visittime() {return driver.findElement(visittime);}

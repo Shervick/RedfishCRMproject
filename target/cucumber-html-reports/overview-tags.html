@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@RedfishCRMEnquiryManagement",  "@RedfishEnquirytwoChildRegister",  "@SmokeTest", ] ,
+        labels:  [ "@SmokeRegressionTC1_2",  "@Test", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00,  100.00,  100.00, ] 
+                data:  [ 81.48,  81.48, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 3.70,  3.70, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 14.81,  14.81, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             }
         ]
     };
@@ -133,9 +133,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>RedfishAutomation</td>
+      <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>23 Sep 2020, 23:50</td>
+      <td>28 Sep 2020, 16:13</td>
     </tr>
   </tbody>
 </table>
@@ -197,88 +197,71 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_2885236432.html">@RedfishCRMEnquiryManagement</a></td>
+        <td class="tagname"><a href="report-tag_3963880996.html">@SmokeRegressionTC1_2</a></td>
 
-        <td      class="passed"    >8</td>
+        <td      class="passed"    >22</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >4</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">8</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="135004991400">2:15.004</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-tag_1154890604.html">@RedfishEnquirytwoChildRegister</a></td>
-
-        <td      class="passed"    >30</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">30</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="234821298200">3:54.821</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-tag_2341313088.html">@SmokeTest</a></td>
-
-        <td      class="passed"    >38</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">38</td>
+        <td class="total">27</td>
 
         <td  class="passed"    >2</td>
-        <td >0</td>
-        <td class="total">2</td>
+        <td  class="failed"    >1</td>
+        <td class="total">3</td>
 
-        <td class="duration" data-value="369826289600">6:9.826</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="415318515000">6:55.318</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2209192177.html">@Test</a></td>
+
+        <td      class="passed"    >22</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">27</td>
+
+        <td  class="passed"    >2</td>
+        <td  class="failed"    >1</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="415318515000">6:55.318</td>
+        <td class="failed">Failed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>76</td>
+      <td>44</td>
+      <td>2</td>
+      <td>8</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>76</td>
+      <td>54</td>
 
       <td>4</td>
-      <td>0</td>
-      <td>4</td>
+      <td>2</td>
+      <td>6</td>
 
-      <td class="duration">12:19.652</td>
-      <td>3</td>
+      <td class="duration">13:50.637</td>
+      <td>2</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
+      <td>81.48%</td>
+      <td>3.70%</td>
+      <td>14.81%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
+      <td>66.67%</td>
+      <td>33.33%</td>
+      <td></td>
+      <td></td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
-      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

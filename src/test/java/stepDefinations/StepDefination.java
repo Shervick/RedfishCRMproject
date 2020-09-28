@@ -35,6 +35,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.redfishCRM.pageObjects.crmloginpage;
 import com.redfishCRM.pageObjects.crmContactpage;
+import com.redfishCRM.pageObjects.crmEnquirypage;
 import com.redfishCRM.pageObjects.crmHomepage;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
@@ -463,10 +464,18 @@ public class StepDefination extends Utils {
  			
  		}
      }
+    
      @Then("Click on Add Enquiry")
      public void click_on_add_enquiry() {
     	 redfishNewEnquirypage addenquiry = new redfishNewEnquirypage(driver);
     	 clickelement(addenquiry.addenquiry());
+     }
+     @Then("Submit General Notes {string}")
+     public void submit_general_notes(String ParentName) {
+    	 redfishEnquiryManagementpage enqgeneralnotes = new redfishEnquiryManagementpage(driver);
+    	 clickelement(enqgeneralnotes.generalnotes());
+    	 typekey(enqgeneralnotes.generalnotes(),ParentName);
+    	 clickelement(enqgeneralnotes.generalnotessubmit());
      }
      @When("Clicked on register Second child with sibling {string}")
      public void clicked_on_register_second_child_with_sibling(String Sibling) {
@@ -496,7 +505,7 @@ public class StepDefination extends Utils {
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
      public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException, IOException {
-    	 Thread.sleep(15000);
+    	 Thread.sleep(12000);
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
@@ -505,16 +514,33 @@ public class StepDefination extends Utils {
      @Then("Verify if user able to open the enquiry and verify the title as {string} screenshot in {string}")
      public void verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(String expectedEnquiryTitle, String Enquiryfilename) throws InterruptedException, IOException {
     	 crmContactpage enqclick=new crmContactpage(driver);
-    	 Thread.sleep(15000);
+    	 Thread.sleep(12000);
     	 driver.switchTo().frame("contentIFrame1");
-    	 clickelement(enqclick.crmcontactenq());
-    	 Thread.sleep(15000);
+    	 clickelement(enqclick.crmcontactfirstenq());
+    	 Thread.sleep(12000);
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedEnquiryTitle);
     	 //assertEquals(actualCRMtitle,expectedEnquiryTitle);
     	 Dimension d = new Dimension(1920,1080);
     	 driver.manage().window().setSize(d);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Enquiryfilename+".png");
+     }
+     @Then("Verify if user able to open the visit and verify the title as {string} screenshot in {string}")
+     public void verify_if_user_able_to_open_the_visit_and_verify_the_title_as_screenshot_in(String CRMVisitTitle, String Visitfilename) throws InterruptedException, IOException {
+    	 crmEnquirypage visitclick=new crmEnquirypage(driver); 
+    	 driver.switchTo().parentFrame();
+    	 Thread.sleep(10000);
+    	 driver.switchTo().frame("contentIFrame1");
+    	 clickelement(visitclick.crmEnqnavig());
+    	 clickelement(visitclick.crmnavalue());
+    	 clickelement(visitclick.crmfirstvisit());
+    	 Thread.sleep(12000);
+    	 String actualCRMvisittitle=driver.getTitle();
+    	 assertThat(actualCRMvisittitle).contains(CRMVisitTitle);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Visitfilename+".png");
+    	 
      }
      @Then("Verify if the CRMcontact screen has the expected first name {string}")
      public void verify_if_the_cr_mcontact_screen_has_the_expected_first_name(String ParentFirstName) {
@@ -551,6 +577,7 @@ public class StepDefination extends Utils {
     	 clearinputfield(redfishCRMsearch.crmsearchbox());
     	 typekey(redfishCRMsearch.crmsearchbox(),EmailId);
     	 keyboardenter(redfishCRMsearch.crmsearchbox());
+    	 Thread.sleep(10000);
     	 clickelement(redfishCRMsearch.crmclickonsearchresult());
     	 wait.until(ExpectedConditions.titleContains("Contact:"));
     	 Thread.sleep(10000);

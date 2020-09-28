@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -18,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.redfishCRM.pageObjects.crmEnquirypage;
 
 
 public class Utils {
@@ -92,6 +94,11 @@ public class Utils {
     }
     public void keyboardtab(WebElement actionkeystab) {
     	actionkeystab.sendKeys(Keys.TAB);
+    }
+    public void selectfloatingmenu(WebElement fomenu,String value) {
+   
+    	
+    	
     }
 
 }

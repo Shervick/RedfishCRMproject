@@ -35,7 +35,8 @@ protected static WebDriver driver;
 	By crmenquerytable=By.cssSelector("div#contactopportunitiesgrid");
 	By crmcontactfram=By.cssSelector("div.crmContentPanel");
 	By crmcontactenqlable=By.cssSelector("table#gridBodyTable tr:nth-child(5) > td:nth-child(2) > nobr > a > span");
-	By crmcontactenq=By.cssSelector("a[class=ms-crm-List-Link][title*='Enquiry'][id^='gridBodyTable_primaryField'][tabindex='1810']");
+	By crmcontactfirstenq=By.cssSelector("a[class=ms-crm-List-Link][title*='Enquiry'][id$='_0'][tabindex='1810']");
+	By crmcontactsecondenq=By.cssSelector("a[class=ms-crm-List-Link][title*='Enquiry'][id$='_1'][tabindex='1810']");
 	
 	public WebElement crmprofile() {return driver.findElement(crmprofile);}
 	public WebElement crmsignout() {return driver.findElement(crmsignout);}
@@ -52,7 +53,7 @@ protected static WebDriver driver;
 	public WebElement crmForename() {return driver.findElement(crmForename);}
 	public WebElement crmenquerytable() {return driver.findElement(crmenquerytable);}
 	public WebElement crmcontactfram() {return driver.findElement(crmcontactfram);}
-	public WebElement crmcontactenq() {return driver.findElement(crmcontactenq);}
+	public WebElement crmcontactfirstenq() {return driver.findElement(crmcontactfirstenq);}
 	
 
 }

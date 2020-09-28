@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-09-25T07:31:13.384Z",
-        "line": 107,
-        "name": "Verify if user is able to see the contact in CRM",
+        "start_timestamp": "2020-09-28T10:35:39.101Z",
+        "line": 43,
+        "name": "DataVerificationInCRM_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM",
         "description": "",
-        "id": "03.1-enquiry-management;verify-if-user-is-able-to-see-the-contact-in-crm;;2",
+        "id": "03.1-enquiry-management;dataverificationincrm-verify-if-redfish-enquiry-booking--child--notes--nursery-and-visit-are-created-in-redfish-is-automatically-created-in-crm;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 21719464700,
+              "duration": 7561701200,
               "status": "passed"
             },
-            "line": 93,
+            "line": 31,
             "name": "Initialize the browser with chrome",
             "match": {
               "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
@@ -25,10 +25,10 @@
           },
           {
             "result": {
-              "duration": 3841594700,
+              "duration": 3420091900,
               "status": "passed"
             },
-            "line": 94,
+            "line": 32,
             "name": "Open Web Application \"UATCRMUrl\"",
             "match": {
               "arguments": [
@@ -43,10 +43,10 @@
           },
           {
             "result": {
-              "duration": 28045780900,
+              "duration": 19690027800,
               "status": "passed"
             },
-            "line": 95,
+            "line": 33,
             "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
             "match": {
               "arguments": [
@@ -65,10 +65,10 @@
           },
           {
             "result": {
-              "duration": 15745141100,
+              "duration": 12473407600,
               "status": "passed"
             },
-            "line": 96,
+            "line": 34,
             "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
             "match": {
               "arguments": [
@@ -83,20 +83,20 @@
           },
           {
             "result": {
-              "duration": 36448013200,
+              "duration": 43777538500,
               "status": "passed"
             },
-            "line": 97,
-            "name": "Verify if user able to search with parent email id \"scbgounell9@yelp.com\" \"contactBeryleGounel\"",
+            "line": 35,
+            "name": "Verify if user able to search with parent email id \"bnewshamjg@gizmodo.com\" \"contactBartolemoNewsham\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"scbgounell9@yelp.com\"",
+                  "val": "\"bnewshamjg@gizmodo.com\"",
                   "offset": 51
                 },
                 {
-                  "val": "\"contactBeryleGounel\"",
-                  "offset": 74
+                  "val": "\"contactBartolemoNewsham\"",
+                  "offset": 76
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String)"
@@ -105,15 +105,15 @@
           },
           {
             "result": {
-              "duration": 15954089700,
+              "duration": 15915932400,
               "status": "passed"
             },
-            "line": 98,
-            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqBeryleGounel\"",
+            "line": 36,
+            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqBartolemoNewsham\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"contactenqBeryleGounel\"",
+                  "val": "\"contactenqBartolemoNewsham\"",
                   "offset": 76
                 }
               ],
@@ -123,20 +123,20 @@
           },
           {
             "result": {
-              "duration": 30867026500,
+              "duration": 24931104600,
               "status": "passed"
             },
-            "line": 99,
-            "name": "Verify if user able to open the enquiry and verify the title as \"Web Enquiry\" screenshot in \"EnquiryBeryleGounel\"",
+            "line": 37,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryBartolemoNewsham\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Web Enquiry\"",
+                  "val": "\"Enquiry: RedFish Enquiry\"",
                   "offset": 64
                 },
                 {
-                  "val": "\"EnquiryBeryleGounel\"",
-                  "offset": 92
+                  "val": "\"EnquiryBartolemoNewsham\"",
+                  "offset": 105
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
@@ -145,15 +145,37 @@
           },
           {
             "result": {
-              "duration": 13823086600,
+              "duration": 23471185900,
               "status": "passed"
             },
-            "line": 100,
-            "name": "Logout from redfishCRM and close browser \"contactlogoutBeryleGounel\"",
+            "line": 38,
+            "name": "Verify if user able to open the visit and verify the title as \"Appointment: Visit\" screenshot in \"VisitBartolemoNewsham\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"contactlogoutBeryleGounel\"",
+                  "val": "\"Appointment: Visit\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"VisitBartolemoNewsham\"",
+                  "offset": 97
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_visit_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14047365000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Logout from redfishCRM and close browser \"contactlogoutBartolemoNewsham\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactlogoutBartolemoNewsham\"",
                   "offset": 41
                 }
               ],
@@ -164,7 +186,389 @@
         ],
         "tags": [
           {
-            "name": "@RedfishCRMContactSearch"
+            "name": "@SmokeRegressionTC1_2"
+          },
+          {
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-28T10:38:24.613Z",
+        "line": 44,
+        "name": "DataVerificationInCRM_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM",
+        "description": "",
+        "id": "03.1-enquiry-management;dataverificationincrm-verify-if-redfish-enquiry-booking--child--notes--nursery-and-visit-are-created-in-redfish-is-automatically-created-in-crm;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6168552300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3421272800,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Open Web Application \"UATCRMUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UATCRMUrl\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18892020300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101@brighthorizons.com\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Sam18You\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12382645000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain \"Contact:\". Current title: \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\" (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027LP000214\u0027, ip: \u002710.28.22.46\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\\Users\\E001291\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58410}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 37a1141a5b2c266ace743e054ff4ffa1\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)\r\n\tat stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(StepDefination.java:582)\r\n\tat ✽.Verify if user able to search with parent email id \"aniblojh@army.com\" \"contactAlissaNiblo\"(file:///C:/Users/E001291/git/script/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:35)\r\n",
+              "duration": 41413360800,
+              "status": "failed"
+            },
+            "line": 35,
+            "name": "Verify if user able to search with parent email id \"aniblojh@army.com\" \"contactAlissaNiblo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aniblojh@army.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"contactAlissaNiblo\"",
+                  "offset": 71
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqAlissaNiblo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactenqAlissaNiblo\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 37,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryAlissaNiblo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry: RedFish Enquiry\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"EnquiryAlissaNiblo\"",
+                  "offset": 105
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 38,
+            "name": "Verify if user able to open the visit and verify the title as \"Appointment: Visit\" screenshot in \"VisitAlissaNiblo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Appointment: Visit\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"VisitAlissaNiblo\"",
+                  "offset": 97
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_visit_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 39,
+            "name": "Logout from redfishCRM and close browser \"contactlogoutAlissaNiblo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactlogoutAlissaNiblo\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeRegressionTC1_2"
+          },
+          {
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-28T10:39:46.925Z",
+        "line": 45,
+        "name": "DataVerificationInCRM_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM",
+        "description": "",
+        "id": "03.1-enquiry-management;dataverificationincrm-verify-if-redfish-enquiry-booking--child--notes--nursery-and-visit-are-created-in-redfish-is-automatically-created-in-crm;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6363518000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3459826500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Open Web Application \"UATCRMUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UATCRMUrl\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19825396300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101@brighthorizons.com\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Sam18You\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12377464600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46911578000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify if user able to search with parent email id \"phansieji@cyberchimps.com\" \"contactPattonHansie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phansieji@cyberchimps.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"contactPattonHansie\"",
+                  "offset": 79
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16187796500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "Verify if Enquiry is created by taking the screen shot of the enquiry table \"contactenqPattonHansie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactenqPattonHansie\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25008586100,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryPattonHansie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry: RedFish Enquiry\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"EnquiryPattonHansie\"",
+                  "offset": 105
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23692225700,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Verify if user able to open the visit and verify the title as \"Appointment: Visit\" screenshot in \"VisitPattonHansie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Appointment: Visit\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"VisitPattonHansie\"",
+                  "offset": 97
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_visit_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13925917200,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Logout from redfishCRM and close browser \"contactlogoutPattonHansie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactlogoutPattonHansie\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeRegressionTC1_2"
+          },
+          {
+            "name": "@Test"
           }
         ]
       }
@@ -173,7 +577,7 @@
     "description": "",
     "id": "03.1-enquiry-management",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/RedfishWorkflow.feature",
+    "uri": "file:src/test/java/features/EnquiryManagement.feature",
     "tags": []
   }
 ]

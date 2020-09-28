@@ -1,4 +1,4 @@
-Feature: 03.1 Enquiry Management
+Feature: 03.1 Enquiry Management Create an Enquiry through Redfish interface
 @RedfishEnquirySingleChildRegister 
 Scenario Outline: Verify if user is able to create an enquiry and register the child
 Given Initialize the browser with chrome
@@ -237,5 +237,23 @@ Examples:
   |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Marysa|McGrale|Marysa McGrale|99-2101 St. Marys Road|SO91 0LG|07030804660|mmcgralekq@indiatimes.com|BH Website|Farah|McGrale|18/10/2017|F|24/09/2020|07/09/2021|All Days|Elisha|McGrale|18/09/2018|F|24/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000138|Child|25/09/2020|0930|
   |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Mariann|Bertelsen|Mariann Bertelsen|99-2102 St. Marys Road|SO92 0LG|07802281837|mbertelsenkr@google.com|BH Website|Gus|Bertelsen|18/10/2017|F|24/09/2020|07/09/2021|All Days|Lenore|Bertelsen|18/09/2018|F|24/09/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000139|Child|25/09/2020|0930|
 
-	
-	
+@RedfishCRMEnquiryVisit
+Scenario Outline: Verify if user is able to see the enquiry and visit in CRM
+Given Initialize the browser with chrome
+And Open Web Application "<application>" 
+When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>"
+Then Verify if Enquiry is created by taking the screen shot of the enquiry table "<contactwithenqfilename>"
+Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
+Then Verify if user able to open the visit and verify the title as "<CRMVisitTitle>" screenshot in "<Visitfilename>"
+Then Logout from redfishCRM and close browser "<CRMlogoutfilename>"
+
+Examples:
+	|UserName|Password|application|expectedtitle|ParentEmailID|ParentFirstName|ParentSecondName|EnquiryType|MobileNumber|contactfilename|contactwithenqfilename|CRMlogoutfilename|CRMEnquiryTitle|Enquiryfilename|CRMVisitTitle|Visitfilename|
+  |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|cwillshawkp@free.com|Cassie|Willshaw|RedFish|07377701886|contactCassieWillshaw|contactenqCassieWillshaw|contactlogoutCassieWillshaw|Enquiry: RedFish Enquiry|EnquiryCassieWillshaw|Appointment: Visit|VisitCassieWillshaw|
+ #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|mmcgralekq@indiatimes.com|Marysa|McGrale|RedFish|07030804660|contactMarysaMcGrale|contactenqMarysaMcGrale|contactlogoutMarysaMcGrale|Enquiry: RedFish Enquiry|EnquiryMarysaMcGrale|Appointment: Visit|VisitMarysaMcGrale|
+ #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|mbertelsenkr@google.com|Mariann|Bertelsen|RedFish|07802281837|contactMariannBertelsen|contactenqMariannBertelsen|contactlogoutMariannBertelsen|Enquiry: RedFish Enquiry|EnquiryMariannBertelsen|Appointment: Visit|VisitMariannBertelsen|
+ #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scbgounell9@yelp.com|Beryle|Gounel|Web|07989155859|contactBeryleGounel|contactenqBeryleGounel|contactlogoutBeryleGounel|Enquiry: Web Enquiry|EnquiryBeryleGounel|Appointment: Visit|VisitBeryleGounel|
+ #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scgmccrannl7@1688.com|Ginevra|McCrann|Web|07164198897|contactGinevraMcCrann|contactenqGinevraMcCrann|contactlogoutGinevraMcCrann|Enquiry: Web Enquiry|EnquiryGinevraMcCrann|Appointment: Visit|VisitGinevraMcCrann|
+ #|99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|scmclutterhaml6@dyndns.com|Martyn|Clutterham|Web|07552586392|contactMartynClutterham|contactenqMartynClutterham|contactlogoutMartynClutterham|Enquiry: Web Enquiry|EnquiryMartynClutterham|Appointment: Visit|VisitMartynClutterham|
