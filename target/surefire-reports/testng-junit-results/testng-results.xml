@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-28T16:13:12 IST" name="Command line suite" finished-at="2020-09-28T16:13:12 IST" duration-ms="119">
+  <suite started-at="2020-09-28T12:16:06 BST" name="Command line suite" finished-at="2020-09-28T12:16:06 BST" duration-ms="97">
     <groups>
     </groups>
-    <test started-at="2020-09-28T16:13:12 IST" name="Command line test" finished-at="2020-09-28T16:13:12 IST" duration-ms="119">
+    <test started-at="2020-09-28T12:16:06 BST" name="Command line test" finished-at="2020-09-28T12:16:06 BST" duration-ms="97">
       <class name="com.QERedfishRegression.app.AppTest">
-        <test-method signature="testApp()" started-at="2020-09-28T16:13:12 IST" name="testApp" finished-at="2020-09-28T16:13:12 IST" duration-ms="16" status="PASS">
+        <test-method signature="testApp()" started-at="2020-09-28T12:16:06 BST" name="testApp" finished-at="2020-09-28T12:16:06 BST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApp -->

@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@SmokeRegressionTC1_2",  "@Test", ] ,
+        labels:  [ "@SmokeRegressionTC1_1",  "@SmokeRegressionTC1_2",  "@Test", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 81.48,  81.48, ] 
+                data:  [ 100.00,  100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 3.70,  3.70, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 14.81,  14.81, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -133,9 +133,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>cucumber-jvm-example</td>
+      <td>RedfishAutomation</td>
         <td>1</td>
-      <td>28 Sep 2020, 16:13</td>
+      <td>28 Sep 2020, 12:16</td>
     </tr>
   </tbody>
 </table>
@@ -197,71 +197,88 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
+        <td class="tagname"><a href="report-tag_3963880995.html">@SmokeRegressionTC1_1</a></td>
+
+        <td      class="passed"    >51</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">51</td>
+
+        <td  class="passed"    >3</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="226349826100">3:46.349</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
         <td class="tagname"><a href="report-tag_3963880996.html">@SmokeRegressionTC1_2</a></td>
 
-        <td      class="passed"    >22</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >4</td>
+        <td      class="passed"    >27</td>
+        <td >0</td>
+        <td >0</td>
         <td >0</td>
         <td >0</td>
         <td class="total">27</td>
 
-        <td  class="passed"    >2</td>
-        <td  class="failed"    >1</td>
+        <td  class="passed"    >3</td>
+        <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="415318515000">6:55.318</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="482525621200">8:2.525</td>
+        <td class="passed">Passed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-tag_2209192177.html">@Test</a></td>
 
-        <td      class="passed"    >22</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >4</td>
+        <td      class="passed"    >78</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">27</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">78</td>
 
-        <td  class="passed"    >2</td>
-        <td  class="failed"    >1</td>
-        <td class="total">3</td>
+        <td  class="passed"    >6</td>
+        <td >0</td>
+        <td class="total">6</td>
 
-        <td class="duration" data-value="415318515000">6:55.318</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="708875447300">11:48.875</td>
+        <td class="passed">Passed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>44</td>
-      <td>2</td>
-      <td>8</td>
+      <td>156</td>
       <td>0</td>
       <td>0</td>
-      <td>54</td>
+      <td>0</td>
+      <td>0</td>
+      <td>156</td>
 
-      <td>4</td>
-      <td>2</td>
-      <td>6</td>
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
 
-      <td class="duration">13:50.637</td>
-      <td>2</td>
+      <td class="duration">23:37.750</td>
+      <td>3</td>
     </tr>
     <tr>
       <td></td>
-      <td>81.48%</td>
-      <td>3.70%</td>
-      <td>14.81%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>66.67%</td>
-      <td>33.33%</td>
-      <td></td>
-      <td></td>
+      <td>100.00%</td>
       <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>
