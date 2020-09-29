@@ -86,7 +86,7 @@ public class Utils {
     	keys.sendKeys(value);
 	}
     public void clearinputfield(WebElement field) {
-    	field.click();
+    	field.clear();
     	
     }
     public void keyboardenter(WebElement actionkeysenter) {

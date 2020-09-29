@@ -505,7 +505,7 @@ public class StepDefination extends Utils {
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
      public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException, IOException {
-    	 Thread.sleep(12000);
+    	 Thread.sleep(5000);
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
@@ -586,41 +586,7 @@ public class StepDefination extends Utils {
     	 
     	 
      }
-     @Then("Verify if user able to see the parent first name in the contact screen {string} {string}")
-     public void verify_if_user_able_to_see_the_parent_first_name_in_the_contact_screen(String ParentFirstName, String filename) throws InterruptedException, IOException {
-    	 crmContactpage redfishCRMcolntact=new crmContactpage(driver);
-    	 driver.switchTo().frame("contentIFrame1");
-    	 Thread.sleep(15000);
-    	 
-    	 File actualfirstname=redfishCRMcolntact.crmForename().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualfirstname,new File("./target/cucumber-html-reports/Screenshots/"+filename+".png"));
-    	 
-     }
-     @Then("Verify if user able to see the parent Surname in the contact screen {string}")
-     public void verify_if_user_able_to_see_the_parent_surname_in_the_contact_screen(String ParentSecondName) throws IOException, InterruptedException {
-    	 crmContactpage redfishCRMcolntactsurname=new crmContactpage(driver);
-    	 Thread.sleep(15000);
-    	 
-    	 File actuallastname=redfishCRMcolntactsurname.crmlastname().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actuallastname,new File("./target/cucumber-html-reports/Screenshots/lastname.png"));
-    	 
-     }
-     @Then("Verify if user able to see the parent email id in the contact screen {string}")
-     public void verify_if_user_able_to_see_the_parent_email_id_in_the_contact_screen(String ParentEmailID) throws IOException, InterruptedException {
-    	 crmContactpage redfishCRMcolntactemail=new crmContactpage(driver);
-    	 Thread.sleep(15000);
-    	 File actualemaiid=redfishCRMcolntactemail.crmemailaddress1().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualemaiid,new File("./target/cucumber-html-reports/Screenshots/emailaddress1.png"));
-    	 
-     }
-     @Then("Verify if user able to see the Enquiry Type in the contact screen {string}")
-     public void verify_if_user_able_to_see_the_enquiry_type_in_the_contact_screen(String EnquiryType) throws IOException, InterruptedException {
-    	 crmContactpage redfishCRMcolntactenq=new crmContactpage(driver);
-    	 Thread.sleep(15000);
-    	 File actualenquiry=redfishCRMcolntactenq.crmemailaddress1().getScreenshotAs(OutputType.FILE);
-    	 FileUtils.copyFile(actualenquiry,new File("./target/cucumber-html-reports/Screenshots/emailaddress1.png"));
-    	 
-     }
+  
      @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table {string}")
      public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(String contactwithenqfilename) throws InterruptedException, IOException {
     	 //crmContactpage crmcntenq = new crmContactpage(driver);
@@ -632,6 +598,69 @@ public class StepDefination extends Utils {
     	 
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactwithenqfilename+".png");
     	 //driver.switchTo().parentFrame();
+     }
+     @Then("Verify if the Contacts Associated View is displayed take screenshot in {string}")
+     public void verify_if_the_contacts_associated_view_is_displayed_take_screenshot_in(String contactviewfilename) throws IOException, InterruptedException {
+    	 Thread.sleep(10000);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactviewfilename+".png");
+     }
+     @When("Verify if user able to search with parent Full Name {string} screenshot in {string}")
+     public void verify_if_user_able_to_search_with_parent_full_name_screenshot_in(String ParentName, String FullNameFileName) throws IOException, InterruptedException {
+    	 crmHomepage redfishCRMParentName=new crmHomepage(driver);
+    	 driver.switchTo().frame("contentIFrame0");
+    	 clickelement(redfishCRMParentName.crmsearchbox());
+    	 clearinputfield(redfishCRMParentName.crmsearchbox());
+    	 typekey(redfishCRMParentName.crmsearchbox(),ParentName);
+    	 keyboardenter(redfishCRMParentName.crmsearchbox());
+    	 Thread.sleep(10000);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+FullNameFileName+".png");
+    	 driver.switchTo().parentFrame();
+     }
+     @When("Verify if user able to search with parent email id {string} screenshot in {string}")
+     public void verify_if_user_able_to_search_with_parent_email_id_screenshot_in(String ParentEmailID, String ParentEmailIDFileName) throws IOException, InterruptedException {
+    	 crmHomepage redfishCRMEmailID=new crmHomepage(driver);
+    	 driver.switchTo().frame("contentIFrame0");
+    	 clickelement(redfishCRMEmailID.crmsearchbox());
+    	 clearinputfield(redfishCRMEmailID.crmsearchbox());
+    	 typekey(redfishCRMEmailID.crmsearchbox(),ParentEmailID);
+    	 keyboardenter(redfishCRMEmailID.crmsearchbox());
+    	 Thread.sleep(10000);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+ParentEmailIDFileName+".png");
+    	 driver.switchTo().parentFrame();
+     }
+     @When("Verify if user able to search with Post Code {string} screenshot in {string}")
+     public void verify_if_user_able_to_search_with_post_code_screenshot_in(String Postcode, String Postcodefilename) throws IOException, InterruptedException {
+    	 crmHomepage redfishCRMpostcode=new crmHomepage(driver);
+    	 driver.switchTo().frame("contentIFrame0");
+    	 clickelement(redfishCRMpostcode.crmsearchbox());
+    	 clearinputfield(redfishCRMpostcode.crmsearchbox());
+    	 typekey(redfishCRMpostcode.crmsearchbox(),Postcode);
+    	 keyboardenter(redfishCRMpostcode.crmsearchbox());
+    	 Thread.sleep(10000);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Postcodefilename+".png");
+    	 driver.switchTo().parentFrame();
+     }
+     @When("Verify if user able to search with invalid search key {string} screenshot in {string}")
+     public void verify_if_user_able_to_search_with_invalid_search_key_screenshot_in(String InvalidSearch, String InvalidSearchFilename) throws IOException, InterruptedException {
+    	 crmHomepage redfishCRMinvalid=new crmHomepage(driver);
+    	 driver.switchTo().frame("contentIFrame0");
+    	 clickelement(redfishCRMinvalid.crmsearchbox());
+    	 clearinputfield(redfishCRMinvalid.crmsearchbox());
+    	 typekey(redfishCRMinvalid.crmsearchbox(),InvalidSearch);
+    	 keyboardenter(redfishCRMinvalid.crmsearchbox());
+    	 Thread.sleep(10000);
+    	 Dimension d = new Dimension(1920,1080);
+    	 driver.manage().window().setSize(d);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+InvalidSearchFilename+".png");
+    	 driver.switchTo().parentFrame();
      }
 
 }
