@@ -662,5 +662,19 @@ public class StepDefination extends Utils {
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+InvalidSearchFilename+".png");
     	 driver.switchTo().parentFrame();
      }
+     @When("Clicked on register First child with sibling with {string}")
+     public void clicked_on_register_first_child_with_sibling_with(String Sibling) {
+    	 redfishNewRegisterpage siblings=new redfishNewRegisterpage(driver);
+    	 redfishNewEnquirypage secondchildreg = new redfishNewEnquirypage(driver);
+    	 clickelement(secondchildreg.secondchildreg());
+    	 clickelement(siblings.registerchild());
+    	     	 if (Sibling.equalsIgnoreCase("Yes")) {
+    	     		 clickelement(siblings.siblingyes());
+    	  			
+    	  		}else {
+    	  			clickelement(siblings.siblingno());
+    	  		}
+    	     	 clickelement(siblings.nextfromsibling());
+     }
 
 }

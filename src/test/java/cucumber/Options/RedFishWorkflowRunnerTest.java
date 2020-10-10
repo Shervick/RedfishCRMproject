@@ -14,10 +14,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features="src/test/java/features/ContactManagement.feature"
+features="src/test/java/features/RegisterChildren.feature"
 ,plugin="json:target/jsonReports/cucumber-report.json"
 ,glue= "stepDefinations"
-,tags = ("@SmokeRegressionTC1_3")
+,tags = ("@SmokeRegressionTC1_5")
 )
 public class RedFishWorkflowRunnerTest {
 	

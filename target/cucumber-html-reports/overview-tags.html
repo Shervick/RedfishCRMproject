@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@SmokeRegressionTC1_3", ] ,
+        labels:  [ "@Register2Children",  "@SmokeRegressionTC1_3", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00, ] 
+                data:  [ 100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>RedfishAutomation</td>
         <td>1</td>
-      <td>29 Sep 2020, 18:12</td>
+      <td>09 Oct 2020, 14:41</td>
     </tr>
   </tbody>
 </table>
@@ -197,20 +197,37 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
+        <td class="tagname"><a href="report-tag_3373912237.html">@Register2Children</a></td>
+
+        <td      class="passed"    >90</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">90</td>
+
+        <td  class="passed"    >6</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td class="duration" data-value="879030026300">14:39.030</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
         <td class="tagname"><a href="report-tag_3963880997.html">@SmokeRegressionTC1_3</a></td>
 
-        <td      class="passed"    >30</td>
+        <td      class="passed"    >63</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">30</td>
+        <td class="total">63</td>
 
         <td  class="passed"    >3</td>
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="319922969100">5:19.922</td>
+        <td class="duration" data-value="412753165600">6:52.753</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -218,19 +235,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>30</td>
+      <td>153</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>30</td>
+      <td>153</td>
 
-      <td>3</td>
+      <td>9</td>
       <td>0</td>
-      <td>3</td>
+      <td>9</td>
 
-      <td class="duration">5:19.922</td>
-      <td>1</td>
+      <td class="duration">21:31.783</td>
+      <td>2</td>
     </tr>
     <tr>
       <td></td>

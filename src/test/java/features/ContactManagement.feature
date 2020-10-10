@@ -36,3 +36,23 @@ Examples:
    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|tbonusj7@msn.com|SO17 0LG|Thomas|Bonus|Thomas Bonus|RedFish|@#$|07519079058|contactThomasBonus|contactenqThomasBonus|contactlogoutThomasBonus|Enquiry: RedFish Enquiry|EnquiryThomasBonus|Appointment: Visit|VisitThomasBonus|FullNameThomas Bonus|ParentEmailIDtbonusj7@msn.com|PostcodefileSO17 0LG|InvalidsearchThomas|contactviewThomas|
    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|awatmoughj8@abc.com|SO18 0LG|Asia|Watmough|Asia Watmough|RedFish|14/10/2020|07754100342|contactAsiaWatmough|contactenqAsiaWatmough|contactlogoutAsiaWatmough|Enquiry: RedFish Enquiry|EnquiryAsiaWatmough|Appointment: Visit|VisitAsiaWatmough|FullNameAsia Watmough|ParentEmailIDawatmoughj8@abc.com|PostcodefileSO18 0LG|InvalidsearchAsia|contactviewAsia|
    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|adebiasij9@pbs.com|SO19 0LG|Arch|De Biasi|Arch De Biasi|RedFish|901Arch|07534038719|contactArchDe Biasi|contactenqArchDe Biasi|contactlogoutArchDe Biasi|Enquiry: RedFish Enquiry|EnquiryArchDe Biasi|Appointment: Visit|VisitArchDe Biasi|FullNameArch De Biasi|ParentEmailIDadebiasij9@pbs.com|PostcodefileSO19 0LG|InvalidsearchArch|contactviewArch|
+
+
+@SmokeRegressionTC1_4
+Scenario Outline: Create a Contact in CRM when enquiry is created in CRM through Redfish interface
+Given Initialize the browser with chrome
+And Open Web Application "<application>" 
+When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>"
+Then Verify if Enquiry is created by taking the screen shot of the enquiry table "<contactwithenqfilename>"
+Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
+Then Verify if user able to open the visit and verify the title as "<CRMVisitTitle>" screenshot in "<Visitfilename>"
+Then Logout from redfishCRM and close browser "<CRMlogoutfilename>"
+
+Examples:
+	|UserName|Password|application|expectedtitle|ParentEmailID|ParentFirstName|ParentSecondName|EnquiryType|MobileNumber|contactfilename|contactwithenqfilename|CRMlogoutfilename|CRMEnquiryTitle|Enquiryfilename|CRMVisitTitle|Visitfilename|
+  |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|tbonusj7@msn.com|Thomas|Bonus|RedFish|07519079058|contactThomasBonus|contactenqThomasBonus|contactlogoutThomasBonus|Enquiry: RedFish Enquiry|EnquiryThomasBonus|Appointment: Visit|VisitThomasBonus|
+  |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|awatmoughj8@abc.com|Asia|Watmough|RedFish|07754100342|contactAsiaWatmough|contactenqAsiaWatmough|contactlogoutAsiaWatmough|Enquiry: RedFish Enquiry|EnquiryAsiaWatmough|Appointment: Visit|VisitAsiaWatmough|
+  |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|adebiasij9@pbs.com|Arch|De Biasi|RedFish|07534038719|contactArchDe Biasi|contactenqArchDe Biasi|contactlogoutArchDe Biasi|Enquiry: RedFish Enquiry|EnquiryArchDe Biasi|Appointment: Visit|VisitArchDe Biasi|
+

@@ -13,7 +13,7 @@ WebDriver driver;
 	public redfishHomepage(WebDriver driver) {
 		this.driver=driver;
 }
-	By Enquiriesmainmenulink=By.cssSelector("#ctl00_ctl00_ctl00_MainContent_MenuContent_rMainMenu_ctl00_hlMenu");
+	By Enquiriesmainmenulink=By.cssSelector("a#ctl00_ctl00_ctl00_MainContent_MenuContent_rMainMenu_ctl01_hlMenu");
 	By Enquiriesubmenulink= By.cssSelector("a#ctl00_ctl00_ctl00_MainContent_SubMenuContent_rSubMenuItems_ctl02_hlMenu");
 	By searchbox=By.cssSelector("input#ctl00_ctl00_ctl00_MainContent_tSearch");
 	
