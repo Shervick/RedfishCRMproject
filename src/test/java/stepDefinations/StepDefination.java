@@ -60,7 +60,6 @@ public class StepDefination extends Utils {
 		driver.get(getGlobalValue(application));
 		
 	}
-	
 	@When("User enters User Name {string} and Password {string}")
 	public void user_enters_user_name_and_password(String username, String password) throws Throwable {	 
 		redfishLoginpage loginredfish=new redfishLoginpage(driver);
@@ -347,11 +346,7 @@ public class StepDefination extends Utils {
     	 Thread.sleep(2000);
     	 clickelement(redfishsearchenq.searchbox());
     	 typekey(redfishsearchenq.searchbox(),ParentName);
-    	 keyboardenter(redfishsearchenq.searchbox());
-    	 
-    	 
-    	 
-    	 
+    	 keyboardenter(redfishsearchenq.searchbox());    	 
      }
      @Then("Verify Enquiry search functionality with only Parent Name {string} in search page")
      public void verify_enquiry_search_functionality_with_only_parent_name_in_search_page(String ParentName) {
@@ -361,10 +356,17 @@ public class StepDefination extends Utils {
     	 clickelement(redfishsearchenq1.clickenquirycheckbox());
     	 clearinputfield(redfishsearchenq1.searchboxinform());
     	 typekey(redfishsearchenq1.searchboxinform(),ParentName);
-    	 keyboardenter(redfishsearchenq1.searchboxinform());
-    	
+    	 keyboardenter(redfishsearchenq1.searchboxinform());    	
+     }
+     @Then("Verify if parent search functionality in redfish with parent name {string} is working")
+     public void verify_if_parent_search_functionality_in_redfish_with_parent_name_is_working(String ParentName) {
+    	 redfishsearchpage redfishsearchparent=new redfishsearchpage(driver);
+    	 clickelement(redfishsearchparent.clickonchildcheckbox());
+    	 clearinputfield(redfishsearchparent.searchboxinform());
+    	 typekey(redfishsearchparent.searchboxinform(),ParentName);
+    	 String actualsearchtest=readwebelementtext(redfishsearchparent.searchtext());
+    	 assertTrue(actualsearchtest.contains(ParentName));  
     	 
-    	
      }
      @Then("Verify Enquiry can be closed with reason code {string} Enquiry Management")
      public void verify_enquiry_can_be_closed_with_reason_code_enquiry_management(String ClosedReason) {

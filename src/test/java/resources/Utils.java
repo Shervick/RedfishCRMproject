@@ -100,5 +100,8 @@ public class Utils {
     	
     	
     }
+    public String readwebelementtext(WebElement weblelemttext) {
+    	return weblelemttext.getText();
+    }
 
 }
