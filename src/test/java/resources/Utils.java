@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -16,7 +17,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
-
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.redfishCRM.pageObjects.crmEnquirypage;
@@ -80,7 +83,8 @@ public class Utils {
 		extent.setSystemInfo("TesterName", "Shervick Samson");
 	}
 	public void clickelement(WebElement locator) {
-		locator.click();
+		WebElement loc=locator;
+		loc.click();
 	}
     public void typekey(WebElement keys,String value) {
     	keys.sendKeys(value);
@@ -90,7 +94,13 @@ public class Utils {
     	
     }
     public void keyboardenter(WebElement actionkeysenter) {
-    	actionkeysenter.sendKeys(Keys.ENTER);
+    	WebElement action=actionkeysenter;
+    	action.sendKeys(Keys.ENTER);
+    	
+    }
+    public void keyboardreturn(WebElement actionkeysenter) {
+    	WebElement action=actionkeysenter;
+    	action.sendKeys(Keys.RETURN);
     }
     public void keyboardtab(WebElement actionkeystab) {
     	actionkeystab.sendKeys(Keys.TAB);
@@ -103,5 +113,22 @@ public class Utils {
     public String readwebelementtext(WebElement weblelemttext) {
     	return weblelemttext.getText();
     }
+    public void ExplicitWaittoclick(WebElement clickable) {
+    	WebDriverWait wait = new WebDriverWait(driver,60);
+    	wait.until(ExpectedConditions.elementToBeClickable(clickable));
+    	
+    }
+    public void ExplicitWaittotitle(String title) {
+    	WebDriverWait wait = new WebDriverWait(driver,60);
+    	wait.until(ExpectedConditions.titleContains(title));
+    }
+    public void windowmaxdim(int height,int width) {
+    	Dimension d = new Dimension(height,width);
+   	 driver.manage().window().setSize(d);
+    }
+    public void submitelement(WebElement locator) {
+		WebElement loc=locator;
+		loc.submit();
+	}
 
 }

@@ -37,6 +37,7 @@ import com.redfishCRM.pageObjects.crmloginpage;
 import com.redfishCRM.pageObjects.crmContactpage;
 import com.redfishCRM.pageObjects.crmEnquirypage;
 import com.redfishCRM.pageObjects.crmHomepage;
+import com.redfishCRM.pageObjects.crmNurseryPreference;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
@@ -502,12 +503,13 @@ public class StepDefination extends Utils {
     	 clickelement(loginredfishCRM.crmPassword());
     	 typekey(loginredfishCRM.crmPassword(),Password);
     	 clickelement(loginredfishCRM.crmsignin());
-    	 Thread.sleep(15000);
+    	 ExplicitWaittotitle("Contacts Active Parents");
+    	 
  		
      }
      @Then("Verify if the RedfishCRM web page title actual {string}")
      public void verify_if_the_redfish_crm_web_page_title_actual(String expectedtitle) throws InterruptedException, IOException {
-    	 Thread.sleep(5000);
+    	 ExplicitWaittotitle("Contacts Active Parents");
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedtitle);
     	 assertEquals(actualCRMtitle,expectedtitle);
@@ -518,29 +520,28 @@ public class StepDefination extends Utils {
     	 crmContactpage enqclick=new crmContactpage(driver);
     	 Thread.sleep(12000);
     	 driver.switchTo().frame("contentIFrame1");
+    	 ExplicitWaittoclick(enqclick.crmcontactfirstenq());
     	 clickelement(enqclick.crmcontactfirstenq());
-    	 Thread.sleep(12000);
+    	 ExplicitWaittotitle(expectedEnquiryTitle);
     	 String actualCRMtitle=driver.getTitle();
     	 assertThat(actualCRMtitle).contains(expectedEnquiryTitle);
     	 //assertEquals(actualCRMtitle,expectedEnquiryTitle);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Enquiryfilename+".png");
      }
      @Then("Verify if user able to open the visit and verify the title as {string} screenshot in {string}")
      public void verify_if_user_able_to_open_the_visit_and_verify_the_title_as_screenshot_in(String CRMVisitTitle, String Visitfilename) throws InterruptedException, IOException {
     	 crmEnquirypage visitclick=new crmEnquirypage(driver); 
     	 driver.switchTo().parentFrame();
-    	 Thread.sleep(10000);
     	 driver.switchTo().frame("contentIFrame1");
+    	 ExplicitWaittoclick(visitclick.crmEnqnavig());
     	 clickelement(visitclick.crmEnqnavig());
     	 clickelement(visitclick.crmnavalue());
     	 clickelement(visitclick.crmfirstvisit());
-    	 Thread.sleep(12000);
+    	 ExplicitWaittotitle("Visit");
     	 String actualCRMvisittitle=driver.getTitle();
     	 assertThat(actualCRMvisittitle).contains(CRMVisitTitle);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+Visitfilename+".png");
     	 
      }
@@ -556,33 +557,30 @@ public class StepDefination extends Utils {
      @Then("Logout from redfishCRM and close browser {string}")
      public void logout_from_redfish_crm_and_close_browser(String CRMlogoutfilename) throws InterruptedException, IOException {
     	 crmHomepage redfishCRMlogout=new crmHomepage(driver);
-    	 WebDriverWait wait = new WebDriverWait(driver, 15);
     	 driver.switchTo().parentFrame();
+    	 ExplicitWaittoclick(redfishCRMlogout.crmprofile());
     	 clickelement(redfishCRMlogout.crmprofile());
+    	 ExplicitWaittoclick(redfishCRMlogout.crmsignout());
     	 clickelement(redfishCRMlogout.crmsignout());
-    	 Thread.sleep(10000);
     	 keyboardenter(redfishCRMlogout.crmsignout());
-    	 wait.until(ExpectedConditions.titleContains("Sign out"));
+    	 keyboardenter(redfishCRMlogout.crmsignout());
+    	 //ExplicitWaittotitle("Sign out");
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+CRMlogoutfilename+".png");
  		 driver.close();
  		 driver.quit();
      }
-     @SuppressWarnings("deprecation")
-	@Then("Verify if user able to search with parent email id {string} {string}")
-     public void verify_if_user_able_to_search_with_parent_email_id(String EmailId, String contactfilename) throws IOException, InterruptedException {
+	@Then("Verify if user able to search with parent email id {string} {string} {string}")
+     public void verify_if_user_able_to_search_with_parent_email_id(String EmailId, String contactfilename, String ParentName) throws IOException, InterruptedException {
     	 crmHomepage redfishCRMsearch=new crmHomepage(driver);
-    	 WebDriverWait wait = new WebDriverWait(driver, 15);
-    	 Thread.sleep(15000);
     	 driver.switchTo().frame("contentIFrame0");
-    	 wait.until(ExpectedConditions.elementToBeClickable(redfishCRMsearch.crmsearchbox()));
+    	 ExplicitWaittoclick(redfishCRMsearch.crmsearchbox());
     	 clickelement(redfishCRMsearch.crmsearchbox());
     	 clearinputfield(redfishCRMsearch.crmsearchbox());
     	 typekey(redfishCRMsearch.crmsearchbox(),EmailId);
     	 keyboardenter(redfishCRMsearch.crmsearchbox());
-    	 Thread.sleep(10000);
-    	 clickelement(redfishCRMsearch.crmclickonsearchresult());
-    	 wait.until(ExpectedConditions.titleContains("Contact:"));
-    	 Thread.sleep(10000);
+    	 ExplicitWaittoclick(redfishCRMsearch.crmclickonsearchresult(ParentName));
+    	 clickelement(redfishCRMsearch.crmclickonsearchresult(ParentName));
+    	 ExplicitWaittotitle("Contact:");
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactfilename+".png");
     	 driver.switchTo().parentFrame();
     	 
@@ -592,10 +590,9 @@ public class StepDefination extends Utils {
      @Then("Verify if Enquiry is created by taking the screen shot of the enquiry table {string}")
      public void verify_if_enquiry_is_created_by_taking_the_screen_shot_of_the_enquiry_table(String contactwithenqfilename) throws InterruptedException, IOException {
     	 //crmContactpage crmcntenq = new crmContactpage(driver);
-    	 Thread.sleep(15000);
+    	 
     	 //driver.switchTo().frame("contentIFrame1");
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 //((JavascriptExecutor)driver).executeScript("scroll(0,400)");
     	 
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactwithenqfilename+".png");
@@ -603,22 +600,19 @@ public class StepDefination extends Utils {
      }
      @Then("Verify if the Contacts Associated View is displayed take screenshot in {string}")
      public void verify_if_the_contacts_associated_view_is_displayed_take_screenshot_in(String contactviewfilename) throws IOException, InterruptedException {
-    	 Thread.sleep(10000);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+contactviewfilename+".png");
      }
      @When("Verify if user able to search with parent Full Name {string} screenshot in {string}")
      public void verify_if_user_able_to_search_with_parent_full_name_screenshot_in(String ParentName, String FullNameFileName) throws IOException, InterruptedException {
     	 crmHomepage redfishCRMParentName=new crmHomepage(driver);
     	 driver.switchTo().frame("contentIFrame0");
+    	 ExplicitWaittoclick(redfishCRMParentName.crmsearchbox());
     	 clickelement(redfishCRMParentName.crmsearchbox());
     	 clearinputfield(redfishCRMParentName.crmsearchbox());
     	 typekey(redfishCRMParentName.crmsearchbox(),ParentName);
     	 keyboardenter(redfishCRMParentName.crmsearchbox());
-    	 Thread.sleep(10000);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+FullNameFileName+".png");
     	 driver.switchTo().parentFrame();
      }
@@ -626,13 +620,12 @@ public class StepDefination extends Utils {
      public void verify_if_user_able_to_search_with_parent_email_id_screenshot_in(String ParentEmailID, String ParentEmailIDFileName) throws IOException, InterruptedException {
     	 crmHomepage redfishCRMEmailID=new crmHomepage(driver);
     	 driver.switchTo().frame("contentIFrame0");
+    	 ExplicitWaittoclick(redfishCRMEmailID.crmsearchbox());
     	 clickelement(redfishCRMEmailID.crmsearchbox());
     	 clearinputfield(redfishCRMEmailID.crmsearchbox());
     	 typekey(redfishCRMEmailID.crmsearchbox(),ParentEmailID);
     	 keyboardenter(redfishCRMEmailID.crmsearchbox());
-    	 Thread.sleep(10000);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+ParentEmailIDFileName+".png");
     	 driver.switchTo().parentFrame();
      }
@@ -640,6 +633,7 @@ public class StepDefination extends Utils {
      public void verify_if_user_able_to_search_with_post_code_screenshot_in(String Postcode, String Postcodefilename) throws IOException, InterruptedException {
     	 crmHomepage redfishCRMpostcode=new crmHomepage(driver);
     	 driver.switchTo().frame("contentIFrame0");
+    	 ExplicitWaittoclick(redfishCRMpostcode.crmsearchbox());
     	 clickelement(redfishCRMpostcode.crmsearchbox());
     	 clearinputfield(redfishCRMpostcode.crmsearchbox());
     	 typekey(redfishCRMpostcode.crmsearchbox(),Postcode);
@@ -658,9 +652,7 @@ public class StepDefination extends Utils {
     	 clearinputfield(redfishCRMinvalid.crmsearchbox());
     	 typekey(redfishCRMinvalid.crmsearchbox(),InvalidSearch);
     	 keyboardenter(redfishCRMinvalid.crmsearchbox());
-    	 Thread.sleep(10000);
-    	 Dimension d = new Dimension(1920,1080);
-    	 driver.manage().window().setSize(d);
+    	 windowmaxdim(1920,1080);
     	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+InvalidSearchFilename+".png");
     	 driver.switchTo().parentFrame();
      }
@@ -678,5 +670,80 @@ public class StepDefination extends Utils {
     	  		}
     	     	 clickelement(siblings.nextfromsibling());
      }
+     @Then("Verify if user is able to click on new contact and get the actual title {string}")
+     public void verify_if_user_is_able_to_click_on_new_contact_and_get_the_actual_title(String expnewcontacttitle) {
+    	 crmHomepage redfishCRMnewcont=new crmHomepage(driver);
+    	 ExplicitWaittoclick(redfishCRMnewcont.crmclickonnew());
+    	 clickelement(redfishCRMnewcont.crmclickonnew());
+    	 ExplicitWaittotitle("New Contact");
+    	 
+     }
+     @Then("Type Parent First Name {string} Parent Second Name {string} Address {string} Postcode {string} MobileNumber {string} Email id {string} Relationship Type {string}")
+     public void type_parent_first_name_parent_second_name_address_postcode_mobile_number_email_id(String ParentFirstName, String ParentSecondName, String Address, String Postcode, String MobileNumber, String ParentEmailID, String relationshipType) throws InterruptedException {
+    	 crmContactpage CRMcreatenewcont=new crmContactpage(driver);
+    	 driver.switchTo().frame("contentIFrame1");
+    	 Thread.sleep(12000);
+    	 clickelement(CRMcreatenewcont.crmrelationshipTypep());
+    	 clickelement(CRMcreatenewcont.crmforename());
+    	 typekey(CRMcreatenewcont.crmforename(),ParentFirstName);
+    	 submitelement(CRMcreatenewcont.crmforename());
+    	 clickelement(CRMcreatenewcont.crmlastname());
+    	 typekey(CRMcreatenewcont.crmlastname(),ParentSecondName);
+    	 //submitelement(CRMcreatenewcont.crmlastname());
+    	 clickelement(CRMcreatenewcont.crmaddress1());
+    	 typekey(CRMcreatenewcont.crmaddress1(),Address);
+    	 //submitelement(CRMcreatenewcont.crmaddress1());
+    	 clickelement(CRMcreatenewcont.crmpostelcode());
+    	 typekey(CRMcreatenewcont.crmpostelcode(),Postcode);
+    	 //submitelement(CRMcreatenewcont.crmpostelcode());
+    	 clickelement(CRMcreatenewcont.crmmobilephone());
+    	 typekey(CRMcreatenewcont.crmmobilephone(),MobileNumber);
+    	 //submitelement(CRMcreatenewcont.crmmobilephone());
+    	 clickelement(CRMcreatenewcont.crmemailaddress1());
+    	 typekey(CRMcreatenewcont.crmemailaddress1(),ParentEmailID);
+    	 //submitelement(CRMcreatenewcont.crmemailaddress1());
+    	 driver.switchTo().parentFrame();
+    	 ExplicitWaittoclick(CRMcreatenewcont.crmsavecintact());
+    	 clickelement(CRMcreatenewcont.crmsavecintact());    	 
+     }
+     @Then("Take screen shot in file name {string}")
+     public void take_screen_shot_in_file_name(String NewContactfilename) throws IOException {
+    	 windowmaxdim(1920,1080);
+    	 fullpagescreenshot("./target/cucumber-html-reports/Screenshots/"+NewContactfilename+".png");
+     }
+     @Then("Verify if user is able to click on add nursery preferred")
+     public void verify_if_user_is_able_to_click_on_add_nursery_preferred() {
+    	 crmEnquirypage CRMaddNP=new crmEnquirypage(driver);
+    	 
+    	 clickelement(CRMaddNP.crmaddnurserypreference());    	 
+     }
+     @Then("Verify if user is able to add {string} in nursery preferred")
+     public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {
+    	 crmNurseryPreference crmaddnursery=new crmNurseryPreference(driver);
+    	 crmEnquirypage CRMaddNP=new crmEnquirypage(driver);
+    	 //driver.switchTo().frame("contentIFrame0");
+    	 clickelement(CRMaddNP.crmaddnurserypreference());
+    	 String parentWindowHandler = driver.getWindowHandle();
+    	 String subWindowHandler = null;
+    	 Set<String> handles = driver.getWindowHandles();
+    	 Iterator<String> iterator = handles.iterator();
+    	 while (iterator.hasNext()){
+ 		    subWindowHandler = iterator.next();
+ 		}
+    	 driver.switchTo().window(subWindowHandler);
+    	 ExplicitWaittotitle("Nursery Preference");
+    	 driver.switchTo().frame("contentIFrame0");
+    	 clickelement(crmaddnursery.crmNPnursery());
+    	 clearinputfield(crmaddnursery.crmNPnursery());
+    	 typekey(crmaddnursery.crmNPnursery(),Nursery);
+    	 keyboardenter(crmaddnursery.crmNPnursery());
+    	 clickelement(crmaddnursery.crmNPsearchtext(Nursery));
+    	 driver.switchTo().parentFrame();
+    	 clickelement(crmaddnursery.crmNPSaveAndClose());
+    	 driver.switchTo().window(parentWindowHandler); 
+    	 
+	
+     }
+     
 
 }

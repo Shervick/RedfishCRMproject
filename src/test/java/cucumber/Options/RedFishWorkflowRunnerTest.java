@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 features="src/test/java/features/EnquiryManagement.feature"
 ,plugin="json:target/jsonReports/cucumber-report.json"
 ,glue= "stepDefinations"
-,tags = ("@Test")
+,tags = ("@CRMAddNP")
 )
 public class RedFishWorkflowRunnerTest {
 	

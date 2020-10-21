@@ -21,15 +21,19 @@ protected static WebDriver driver;
 	}
 	
 	By crmprofile= By.cssSelector("span#navTabButtonChangeProfileImageLink>img.navTabButtonUserInfoProfileImage");
-	By crmsignout=By.linkText("Sign out");
+	By crmcntsignout=By.linkText("Sign out");
 	By crmsingoutsmenu=By.cssSelector("span#navTabButtonUserInfoDropDownId");
 	By crmcontactframe1=By.cssSelector("iframe#contentIFrame1");
 	By crmcontactframe=By.cssSelector("iframe#contentIFrame0");
-	By crmforename=By.cssSelector("input#firstname_i");
+	By crmrelationshipTypep=By.cssSelector("label[for*='customertypecode_label'],div[text='Parent']");
+	By crmforename=By.cssSelector("input[id*='firstname']");
 	By crmforenamelabel=By.cssSelector("label#Forename_label>div.ms-crm-div-NotVisible");
-	By crmlastname=By.cssSelector("input#lastname_i");
-	By crmemailaddress1=By.cssSelector("input#emailaddress1_i");
-	By crmmobilephone=By.cssSelector("input#mobilephone_i");
+	By crmlastname=By.cssSelector("td#lastname_d div#lastname div[attrname='lastname'],input[id*='lastname']");
+	By crmemailaddress1=By.cssSelector("td#emailaddress1_d input#emailaddress1_i");
+	By crmaddress1=By.cssSelector("td#address1_line1_d input#address1_line1_i");
+	By crmpostelcode=By.cssSelector("td#address1_postalcode_d input#address1_postalcode_i");
+	By crmmobilephone=By.cssSelector("td#mobilephone_d input#mobilephone_i");
+	By crmsavecintact=By.cssSelector("span[command*='SavePrimary']");
 	By crmenquirytab=By.cssSelector("table[name='SUMMARY_TAB_ENQUIRY']");
 	By crmForename=By.cssSelector("#firstname");
 	By crmenquerytable=By.cssSelector("div#contactopportunitiesgrid");
@@ -39,16 +43,20 @@ protected static WebDriver driver;
 	By crmcontactsecondenq=By.cssSelector("a[class=ms-crm-List-Link][title*='Enquiry'][id$='_1'][tabindex='1810']");
 	
 	public WebElement crmprofile() {return driver.findElement(crmprofile);}
-	public WebElement crmsignout() {return driver.findElement(crmsignout);}
+	public WebElement crmcntsignout() {return driver.findElement(crmcntsignout);}
 	public WebElement crmsingoutsmenu() {return driver.findElement(crmsingoutsmenu);}
 	public WebElement crmcontactframe() {return driver.findElement(crmcontactframe);}
 	public WebElement crmcontactframe1() {return driver.findElement(crmcontactframe1);}
+	public WebElement crmrelationshipTypep() {return driver.findElement(crmrelationshipTypep);}
 	public WebElement crmforename() {return driver.findElement(crmforename);}
 	public WebElement crmforenamelabel() {return driver.findElement(crmforenamelabel);}
 	public WebElement crmlastname() {return driver.findElement(crmlastname);}
 	public WebElement crmemailaddress1() {return driver.findElement(crmemailaddress1);}
+	public WebElement crmaddress1() {return driver.findElement(crmaddress1);}
+	public WebElement crmpostelcode() {return driver.findElement(crmpostelcode);}
+	public WebElement crmsavecintact() {return driver.findElement(crmsavecintact);}
 	public WebElement crmcontactenqlable() {return driver.findElement(crmcontactenqlable);}
-	public WebElement crmmobilephone() {return driver.findElement(crmemailaddress1);}
+	public WebElement crmmobilephone() {return driver.findElement(crmmobilephone);}
 	public WebElement crmenquirytab() {return driver.findElement(crmenquirytab);}
 	public WebElement crmForename() {return driver.findElement(crmForename);}
 	public WebElement crmenquerytable() {return driver.findElement(crmenquerytable);}

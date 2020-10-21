@@ -1,6 +1,6 @@
 Feature: 03.1 Enquiry Management
 
-  @SmokeRegressionTC1_1 @Test
+  @SmokeRegressionTC1_1 @Test  @CRMAddNP
   Scenario Outline: DataCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -21,13 +21,10 @@ Feature: 03.1 Enquiry Management
     Then Logout from redfish and close browser
 
     Examples: 
-      | UserName    | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName          | Address                | Postcode | MobileNumber | EmailId                  | Source     | FirstChildFirstName | SecondChildSecondName | DOB        | FirstChildGender | FirstEnrolmentStartDate | FirstEnrolmentEndDate | BookingPatten | SecondChildFirstName | SecondChildSecondName | SecondChildDOB | SecondChildGender | SecondEnrolmentStartDate | SecondBookingPatten | EnquiryDetails  | Sibling | Relationship | ParentalResponsibility | PhotoPreference | TFCReference | LEAFEETReference | hrFundingCode | ChildProfileTitle | VisitDate  | VisitTime |
-      | 99160101NM  | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Federico        | McWilliams       | Federico McWilliams | 99-2147 St. Marys Road | SO47 0LG |  07194124937 | fmcwilliamsez@joomla.com | BH Website | Abram               | McWilliams            | 15/10/2017 | M                | 14/10/2020              | 27/09/2021            | All Days      | Christabella         | McWilliams            | 14/10/2018     | F                 | 15/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000191 | Child             | 19/10/2020 |      0930 |
-      | 99160101NM2 | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Malanie         | Fordyce          | Malanie Fordyce     | 99-2148 St. Marys Road | SO48 0LG |  07041458233 | mfordycef0@nature.com    | BH Website | Berti               | Fordyce               | 15/10/2017 | F                | 14/10/2020              | 27/09/2021            | All Days      | Christin             | Fordyce               | 14/10/2018     | F                 | 15/10/2020               | All Days            | Enquiry Details | No      | Father       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000192 | Child             | 19/10/2020 |      0930 |
-      | 99160101NM3 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Jilleen         | Brougham         | Jilleen Brougham    | 99-2149 St. Marys Road | SO49 0LG |  07622870426 | jbroughamf1@goo.com      | BH Website | Fina                | Brougham              | 15/10/2017 | F                | 14/10/2020              | 27/09/2021            | All Days      | Rolph                | Brougham              | 14/10/2018     | M                 | 15/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000193 | Child             | 19/10/2020 |      0930 |
-      | 99160101NM  | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Rhona           | Thurston         | Rhona Thurston      | 99-2150 St. Marys Road | SO50 0LG |  07121785051 | rthurstonf2@gravatar.com | BH Website | Felisha             | Thurston              | 15/10/2017 | F                | 14/10/2020              | 27/09/2021            | All Days      | Tilda                | Thurston              | 14/10/2018     | F                 | 15/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000194 | Child             | 19/10/2020 |      0930 |
-      | 99160101NM2 | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Anny            | Merrigan         | Anny Merrigan       | 99-2151 St. Marys Road | SO51 0LG |  07555183309 | amerriganf3@infoseek.com | BH Website | Steward             | Merrigan              | 15/10/2017 | M                | 14/10/2020              | 27/09/2021            | All Days      | Catlee               | Merrigan              | 14/10/2018     | F                 | 15/10/2020               | All Days            | Enquiry Details | No      | Father       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000195 | Child             | 19/10/2020 |      0930 |
-      | 99160101NM3 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Greta           | Wistance         | Greta Wistance      | 99-2152 St. Marys Road | SO52 0LG |  07468768392 | gwistancef4@sbwire.com   | BH Website | Marina              | Wistance              | 15/10/2017 | F                | 14/10/2020              | 27/09/2021            | All Days      | Darb                 | Wistance              | 14/10/2018     | F                 | 15/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000196 | Child             | 19/10/2020 |      0930 |
+      |UserName|Password|application|expectedtitle|MainMenuItem|SubMenuItem|expectedenqtitle|ParentFirstName|ParentSecondName|ParentName|Address|Postcode|MobileNumber|EmailId|Source|FirstChildFirstName|SecondChildSecondName|DOB|FirstChildGender|FirstEnrolmentStartDate|FirstEnrolmentEndDate|BookingPatten|SecondChildFirstName|SecondChildSecondName|SecondChildDOB|SecondChildGender|SecondEnrolmentStartDate|SecondBookingPatten|EnquiryDetails|Sibling|Relationship|ParentalResponsibility|PhotoPreference|TFCReference|LEAFEETReference|hrFundingCode|ChildProfileTitle|VisitDate|VisitTime|
+      |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Neddy|Gairdner|Neddy Gairdner|99-2154 St. Marys Road|SO54 0LG|07749636857|ngairdnerea@telegraph.com|BH Website|Tersina|Gairdner|21/10/2017|F|21/10/2020|27/09/2021|All Days|Carmelita|Gairdner|21/10/2018|F|21/10/2020|All Days|Enquiry Details|No|Father|Yes|All|DAST25417TFC|MIOS62392TFC|50700000197|Child|23/10/2020|0930|
+      |99160101NM2|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Elsworth|Nias|Elsworth Nias|99-2155 St. Marys Road|SO55 0LG|07975285568|eniaseb@hexun.com|BH Website|Silvanus|Nias|21/10/2017|M|21/10/2020|27/09/2021|All Days|Laurianne|Nias|21/10/2018|F|21/10/2020|All Days|Enquiry Details|No|Father|Yes|All|DAST25417TFC|MIOS62392TFC|50700000198|Child|23/10/2020|0930|
+      |99160101NM3|Password01|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Fulvia|Edmonston|Fulvia Edmonston|99-2156 St. Marys Road|SO56 0LG|07256642122|fedmonstonec@soundcloud.com|BH Website|Kristina|Edmonston|21/10/2017|F|21/10/2020|27/09/2021|All Days|Mara|Edmonston|21/10/2018|F|21/10/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000199|Child|23/10/2020|0930|
 
   @SmokeRegressionTC1_2
   Scenario Outline: DataVerificationInCRM_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
@@ -35,7 +32,7 @@ Feature: 03.1 Enquiry Management
     And Open Web Application "<application>"
     When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
     Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
-    Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>"
+    Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>" "<ParentName>"
     Then Verify if Enquiry is created by taking the screen shot of the enquiry table "<contactwithenqfilename>"
     Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
     Then Verify if user able to open the visit and verify the title as "<CRMVisitTitle>" screenshot in "<Visitfilename>"
@@ -47,7 +44,7 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | parentgm@theatlantic.com | SO39 0LG | Patin           | Blouet           | Patin Blouet     | RedFish     | 14/10/2020    |  07374096556 | contactPatinBlouet     | contactenqPatinBlouet     | contactlogoutPatinBlouet     | Enquiry: RedFish Enquiry | EnquiryPatinBlouet     | Appointment: Visit | VisitPatinBlouet     | FullNamePatin Blouet     | ParentEmailIDparentgm@theatlantic.com | PostcodefileSO39 0LG | InvalidsearchPatin    | contactviewPatin    |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lgwylltgn@ebay.com       | SO40 0LG | Laural          | Langfield        | Laural Langfield | RedFish     | 901Laural     |  07727152892 | contactLauralLangfield | contactenqLauralLangfield | contactlogoutLauralLangfield | Enquiry: RedFish Enquiry | EnquiryLauralLangfield | Appointment: Visit | VisitLauralLangfield | FullNameLaural Langfield | ParentEmailIDlgwylltgn@ebay.com       | PostcodefileSO40 0LG | InvalidsearchLaural   | contactviewLaural   |
 
-  @SmokeRegressionTC1_3
+  @SmokeRegressionTC1_3 
   Scenario Outline: Verify if user is able to register the two children
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -72,18 +69,18 @@ Feature: 03.1 Enquiry Management
     Then Logout from redfish and close browser
 
     Examples: 
-      | UserName    | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName        | Address                | Postcode | MobileNumber | EmailId                      | Source     | FirstChildFirstName | SecondChildSecondName | DOB        | FirstChildGender | FirstEnrolmentStartDate | FirstEnrolmentEndDate | BookingPatten | SecondChildFirstName | SecondChildSecondName | SecondChildDOB | SecondChildGender | SecondEnrolmentStartDate | SecondBookingPatten | EnquiryDetails  | Sibling | Relationship | ParentalResponsibility | PhotoPreference | TFCReference | LEAFEETReference | hrFundingCode | ChildProfileTitle | VisitDate  | VisitTime |
-      | 99160101NM  | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Samuel          | Yukhnevich       | Samuel Yukhnevich | 99-2141 St. Marys Road | SO41 0LG |  07690204518 | syukhnevichgc@craigslist.com | BH Website | Alvin               | Yukhnevich            | 13/10/2017 | F                | 13/10/2020              | 27/09/2021            | All Days      | Keely                | Yukhnevich            | 13/10/2018     | M                 | 14/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000185 | Child             | 16/10/2020 |      0930 |
-      | 99160101NM2 | Password1  | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Rachel          | Innocent         | Rachel Innocent   | 99-2142 St. Marys Road | SO42 0LG |  07684414876 | rinnocentgd@opera.com        | BH Website | Marrilee            | Innocent              | 13/10/2017 | M                | 13/10/2020              | 27/09/2021            | All Days      | Daniel               | Innocent              | 13/10/2018     | F                 | 14/10/2020               | All Days            | Enquiry Details | No      | Father       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000186 | Child             | 16/10/2020 |      0930 |
-      | 99160101NM3 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Lemmy           | Lettson          | Lemmy Lettson     | 99-2143 St. Marys Road | SO43 0LG |  07765893286 | llettsonge@mail.com          | BH Website | Bessie              | Lettson               | 13/10/2017 | M                | 13/10/2020              | 27/09/2021            | All Days      | Stuart               | Lettson               | 13/10/2018     | M                 | 14/10/2020               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000187 | Child             | 16/10/2020 |      0930 |
-
+      |UserName|Password|application|expectedtitle|MainMenuItem|SubMenuItem|expectedenqtitle|ParentFirstName|ParentSecondName|ParentName|Address|Postcode|MobileNumber|EmailId|Source|FirstChildFirstName|SecondChildSecondName|DOB|FirstChildGender|FirstEnrolmentStartDate|FirstEnrolmentEndDate|BookingPatten|SecondChildFirstName|SecondChildSecondName|SecondChildDOB|SecondChildGender|SecondEnrolmentStartDate|SecondBookingPatten|EnquiryDetails|Sibling|Relationship|ParentalResponsibility|PhotoPreference|TFCReference|LEAFEETReference|hrFundingCode|ChildProfileTitle|VisitDate|VisitTime|
+      |99160101NM|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Olympe|Heiden|Olympe Heiden|99-2151 St. Marys Road|SO51 0LG|07678976577|oheidenej@cargocollective.com|BH Website|Nial|Heiden|20/10/2017|M|20/10/2020|27/09/2021|All Days|Genevra|Heiden|20/10/2018|F|20/10/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000194|Child|23/10/2020|0930|
+      |99160101NM2|Password1|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Biron|Yapp|Biron Yapp|99-2152 St. Marys Road|SO52 0LG|07592812763|byappek@jimdo.com|BH Website|Ruperto|Yapp|20/10/2017|M|20/10/2020|27/09/2021|All Days|Del|Yapp|20/10/2018|F|20/10/2020|All Days|Enquiry Details|No|Father|Yes|All|DAST25417TFC|MIOS62392TFC|50700000195|Child|23/10/2020|0930|
+      |99160101NM3|Password01|redfishUAT|Home|Enquiries|Enquiry|New enquiry|Krista|Moffett|Krista Moffett|99-2153 St. Marys Road|SO53 0LG|07803935159|kmoffettel@independent.com|BH Website|Anders|Moffett|20/10/2017|M|20/10/2020|27/09/2021|All Days|Loria|Moffett|20/10/2018|F|20/10/2020|All Days|Enquiry Details|No|Mother|Yes|All|DAST25417TFC|MIOS62392TFC|50700000196|Child|23/10/2020|0930|
+  
   @Register2Children
   Scenario Outline: DataVerificationInCRM_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
     When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
     Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
-    Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>"
+    Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>" "<ParentName>"
     Then Verify if Enquiry is created by taking the screen shot of the enquiry table "<contactwithenqfilename>"
     Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
     Then Verify if user able to open the visit and verify the title as "<CRMVisitTitle>" screenshot in "<Visitfilename>"
@@ -94,3 +91,39 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lashfoldgl@netscape.com  | SO38 0LG | Lezlie          | Tythacott        | Lezlie Tythacott | RedFish     | @#$           |  07214596965 | contactLezlieTythacott | contactenqLezlieTythacott | contactlogoutLezlieTythacott | Enquiry: RedFish Enquiry | EnquiryLezlieTythacott | Appointment: Visit | VisitLezlieTythacott | FullNameLezlie Tythacott | ParentEmailIDlashfoldgl@netscape.com  | PostcodefileSO38 0LG | InvalidsearchLezlie   | contactviewLezlie   |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | parentgm@theatlantic.com | SO39 0LG | Patin           | Blouet           | Patin Blouet     | RedFish     | 14/10/2020    |  07374096556 | contactPatinBlouet     | contactenqPatinBlouet     | contactlogoutPatinBlouet     | Enquiry: RedFish Enquiry | EnquiryPatinBlouet     | Appointment: Visit | VisitPatinBlouet     | FullNamePatin Blouet     | ParentEmailIDparentgm@theatlantic.com | PostcodefileSO39 0LG | InvalidsearchPatin    | contactviewPatin    |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lgwylltgn@ebay.com       | SO40 0LG | Laural          | Langfield        | Laural Langfield | RedFish     | 901Laural     |  07727152892 | contactLauralLangfield | contactenqLauralLangfield | contactlogoutLauralLangfield | Enquiry: RedFish Enquiry | EnquiryLauralLangfield | Appointment: Visit | VisitLauralLangfield | FullNameLaural Langfield | ParentEmailIDlgwylltgn@ebay.com       | PostcodefileSO40 0LG | InvalidsearchLaural   | contactviewLaural   |
+			
+			@CRMPhoneEnquiry
+      Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
+      Given Initialize the browser with chrome
+      And Open Web Application "<application>"
+      When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+      Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+      Then Verify if user is able to click on new contact and get the actual title "<expnewcontacttitle>"
+      Then Type Parent First Name "<ParentFirstName>" Parent Second Name "<ParentSecondName>" Address "<Address>" Postcode "<Postcode>" MobileNumber "<MobileNumber>" Email id "<ParentEmailID>" Relationship Type "<relationshipType>"
+      Then Take screen shot in file name "<NewContactfilename>"
+      Then Logout from redfishCRM and close browser "<CRMlogoutfilename>" 
+    
+     Examples:
+    |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|relationshipType|
+    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Krista|Moffett|Krista Moffett|contactlogoutKristaMoffett|kmoffettel@independent.com|SO45 0LG|07803935159|NewContactKristaMoffett|Parent|
+
+    @CRMAddNP
+    Scenario Outline: DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM
+     Given Initialize the browser with chrome
+     And Open Web Application "<application>"
+     When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+     Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+     Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>" "<ParentName>"
+     Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
+     Then Verify if user is able to add "<Nursery>" in nursery preferred
+     Then Logout from redfishCRM and close browser "<CRMlogoutfilename>" 
+      
+      Examples:
+      |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|Address|relationshipType|expectedEnquiryTitle|Enquiryfilename|Nursery|contactfilename|
+      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Neddy|Gairdner|Neddy Gairdner|contactlogoutNeddyGairdner|ngairdnerea@telegraph.com|SO54 0LG|07749636857|NewContactNeddyGairdner|99-2154 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryNeddyGairdner|Northwick Park Day Nursery and Preschool|contactNeddyGairdner|
+      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Elsworth|Nias|Elsworth Nias|contactlogoutElsworthNias|eniaseb@hexun.com|SO55 0LG|07975285568|NewContactElsworthNias|99-2155 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryElsworthNias|Yellow Dot Ampfield|contactElsworthNias|
+      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Fulvia|Edmonston|Fulvia Edmonston|Edmonston Fulvia Edmonston|fedmonstonec@soundcloud.com|SO56 0LG|07256642122|NewContactFulviaEdmonston|99-2156 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryFulviaEdmonston|Abbeymore Day Nursery and Preschool|contactFulviaEdmonston|
+
+      
+      
+      
