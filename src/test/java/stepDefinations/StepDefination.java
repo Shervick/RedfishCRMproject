@@ -721,7 +721,6 @@ public class StepDefination extends Utils {
      public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {
     	 crmNurseryPreference crmaddnursery=new crmNurseryPreference(driver);
     	 crmEnquirypage CRMaddNP=new crmEnquirypage(driver);
-    	 //driver.switchTo().frame("contentIFrame0");
     	 clickelement(CRMaddNP.crmaddnurserypreference());
     	 String parentWindowHandler = driver.getWindowHandle();
     	 String subWindowHandler = null;

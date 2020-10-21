@@ -22,12 +22,14 @@ protected static WebDriver driver;
 	
 	By crmEnqnavig=By.cssSelector("a#FormSecNavigationControl-Icon");
 	By crmnavalue=By.cssSelector("td[id='flyoutFormSection_Cell'][title='Visits']");
-	By crmaddnurserypreference = By.cssSelector("img[id*='NurseryPreferencesGrid_add']");
+	By crmaddnurserypreference = By.cssSelector("div#NurseryPreferencesGrid_contextualButtonsContainer a#NurseryPreferencesGrid_addImageButton img#NurseryPreferencesGrid_addImageButtonImage");
+	By crmframe=By.cssSelector("iframe#contentIFrame1");
 	By crmfirstvisit= By.cssSelector("a[title*='Visit'][id$='_0']");
 	By crmlatestvisit= By.cssSelector("a[title*='Visit'][id$='_1']");
 	
 	public WebElement crmnavalue() {return driver.findElement(crmnavalue);}
 	public WebElement crmEnqnavig() {return driver.findElement(crmEnqnavig);}
+	public WebElement crmframe() {return driver.findElement(crmframe);}
 	public WebElement crmaddnurserypreference() {return driver.findElement(crmaddnurserypreference);}
 	public WebElement crmfirstvisit() {return driver.findElement(crmfirstvisit);}
 	public WebElement crmlatestvisit() {return driver.findElement(crmlatestvisit);}

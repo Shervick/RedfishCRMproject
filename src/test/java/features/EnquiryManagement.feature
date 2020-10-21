@@ -1,6 +1,6 @@
 Feature: 03.1 Enquiry Management
 
-  @SmokeRegressionTC1_1 @Test  @CRMAddNP
+  @SmokeRegressionTC1_1 @Test  
   Scenario Outline: DataCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -119,7 +119,7 @@ Feature: 03.1 Enquiry Management
      Then Logout from redfishCRM and close browser "<CRMlogoutfilename>" 
       
       Examples:
-      |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|Address|relationshipType|expectedEnquiryTitle|Enquiryfilename|Nursery|contactfilename|
+      |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|Address|relationshipType|CRMEnquiryTitle|Enquiryfilename|Nursery|contactfilename|
       |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Neddy|Gairdner|Neddy Gairdner|contactlogoutNeddyGairdner|ngairdnerea@telegraph.com|SO54 0LG|07749636857|NewContactNeddyGairdner|99-2154 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryNeddyGairdner|Northwick Park Day Nursery and Preschool|contactNeddyGairdner|
       |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Elsworth|Nias|Elsworth Nias|contactlogoutElsworthNias|eniaseb@hexun.com|SO55 0LG|07975285568|NewContactElsworthNias|99-2155 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryElsworthNias|Yellow Dot Ampfield|contactElsworthNias|
       |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Fulvia|Edmonston|Fulvia Edmonston|Edmonston Fulvia Edmonston|fedmonstonec@soundcloud.com|SO56 0LG|07256642122|NewContactFulviaEdmonston|99-2156 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryFulviaEdmonston|Abbeymore Day Nursery and Preschool|contactFulviaEdmonston|
