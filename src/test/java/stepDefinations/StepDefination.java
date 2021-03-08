@@ -34,6 +34,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 
 import com.redfishCRM.pageObjects.crmloginpage;
+import com.redfishCRM.pageObjects.redfishAbsencepage;
 import com.redfishCRM.pageObjects.crmContactpage;
 import com.redfishCRM.pageObjects.crmEnquirypage;
 import com.redfishCRM.pageObjects.crmHomepage;
@@ -917,6 +918,33 @@ public class StepDefination extends Utils {
     	 crmEnquirypage CRMaddNP=new crmEnquirypage(driver);
     	 
     	 clickelement(CRMaddNP.crmaddnurserypreference());    	 
+     }
+     @Then("Verify if your able to click on Absence link and key in the Start Date {string} and End Date {string}")
+     public void verify_if_your_able_to_click_on_absence_link_and_key_in_the_start_date_and_end_date(String AbsenceStartDate, String AbsenceEndDate) {
+    	 redfishAbsencepage redfishAbsenceselect = new redfishAbsencepage(driver);
+    	 clickelement(redfishAbsenceselect.Absencelink());
+    	 typekey(redfishAbsenceselect.AbsenceStartDate(),AbsenceStartDate);
+    	 keyboardenter(redfishAbsenceselect.AbsenceStartDate());
+    	 typekey(redfishAbsenceselect.AbsenceEndDate(),AbsenceEndDate);
+    	 keyboardenter(redfishAbsenceselect.AbsenceEndDate());
+    	 
+     }
+     @When("Verify if the Absence Reason is selected as {string} and Add absence")
+     public void verify_if_the_absence_reason_is_selected_as_and_add_absence(String AbsenceReason) {
+    	 redfishAbsencepage redfishAbsencereason = new redfishAbsencepage(driver);
+    	 Select AbsenceReasonSelect=new Select(redfishAbsencereason.SelectAbsenceReason());
+    	 clickelement(redfishAbsencereason.SelectAbsenceReason());
+    	 AbsenceReasonSelect.selectByVisibleText(AbsenceReason);
+    	 clickelement(redfishAbsencereason.AbsenceAdd());
+    	 
+     }
+     @Then("Verify Child search functionality with only Parent Email id {string} in search page")
+     public void verify_child_search_functionality_with_only_parent_email_id_in_search_page(String EmailId) {
+    	 redfishsearchpage redfishsearchenq2=new redfishsearchpage(driver);
+    	 clearinputfield(redfishsearchenq2.searchboxinform());
+    	 typekey(redfishsearchenq2.searchboxinform(),EmailId);
+    	 keyboardenter(redfishsearchenq2.searchboxinform()); 
+    	 clickelement(redfishsearchenq2.clickonsearchresult());
      }
      @Then("Verify if user is able to add {string} in nursery preferred")
      public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {

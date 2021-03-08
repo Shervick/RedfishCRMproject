@@ -1,10 +1,6 @@
 Feature: 03.1 Enquiry Management
 
-
-  @SmokeRegressionTC1_1 @2childenquiry @CRMAddNP @Register
-
-  @SmokeRegressionTC1_1 @Test  
-
+  @SmokeRegressionTC1_1 @2childenquiry @CRMAddNP @Register @SmokeRegressionTC1_1 @Test
   Scenario Outline: DataCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -58,7 +54,7 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam19You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | slukovicc9@time.com     | SO87 0LG | Shell           | Lukovic          | Shell Lukovic      | RedFish     | 14/10/2020    |  07699081109 | contactShellLukovic      | contactenqShellLukovic      | contactlogoutShellLukovic      | Enquiry: RedFish Enquiry | EnquiryShellLukovic      | Northwick Park Day Nursery and Preschool | Appointment: Visit | VisitShellLukovic      | FullNameShell Lukovic      | ParentEmailIDslukovicc9@time.com     | PostcodefileSO87 0LG | InvalidsearchShell       | contactviewShell       |
       | 99160101@brighthorizons.com | Sam19You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | cdevonsca@hc360.com     | SO88 0LG | Case            | Devons           | Case Devons        | RedFish     | 901Case       |  07786200301 | contactCaseDevons        | contactenqCaseDevons        | contactlogoutCaseDevons        | Enquiry: RedFish Enquiry | EnquiryCaseDevons        | Yellow Dot Ampfield                      | Appointment: Visit | VisitCaseDevons        | FullNameCase Devons        | ParentEmailIDcdevonsca@hc360.com     | PostcodefileSO88 0LG |                          | contactviewCase        |
 
-  @SmokeRegressionTC1_3 @Register 
+  @SmokeRegressionTC1_3 @Register
   Scenario Outline: Verify if user is able to register one child
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -143,7 +139,6 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lashfoldgl@netscape.com  | SO38 0LG | Lezlie          | Tythacott        | Lezlie Tythacott | RedFish     | @#$           |  07214596965 | contactLezlieTythacott | contactenqLezlieTythacott | contactlogoutLezlieTythacott | Enquiry: RedFish Enquiry | EnquiryLezlieTythacott | Appointment: Visit | VisitLezlieTythacott | FullNameLezlie Tythacott | ParentEmailIDlashfoldgl@netscape.com  | PostcodefileSO38 0LG | InvalidsearchLezlie   | contactviewLezlie   |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | parentgm@theatlantic.com | SO39 0LG | Patin           | Blouet           | Patin Blouet     | RedFish     | 14/10/2020    |  07374096556 | contactPatinBlouet     | contactenqPatinBlouet     | contactlogoutPatinBlouet     | Enquiry: RedFish Enquiry | EnquiryPatinBlouet     | Appointment: Visit | VisitPatinBlouet     | FullNamePatin Blouet     | ParentEmailIDparentgm@theatlantic.com | PostcodefileSO39 0LG | InvalidsearchPatin    | contactviewPatin    |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lgwylltgn@ebay.com       | SO40 0LG | Laural          | Langfield        | Laural Langfield | RedFish     | 901Laural     |  07727152892 | contactLauralLangfield | contactenqLauralLangfield | contactlogoutLauralLangfield | Enquiry: RedFish Enquiry | EnquiryLauralLangfield | Appointment: Visit | VisitLauralLangfield | FullNameLaural Langfield | ParentEmailIDlgwylltgn@ebay.com       | PostcodefileSO40 0LG | InvalidsearchLaural   | contactviewLaural   |
-
 
   @CRMPhoneEnquiry
   Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
@@ -243,48 +238,70 @@ Feature: 03.1 Enquiry Management
       | 99160101NM  | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | 20951 Spohn Crossing     | SO21 0LG |  07344089914 | jstreetsk@guardian.com           | BH Website | Eliza               | Streets               | 15/01/2019 | F                | 01/02/2021              | 12/12/2022            | AMT PMT AMTH PMTH                 | Willdon              | Streets               | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000021 | Child             | 21/01/2020 |      0930 |
       | 99160101NM2 | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | 229 Riverside Terrace    | SO22 0LG |  07125977493 | mlarrowayl@nyu.com               | BH Website | Melissa             | Larroway              | 15/01/2019 | F                | 28/01/2021              | 12/12/2022            | AMM PMM AMT PMT                   | Alister              | Larroway              | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000022 | Child             | 21/01/2020 |      0930 |
 
-			
-			@CRMPhoneEnquiry
-      Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
-      Given Initialize the browser with chrome
-      And Open Web Application "<application>"
-      When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
-      Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
-      Then Verify if user is able to click on new contact and get the actual title "<expnewcontacttitle>"
-      Then Type Parent First Name "<ParentFirstName>" Parent Second Name "<ParentSecondName>" Address "<Address>" Postcode "<Postcode>" MobileNumber "<MobileNumber>" Email id "<ParentEmailID>" Relationship Type "<relationshipType>"
-      Then Take screen shot in file name "<NewContactfilename>"
-      Then Logout from redfishCRM and close browser "<CRMlogoutfilename>" 
-    
-     Examples:
-    |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|relationshipType|
-    |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Krista|Moffett|Krista Moffett|contactlogoutKristaMoffett|kmoffettel@independent.com|SO45 0LG|07803935159|NewContactKristaMoffett|Parent|
+  @CRMPhoneEnquiry
+  Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+    Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+    Then Verify if user is able to click on new contact and get the actual title "<expnewcontacttitle>"
+    Then Type Parent First Name "<ParentFirstName>" Parent Second Name "<ParentSecondName>" Address "<Address>" Postcode "<Postcode>" MobileNumber "<MobileNumber>" Email id "<ParentEmailID>" Relationship Type "<relationshipType>"
+    Then Take screen shot in file name "<NewContactfilename>"
+    Then Logout from redfishCRM and close browser "<CRMlogoutfilename>"
 
-    @CRMAddNP
-    Scenario Outline: DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM
-     Given Initialize the browser with chrome
-     And Open Web Application "<application>"
-     When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
-     Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
-     Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>" "<ParentName>"
-     Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
-     Then Verify if user is able to add "<Nursery>" in nursery preferred
-     Then Logout from redfishCRM and close browser "<CRMlogoutfilename>" 
-      
-      Examples:
-      |UserName|Password|application|expectedtitle|expnewcontacttitle|ParentFirstName|ParentSecondName|ParentName|CRMlogoutfilename|ParentEmailID|Postcode|MobileNumber|NewContactfilename|Address|relationshipType|CRMEnquiryTitle|Enquiryfilename|Nursery|contactfilename|
-      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Neddy|Gairdner|Neddy Gairdner|contactlogoutNeddyGairdner|ngairdnerea@telegraph.com|SO54 0LG|07749636857|NewContactNeddyGairdner|99-2154 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryNeddyGairdner|Northwick Park Day Nursery and Preschool|contactNeddyGairdner|
-      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Elsworth|Nias|Elsworth Nias|contactlogoutElsworthNias|eniaseb@hexun.com|SO55 0LG|07975285568|NewContactElsworthNias|99-2155 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryElsworthNias|Yellow Dot Ampfield|contactElsworthNias|
-      |99160101@brighthorizons.com|Sam18You|UATCRMUrl|Contacts Active Parents/Guardian - Microsoft Dynamics 365|Contact: New Contact|Fulvia|Edmonston|Fulvia Edmonston|Edmonston Fulvia Edmonston|fedmonstonec@soundcloud.com|SO56 0LG|07256642122|NewContactFulviaEdmonston|99-2156 St. Marys Road|Parent|Enquiry: RedFish Enquiry|EnquiryFulviaEdmonston|Abbeymore Day Nursery and Preschool|contactFulviaEdmonston|
+    Examples: 
+      | UserName                    | Password | application | expectedtitle                                             | expnewcontacttitle   | ParentFirstName | ParentSecondName | ParentName     | CRMlogoutfilename          | ParentEmailID              | Postcode | MobileNumber | NewContactfilename      | relationshipType |
+      | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Krista          | Moffett          | Krista Moffett | contactlogoutKristaMoffett | kmoffettel@independent.com | SO45 0LG |  07803935159 | NewContactKristaMoffett | Parent           |
 
-      
-    @AddAbsenceSingleChild @Regiser1Child
- 		Scenario Outline: Verify if user is able to add Absence for a child
-     Given Initialize the browser with chrome
-     And Open Web Application "<application>"
-     When User enters User Name "<UserName>" and Password "<Password>"
-     Then Verify if the web page title actual "<expectedtitle>"
-     Then Verify search functionality with only Parent Name "<EmailId>" in search page
-     Then Verify Enquiry search functionality with only Parent Name "<EmailId>" in search page
-     Then Logout from redfish and close browser
-      
+  @CRMAddNP
+  Scenario Outline: DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters RedfishCRM User Name "<UserName>" and Password "<Password>"
+    Then Verify if the RedfishCRM web page title actual "<expectedtitle>"
+    Then Verify if user able to search with parent email id "<ParentEmailID>" "<contactfilename>" "<ParentName>"
+    Then Verify if user able to open the enquiry and verify the title as "<CRMEnquiryTitle>" screenshot in "<Enquiryfilename>"
+    Then Verify if user is able to add "<Nursery>" in nursery preferred
+    Then Logout from redfishCRM and close browser "<CRMlogoutfilename>"
 
+    Examples: 
+      | UserName                    | Password | application | expectedtitle                                             | expnewcontacttitle   | ParentFirstName | ParentSecondName | ParentName       | CRMlogoutfilename          | ParentEmailID               | Postcode | MobileNumber | NewContactfilename        | Address                | relationshipType | CRMEnquiryTitle          | Enquiryfilename        | Nursery                                  | contactfilename        |
+      | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Neddy           | Gairdner         | Neddy Gairdner   | contactlogoutNeddyGairdner | ngairdnerea@telegraph.com   | SO54 0LG |  07749636857 | NewContactNeddyGairdner   | 99-2154 St. Marys Road | Parent           | Enquiry: RedFish Enquiry | EnquiryNeddyGairdner   | Northwick Park Day Nursery and Preschool | contactNeddyGairdner   |
+      | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Elsworth        | Nias             | Elsworth Nias    | contactlogoutElsworthNias  | eniaseb@hexun.com           | SO55 0LG |  07975285568 | NewContactElsworthNias    | 99-2155 St. Marys Road | Parent           | Enquiry: RedFish Enquiry | EnquiryElsworthNias    | Yellow Dot Ampfield                      | contactElsworthNias    |
+      | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Fulvia          | Edmonston        | Fulvia Edmonston | Edmonston Fulvia Edmonston | fedmonstonec@soundcloud.com | SO56 0LG |  07256642122 | NewContactFulviaEdmonston | 99-2156 St. Marys Road | Parent           | Enquiry: RedFish Enquiry | EnquiryFulviaEdmonston | Abbeymore Day Nursery and Preschool      | contactFulviaEdmonston |
+
+  @AddAbsenceSingleChild @Regiser1Child @AddAbsence
+  Scenario Outline: Verify if user is able to add Absence for a child
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify search functionality with only Parent Name "<EmailId>" in search page
+    Then Verify Child search functionality with only Parent Email id "<EmailId>" in search page
+    Then Verify if your able to click on Absence link and key in the Start Date "<AbsenceStartDate>" and End Date "<AbsenceEndDate>"
+    When Verify if the Absence Reason is selected as "<AbsenceReason>" and Add absence
+    Then Logout from redfish and close browser
+
+    Examples: 
+      | UserName | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName        | EmailId                          | AbsenceStartDate | AbsenceEndDate | AbsenceReason                               |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Layne           | Tuohy            | Layne Tuohy       | ltuohy0@ox.com                   | 04/01/2021       | 08/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Jeri            | Hanster          | Jeri Hanster      | jhanster1@cisco.com              | 05/01/2021       | 15/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Elisabet        | Casetta          | Elisabet Casetta  | ecasetta2@marketwatch.com        | 05/01/2021       | 10/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Jillane         | Bransden         | Jillane Bransden  | jbransden3@netlog.com            | 05/01/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Livvie          | Patching         | Livvie Patching   | lpatching4@jigsy.com             | 06/01/2021       | 15/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Milly           | Overton          | Milly Overton     | moverton5@hhs.com                | 06/01/2021       | 15/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Tamra           | Carhart          | Tamra Carhart     | tcarhart6@nasa.com               | 18/01/2021       | 21/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Gaylor          | McFall           | Gaylor McFall     | gmcfall7@psu.com                 | 18/01/2021       | 25/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Allx            | Schultz          | Allx Schultz      | aschultz8@elegantthemes.com      | 09/03/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Marylin         | Biskupiak        | Marylin Biskupiak | mbiskupiak9@senate.com           | 09/03/2021       | 12/03/2021     | COVID-19 Nursery Restriction Non-Chargeable |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Kaela           | McDuffy          | Kaela McDuffy     | kmcduffya@yelp.com               | 14/01/2021       | 28/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Mikel           | Crowden          | Mikel Crowden     | mcrowdenb@nationalgeographic.com | 11/01/2021       | 15/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Courtney        | Benardet         | Courtney Benardet | cbenardetc@list-manage.com       | 18/01/2021       | 22/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Bentley         | Killner          | Bentley Killner   | bkillnerd@mozilla.com            | 18/01/2021       | 31/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Verge           | Thomtson         | Verge Thomtson    | vthomtsone@techcrunch.com        | 01/02/2021       | 19/02/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Dorian          | Tallach          | Dorian Tallach    | dtallachf@canalblog.com          | 09/03/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Wallas          | Poulsom          | Wallas Poulsom    | wpoulsomg@samsung.com            | 23/03/2021       | 23/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Blanche         | Branwhite        | Blanche Branwhite | bbranwhiteh@free.com             | 09/01/2021       | 09/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Deeyn           | Darnbrook        | Deeyn Darnbrook   | ddarnbrooki@hubpages.com         | 09/03/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Cthrine         | Graben           | Cthrine Graben    | cgrabenj@npr.com                 | 09/03/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | jstreetsk@guardian.com           | 19/01/2021       | 19/01/2021     | COVID-19 Family Choice Non-Chargeable       |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | mlarrowayl@nyu.com               | 11/01/2021       | 15/01/2021     | COVID-19 Nursery Restriction Non-Chargeable |

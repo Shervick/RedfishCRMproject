@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@RegisterSingleChild",  "@SingleChildEnquiry", ] ,
+        labels:  [ "@AddAbsence",  "@AddAbsenceSingleChild",  "@Regiser1Child", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 99.33,  100.00, ] 
+                data:  [ 100.00,  100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.17,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.51,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>RedfishAutomation</td>
         <td>1</td>
-      <td>05 Mar 2021, 10:19</td>
+      <td>08 Mar 2021, 10:41</td>
     </tr>
   </tbody>
 </table>
@@ -197,37 +197,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_121787056.html">@RegisterSingleChild</a></td>
+        <td class="tagname"><a href="report-tag_1521968827.html">@AddAbsence</a></td>
 
-        <td      class="passed"    >590</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">594</td>
-
-        <td  class="passed"    >43</td>
-        <td  class="failed"    >1</td>
-        <td class="total">44</td>
-
-        <td class="duration" data-value="1698449571100">28:18.449</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-tag_173367502.html">@SingleChildEnquiry</a></td>
-
-        <td      class="passed"    >308</td>
+        <td      class="passed"    >176</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">308</td>
+        <td class="total">176</td>
 
         <td  class="passed"    >22</td>
         <td >0</td>
         <td class="total">22</td>
 
-        <td class="duration" data-value="704475572700">11:44.475</td>
+        <td class="duration" data-value="640280713400">10:40.280</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_98820439.html">@AddAbsenceSingleChild</a></td>
+
+        <td      class="passed"    >176</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">176</td>
+
+        <td  class="passed"    >22</td>
+        <td >0</td>
+        <td class="total">22</td>
+
+        <td class="duration" data-value="640280713400">10:40.280</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_4248665269.html">@Regiser1Child</a></td>
+
+        <td      class="passed"    >176</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">176</td>
+
+        <td  class="passed"    >22</td>
+        <td >0</td>
+        <td class="total">22</td>
+
+        <td class="duration" data-value="640280713400">10:40.280</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -235,33 +252,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>898</td>
-      <td>1</td>
-      <td>3</td>
+      <td>528</td>
       <td>0</td>
       <td>0</td>
-      <td>902</td>
+      <td>0</td>
+      <td>0</td>
+      <td>528</td>
 
-      <td>65</td>
-      <td>1</td>
+      <td>66</td>
+      <td>0</td>
       <td>66</td>
 
-      <td class="duration">40:2.925</td>
-      <td>2</td>
+      <td class="duration">32:0.842</td>
+      <td>3</td>
     </tr>
     <tr>
       <td></td>
-      <td>99.56%</td>
-      <td>0.11%</td>
-      <td>0.33%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>98.48%</td>
-      <td>1.52%</td>
-      <td></td>
-      <td></td>
+      <td>100.00%</td>
       <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>
