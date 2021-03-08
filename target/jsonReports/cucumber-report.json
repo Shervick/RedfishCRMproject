@@ -3,9 +3,15 @@
     "line": 1,
     "elements": [
       {
+<<<<<<< HEAD
         "start_timestamp": "2021-03-05T09:45:20.292Z",
         "line": 177,
         "name": "DataSingleChidlCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM",
+=======
+        "start_timestamp": "2020-10-21T12:45:26.770Z",
+        "line": 123,
+        "name": "DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM",
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
         "description": "",
         "id": "03.1-enquiry-management;datasinglechidlcreationinredfish-verify-if-redfish-enquiry-booking--child--notes--nursery-and-visit-are-created-in-redfish-is-automatically-created-in-crm;;2",
         "type": "scenario",
@@ -13,7 +19,181 @@
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "duration": 2506158800,
+=======
+              "duration": 8015468300,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2445313900,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "Open Web Application \"UATCRMUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UATCRMUrl\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13178653500,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101@brighthorizons.com\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Sam18You\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 917002500,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10314436300,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "Verify if user able to search with parent email id \"ngairdnerea@telegraph.com\" \"contactNeddyGairdner\" \"Neddy Gairdner\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ngairdnerea@telegraph.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"contactNeddyGairdner\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"Neddy Gairdner\"",
+                  "offset": 102
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16568267000,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryNeddyGairdner\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry: RedFish Enquiry\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"EnquiryNeddyGairdner\"",
+                  "offset": 105
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13581930700,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "Verify if user is able to add \"Northwick Park Day Nursery and Preschool\" in nursery preferred",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Northwick Park Day Nursery and Preschool\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_in_nursery_preferred(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3015328100,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "Logout from redfishCRM and close browser \"contactlogoutNeddyGairdner\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactlogoutNeddyGairdner\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CRMAddNP"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-21T12:46:35.081Z",
+        "line": 124,
+        "name": "DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM",
+        "description": "",
+        "id": "03.1-enquiry-management;datacreationincrm-verify-if-user-is-able-to-add-a-new-nursery-preference-for-an-enquiry-in-crm;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8624073100,
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
               "status": "passed"
             },
             "line": 160,
@@ -25,7 +205,11 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 3642231000,
+=======
+              "duration": 2175797800,
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
               "status": "passed"
             },
             "line": 161,
@@ -43,7 +227,11 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 5021322800,
+=======
+              "duration": 11635596400,
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
               "status": "passed"
             },
             "line": 162,
@@ -11526,7 +11714,11 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 9008200,
+=======
+              "duration": 509857100,
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
               "status": "passed"
             },
             "line": 205,
@@ -11580,6 +11772,7 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 6666382300,
               "status": "passed"
             },
@@ -11691,6 +11884,26 @@
                 {
                   "val": "\"Child\"",
                   "offset": 34
+=======
+              "duration": 10103041400,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "Verify if user able to search with parent email id \"eniaseb@hexun.com\" \"contactElsworthNias\" \"Elsworth Nias\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"eniaseb@hexun.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"contactElsworthNias\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Elsworth Nias\"",
+                  "offset": 93
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
@@ -11699,6 +11912,7 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 2801191400,
               "status": "passed"
             },
@@ -11744,6 +11958,13 @@
             },
             "line": 203,
             "name": "Open Web Application \"redfishUAT\"",
+=======
+              "duration": 16176359300,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryElsworthNias\"",
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
             "match": {
               "arguments": [
                 {
@@ -11769,6 +11990,7 @@
                   "offset": 22
                 },
                 {
+<<<<<<< HEAD
                   "val": "\"Password1\"",
                   "offset": 49
                 }
@@ -11789,6 +12011,10 @@
                 {
                   "val": "\"Home\"",
                   "offset": 36
+=======
+                  "val": "\"EnquiryElsworthNias\"",
+                  "offset": 105
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
                 }
               ],
               "location": "stepDefinations.StepDefination.Verify_if_the_web_page_title_actual(java.lang.String)"
@@ -11797,7 +12023,11 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 3317190900,
+=======
+              "duration": 9673722000,
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
               "status": "passed"
             },
             "line": 206,
@@ -11833,6 +12063,7 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 6048346300,
               "status": "passed"
             },
@@ -11868,11 +12099,95 @@
                 }
               ],
               "location": "stepDefinations.StepDefination.selecting_the_relationship_status_as_and_parental_parental_responsibility_as(java.lang.String,java.lang.String)"
+=======
+              "duration": 3832368100,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "Logout from redfishCRM and close browser \"contactlogoutElsworthNias\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"contactlogoutElsworthNias\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.StepDefination.logout_from_redfish_crm_and_close_browser(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CRMAddNP"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-21T12:47:37.861Z",
+        "line": 125,
+        "name": "DataCreationInCRM_Verify if user is able to add a new Nursery Preference for an enquiry in CRM",
+        "description": "",
+        "id": "03.1-enquiry-management;datacreationincrm-verify-if-user-is-able-to-add-a-new-nursery-preference-for-an-enquiry-in-crm;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8256480600,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5085347800,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "Open Web Application \"UATCRMUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UATCRMUrl\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11365683500,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "User enters RedfishCRM User Name \"99160101@brighthorizons.com\" and Password \"Sam18You\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101@brighthorizons.com\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Sam18You\"",
+                  "offset": 76
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_redfish_crm_user_name_and_password(java.lang.String,java.lang.String)"
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
             },
             "keyword": "When "
           },
           {
             "result": {
+<<<<<<< HEAD
               "status": "passed"
             },
             "line": 210,
@@ -11944,6 +12259,102 @@
                 {
                   "val": "\"Child\"",
                   "offset": 34
+=======
+              "duration": 444621600,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "Verify if the RedfishCRM web page title actual \"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contacts Active Parents/Guardian - Microsoft Dynamics 365\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_the_redfish_crm_web_page_title_actual(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10146285700,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "Verify if user able to search with parent email id \"fedmonstonec@soundcloud.com\" \"contactFulviaEdmonston\" \"Fulvia Edmonston\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fedmonstonec@soundcloud.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"contactFulviaEdmonston\"",
+                  "offset": 81
+                },
+                {
+                  "val": "\"Fulvia Edmonston\"",
+                  "offset": 106
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_search_with_parent_email_id(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15678784800,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "Verify if user able to open the enquiry and verify the title as \"Enquiry: RedFish Enquiry\" screenshot in \"EnquiryFulviaEdmonston\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Enquiry: RedFish Enquiry\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"EnquiryFulviaEdmonston\"",
+                  "offset": 105
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_able_to_open_the_enquiry_and_verify_the_title_as_screenshot_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9054760000,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "Verify if user is able to add \"Abbeymore Day Nursery and Preschool\" in nursery preferred",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abbeymore Day Nursery and Preschool\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_in_nursery_preferred(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2993940300,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "Logout from redfishCRM and close browser \"Edmonston Fulvia Edmonston\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Edmonston Fulvia Edmonston\"",
+                  "offset": 41
+>>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
                 }
               ],
               "location": "stepDefinations.StepDefination.verify_if_the_child_is_registered(java.lang.String)"
