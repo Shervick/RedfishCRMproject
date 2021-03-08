@@ -1,10 +1,10 @@
 Feature: 03.1 Enquiry Management
 
-<<<<<<< HEAD
+
   @SmokeRegressionTC1_1 @2childenquiry @CRMAddNP @Register
-=======
+
   @SmokeRegressionTC1_1 @Test  
->>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
+
   Scenario Outline: DataCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -58,7 +58,7 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam19You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | slukovicc9@time.com     | SO87 0LG | Shell           | Lukovic          | Shell Lukovic      | RedFish     | 14/10/2020    |  07699081109 | contactShellLukovic      | contactenqShellLukovic      | contactlogoutShellLukovic      | Enquiry: RedFish Enquiry | EnquiryShellLukovic      | Northwick Park Day Nursery and Preschool | Appointment: Visit | VisitShellLukovic      | FullNameShell Lukovic      | ParentEmailIDslukovicc9@time.com     | PostcodefileSO87 0LG | InvalidsearchShell       | contactviewShell       |
       | 99160101@brighthorizons.com | Sam19You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | cdevonsca@hc360.com     | SO88 0LG | Case            | Devons           | Case Devons        | RedFish     | 901Case       |  07786200301 | contactCaseDevons        | contactenqCaseDevons        | contactlogoutCaseDevons        | Enquiry: RedFish Enquiry | EnquiryCaseDevons        | Yellow Dot Ampfield                      | Appointment: Visit | VisitCaseDevons        | FullNameCase Devons        | ParentEmailIDcdevonsca@hc360.com     | PostcodefileSO88 0LG |                          | contactviewCase        |
 
-  @SmokeRegressionTC1_3 @Register
+  @SmokeRegressionTC1_3 @Register 
   Scenario Outline: Verify if user is able to register one child
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -143,7 +143,7 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lashfoldgl@netscape.com  | SO38 0LG | Lezlie          | Tythacott        | Lezlie Tythacott | RedFish     | @#$           |  07214596965 | contactLezlieTythacott | contactenqLezlieTythacott | contactlogoutLezlieTythacott | Enquiry: RedFish Enquiry | EnquiryLezlieTythacott | Appointment: Visit | VisitLezlieTythacott | FullNameLezlie Tythacott | ParentEmailIDlashfoldgl@netscape.com  | PostcodefileSO38 0LG | InvalidsearchLezlie   | contactviewLezlie   |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | parentgm@theatlantic.com | SO39 0LG | Patin           | Blouet           | Patin Blouet     | RedFish     | 14/10/2020    |  07374096556 | contactPatinBlouet     | contactenqPatinBlouet     | contactlogoutPatinBlouet     | Enquiry: RedFish Enquiry | EnquiryPatinBlouet     | Appointment: Visit | VisitPatinBlouet     | FullNamePatin Blouet     | ParentEmailIDparentgm@theatlantic.com | PostcodefileSO39 0LG | InvalidsearchPatin    | contactviewPatin    |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | lgwylltgn@ebay.com       | SO40 0LG | Laural          | Langfield        | Laural Langfield | RedFish     | 901Laural     |  07727152892 | contactLauralLangfield | contactenqLauralLangfield | contactlogoutLauralLangfield | Enquiry: RedFish Enquiry | EnquiryLauralLangfield | Appointment: Visit | VisitLauralLangfield | FullNameLaural Langfield | ParentEmailIDlgwylltgn@ebay.com       | PostcodefileSO40 0LG | InvalidsearchLaural   | contactviewLaural   |
-<<<<<<< HEAD
+
 
   @CRMPhoneEnquiry
   Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
@@ -160,7 +160,7 @@ Feature: 03.1 Enquiry Management
       | UserName                    | Password | application | expectedtitle                                             | expnewcontacttitle   | ParentFirstName | ParentSecondName | ParentName     | CRMlogoutfilename          | ParentEmailID              | Postcode | MobileNumber | NewContactfilename      | relationshipType |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Krista          | Moffett          | Krista Moffett | contactlogoutKristaMoffett | kmoffettel@independent.com | SO45 0LG |  07803935159 | NewContactKristaMoffett | Parent           |
 
-  @SingleChildEnquiry @RegisterSingleChild
+  @SingleChildEnquiry @Regiser1Child
   Scenario Outline: DataSingleChidlCreationInRedfish_Verify if redfish Enquiry Booking, Child, Notes, Nursery and Visit are created in redfish is automatically created in CRM
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -202,7 +202,7 @@ Feature: 03.1 Enquiry Management
       | 99160101NM  | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | 20951 Spohn Crossing     | SO21 0LG |  07344089914 | jstreetsk@guardian.com           | BH Website | Eliza               | Streets               | 15/01/2019 | F                | 01/02/2021              | 12/12/2022            | AMT PMT AMTH PMTH                 | Willdon              | Streets               | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000021 | Child             | 21/01/2020 |      0930 |
       | 99160101NM2 | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | 229 Riverside Terrace    | SO22 0LG |  07125977493 | mlarrowayl@nyu.com               | BH Website | Melissa             | Larroway              | 15/01/2019 | F                | 28/01/2021              | 12/12/2022            | AMM PMM AMT PMT                   | Alister              | Larroway              | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000022 | Child             | 21/01/2020 |      0930 |
 
-  @RegisterSingleChild
+  @RegisterSingleChild @Regiser1Child
   Scenario Outline: Verify if user is able to register one child
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -242,7 +242,7 @@ Feature: 03.1 Enquiry Management
       | 99160101NM2 | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Cthrine         | Graben           | Cthrine Graben    | 632 Eastwood Parkway     | SO20 0LG |  07106597794 | cgrabenj@npr.com                 | BH Website | Aldric              | Graben                | 15/01/2019 | M                | 06/01/2021              | 12/12/2022            | All Days                          | Hayden               | Graben                | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000020 | Child             | 21/01/2020 |      0930 |
       | 99160101NM  | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | 20951 Spohn Crossing     | SO21 0LG |  07344089914 | jstreetsk@guardian.com           | BH Website | Eliza               | Streets               | 15/01/2019 | F                | 01/02/2021              | 12/12/2022            | AMT PMT AMTH PMTH                 | Willdon              | Streets               | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000021 | Child             | 21/01/2020 |      0930 |
       | 99160101NM2 | Password1 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | 229 Riverside Terrace    | SO22 0LG |  07125977493 | mlarrowayl@nyu.com               | BH Website | Melissa             | Larroway              | 15/01/2019 | F                | 28/01/2021              | 12/12/2022            | AMM PMM AMT PMT                   | Alister              | Larroway              | 15/01/2018     | M                 | 12/12/2022               | All Days            | Enquiry Details | No      | Mother       | Yes                    | All             | DAST25417TFC | MIOS62392TFC     |   50700000022 | Child             | 21/01/2020 |      0930 |
-=======
+
 			
 			@CRMPhoneEnquiry
       Scenario Outline: DataCreationInCRM_Verify if user is able to create a phone enquiry from CRM
@@ -279,4 +279,4 @@ Feature: 03.1 Enquiry Management
       
       
       
->>>>>>> f8c0b50585988594133087920a6bc30af78ccbb6
+
