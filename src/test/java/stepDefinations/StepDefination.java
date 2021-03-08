@@ -157,12 +157,14 @@ public class StepDefination extends Utils {
     		clickelement(bookingaddenq.AMfriday());
     		clickelement(bookingaddenq.PMfriday());
  			
- 		}else if(BookingPatten.equalsIgnoreCase("AMM PMT AMW PMTH PMF")) {
+ 		}else if(BookingPatten.equalsIgnoreCase("AMM AMT PMT AMW PMW THAM THPM")) {
  			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.AMtuesday());
  			clickelement(bookingaddenq.PMtuesday());
  			clickelement(bookingaddenq.AMwednesday());
- 			clickelement(bookingaddenq.PMthusday());
- 			clickelement(bookingaddenq.PMfriday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.AMthusday());
  			
  		}else if(BookingPatten.equalsIgnoreCase("All AM")) {
  			clickelement(bookingaddenq.AMmonday());
@@ -177,19 +179,117 @@ public class StepDefination extends Utils {
  			clickelement(bookingaddenq.PMthusday());
  			clickelement(bookingaddenq.PMfriday());
  			
- 		}else if(BookingPatten.equalsIgnoreCase("FM WM FRM")) {
- 			clickelement(bookingaddenq.mondayampm());
- 			clickelement(bookingaddenq.wednesdayampm());
- 			clickelement(bookingaddenq.fridayampm());
+ 		}else if(BookingPatten.equalsIgnoreCase("AMM PMM AMT PMT FAM FPM")) {
+ 			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.PMmonday());
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.PMtuesday());
+ 			clickelement(bookingaddenq.AMfriday());
+ 			clickelement(bookingaddenq.PMfriday());
  			
- 		}else if(BookingPatten.equalsIgnoreCase("FT FTH")) {
+ 		}else if(BookingPatten.equalsIgnoreCase("AMM AMT AMW AMTH AMF PMM")) {
  			clickelement(bookingaddenq.tuesdayampm());
  			clickelement(bookingaddenq.thusdayampm());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.AMfriday());
+ 			
+ 			
  			
  		}else if(BookingPatten.equalsIgnoreCase("All")) {
  			clickelement(bookingaddenq.Alldaybooking());
  			
  		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW FAM FPM")) {
+ 			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.PMmonday());
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.PMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.AMfriday());
+ 			clickelement(bookingaddenq.PMfriday());
+ 						
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW")) {
+ 			clickelement(bookingaddenq.AMmonday());
+ 			clickelement(bookingaddenq.PMmonday());
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.PMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMT AMW PMW THAM THPM")) {
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.PMthusday());
+ 			
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMT PMT AMW")) {
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.PMthusday());
+ 			
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMT THAM")) {
+ 			clickelement(bookingaddenq.AMtuesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMT PMT THAM THPM")) {
+ 			 clickelement(bookingaddenq.AMtuesday());
+    		 clickelement(bookingaddenq.PMtuesday());
+    		 clickelement(bookingaddenq.AMthusday());
+  			 clickelement(bookingaddenq.PMthusday());
+ 			
+ 		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM TAM TPM FAM FPM")) {
+ 			clickelement(bookingaddenq.AMmonday());
+   		    clickelement(bookingaddenq.PMmonday());
+   		    clickelement(bookingaddenq.AMtuesday());
+   		    clickelement(bookingaddenq.PMtuesday());
+   		    clickelement(bookingaddenq.AMfriday());
+			clickelement(bookingaddenq.PMfriday());
+			
+		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM THAM")) {
+ 			clickelement(bookingaddenq.AMmonday());
+   		    clickelement(bookingaddenq.PMmonday());
+   		    clickelement(bookingaddenq.AMthusday());			
+		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW AMTH PMTH")) {
+ 			clickelement(bookingaddenq.AMmonday());
+   		    clickelement(bookingaddenq.PMmonday());
+   		    clickelement(bookingaddenq.AMtuesday());
+		    clickelement(bookingaddenq.PMtuesday());
+		    clickelement(bookingaddenq.AMwednesday());
+ 			clickelement(bookingaddenq.PMwednesday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.PMthusday());
+		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM AMTH PMTH")) {
+ 			clickelement(bookingaddenq.AMmonday());
+   		    clickelement(bookingaddenq.PMmonday());
+ 			clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.PMthusday());
+		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMM PMM AMT PMT")) {
+ 			clickelement(bookingaddenq.AMmonday());
+   		    clickelement(bookingaddenq.PMmonday());
+   		    clickelement(bookingaddenq.AMtuesday());
+		    clickelement(bookingaddenq.PMtuesday());			
+		}
+ 		else if(BookingPatten.equalsIgnoreCase("AMT PMT AMTH PMTH")) {
+   		    clickelement(bookingaddenq.AMtuesday());
+		    clickelement(bookingaddenq.PMtuesday());
+		    clickelement(bookingaddenq.AMthusday());
+ 			clickelement(bookingaddenq.PMthusday());
+		}
     	 
      }
      @Then("Verify if the Enquiry is created and Enquiry Details {string} is displayed on the Parent Name Click on")
@@ -433,12 +533,14 @@ public class StepDefination extends Utils {
     		 clickelement(secondbookingaddenq.secondAMfriday());
     		 clickelement(secondbookingaddenq.secondPMfriday());
  			
- 		}else if(SecondBookingPatten.equalsIgnoreCase("AMM PMT AMW PMTH PMF")) {
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("AMM AMT PMT AMW PMW THAM THPM")) {
  			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
  			clickelement(secondbookingaddenq.secondPMtuesday());
  			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
  			clickelement(secondbookingaddenq.secondPMthusday());
- 			clickelement(secondbookingaddenq.secondPMfriday());
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("All AM")) {
  			clickelement(secondbookingaddenq.secondAMmonday());
@@ -453,19 +555,118 @@ public class StepDefination extends Utils {
  			clickelement(secondbookingaddenq.secondPMthusday());
  			clickelement(secondbookingaddenq.secondPMfriday());
  			
- 		}else if(SecondBookingPatten.equalsIgnoreCase("FM WM FRM")) {
- 			clickelement(secondbookingaddenq.secondmondayampm());
- 			clickelement(secondbookingaddenq.secondwednesdayampm());
- 			clickelement(secondbookingaddenq.secondfridayampm());
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMT PMT FAM FPM")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondPMmonday());
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondPMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMfriday());
+ 			clickelement(secondbookingaddenq.secondPMfriday());
  			
- 		}else if(SecondBookingPatten.equalsIgnoreCase("FT FTH")) {
+ 		}else if(SecondBookingPatten.equalsIgnoreCase("AMM AMT AMW AMTH AMF PMM")) {
  			clickelement(secondbookingaddenq.secondtuesdayampm());
  			clickelement(secondbookingaddenq.secondthusdayampm());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondAMfriday());
+ 			
+ 			
  			
  		}else if(SecondBookingPatten.equalsIgnoreCase("All")) {
  			clickelement(secondbookingaddenq.secondAlldaybooking());
  			
  		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW FAM FPM")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondPMmonday());
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondPMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMfriday());
+ 			clickelement(secondbookingaddenq.secondPMfriday());
+ 						
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+ 			clickelement(secondbookingaddenq.secondPMmonday());
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondPMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMT AMW PMW THAM THPM")) {
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+ 			
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMT PMT AMW")) {
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+ 			
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMT THAM")) {
+ 			clickelement(secondbookingaddenq.secondAMtuesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMT PMT THAM THPM")) {
+ 			 clickelement(secondbookingaddenq.secondAMtuesday());
+    		 clickelement(secondbookingaddenq.secondPMtuesday());
+    		 clickelement(secondbookingaddenq.secondAMthusday());
+  			 clickelement(secondbookingaddenq.secondPMthusday());
+ 			
+ 		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM TAM TPM FAM FPM")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+   		    clickelement(secondbookingaddenq.secondPMmonday());
+   		    clickelement(secondbookingaddenq.secondAMtuesday());
+   		    clickelement(secondbookingaddenq.secondPMtuesday());
+   		    clickelement(secondbookingaddenq.secondAMfriday());
+			clickelement(secondbookingaddenq.secondPMfriday());
+			
+		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM THAM")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+   		    clickelement(secondbookingaddenq.secondPMmonday());
+   		    clickelement(secondbookingaddenq.secondAMthusday());			
+		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMT PMT AMW PMW AMTH PMTH")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+   		    clickelement(secondbookingaddenq.secondPMmonday());
+   		    clickelement(secondbookingaddenq.secondAMtuesday());
+		    clickelement(secondbookingaddenq.secondPMtuesday());
+		    clickelement(secondbookingaddenq.secondAMwednesday());
+ 			clickelement(secondbookingaddenq.secondPMwednesday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMTH PMTH")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+   		    clickelement(secondbookingaddenq.secondPMmonday());
+ 			clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMM PMM AMT PMT")) {
+ 			clickelement(secondbookingaddenq.secondAMmonday());
+   		    clickelement(secondbookingaddenq.secondPMmonday());
+   		    clickelement(secondbookingaddenq.secondAMtuesday());
+		    clickelement(secondbookingaddenq.secondPMtuesday());			
+		}
+ 		else if(SecondBookingPatten.equalsIgnoreCase("AMT PMT AMTH PMTH")) {
+   		    clickelement(secondbookingaddenq.secondAMtuesday());
+		    clickelement(secondbookingaddenq.secondPMtuesday());
+		    clickelement(secondbookingaddenq.secondAMthusday());
+ 			clickelement(secondbookingaddenq.secondPMthusday());
+		}
+ 	
      }
     
      @Then("Click on Add Enquiry")
