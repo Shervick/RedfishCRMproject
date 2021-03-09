@@ -270,7 +270,7 @@ Feature: 03.1 Enquiry Management
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Elsworth        | Nias             | Elsworth Nias    | contactlogoutElsworthNias  | eniaseb@hexun.com           | SO55 0LG |  07975285568 | NewContactElsworthNias    | 99-2155 St. Marys Road | Parent           | Enquiry: RedFish Enquiry | EnquiryElsworthNias    | Yellow Dot Ampfield                      | contactElsworthNias    |
       | 99160101@brighthorizons.com | Sam18You | UATCRMUrl   | Contacts Active Parents/Guardian - Microsoft Dynamics 365 | Contact: New Contact | Fulvia          | Edmonston        | Fulvia Edmonston | Edmonston Fulvia Edmonston | fedmonstonec@soundcloud.com | SO56 0LG |  07256642122 | NewContactFulviaEdmonston | 99-2156 St. Marys Road | Parent           | Enquiry: RedFish Enquiry | EnquiryFulviaEdmonston | Abbeymore Day Nursery and Preschool      | contactFulviaEdmonston |
 
-  @AddAbsenceSingleChild @Regiser1Child @AddAbsence
+  @AddAbsenceSingleChild
   Scenario Outline: Verify if user is able to add Absence for a child
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -305,3 +305,31 @@ Feature: 03.1 Enquiry Management
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Cthrine         | Graben           | Cthrine Graben    | cgrabenj@npr.com                 | 09/03/2021       | 12/03/2021     | COVID-19 Family Choice Non-Chargeable       |
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | jstreetsk@guardian.com           | 19/01/2021       | 19/01/2021     | COVID-19 Family Choice Non-Chargeable       |
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | mlarrowayl@nyu.com               | 11/01/2021       | 15/01/2021     | COVID-19 Nursery Restriction Non-Chargeable |
+
+  @ManagementLaunchInvoicing 
+  Scenario Outline: Verify if user is able to run the Automatic Task for Launch Invoicing
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify if user is able to click on management link in the main menu
+    Then Verify if is able to click on Automatic Tasks link in management page
+    Then Verify if user is able to select the invoice month "<InvoiceMonth>" year "<InvoiceYear>" and Launch Invoicing
+    Then Logout from redfish and close browser
+    
+    Examples: 
+      | UserName | Password   | application | InvoiceMonth | InvoiceYear |
+      | 99160101 | Password01 | redfishUAT  |            2 |        2021 |
+    
+    @AbsenceCreditNoteTask  
+    Scenario Outline: Verify if user is able to run the Automatic Task for Launch Invoicing
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify if user is able to click on management link in the main menu
+    Then Verify if is able to click on Automatic Tasks link in management page
+    Then Verify if user is able click on Absence Credit Note Task
+    Then Logout from redfish and close browser
+    
+    Examples: 
+      | UserName | Password   | application | InvoiceMonth | InvoiceYear |
+      | 99160101 | Password01 | redfishUAT  |            1 |        2021 |

@@ -42,6 +42,7 @@ import com.redfishCRM.pageObjects.crmNurseryPreference;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
 import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
+import com.redfishCRM.pageObjects.redfishManagementpage;
 import com.redfishCRM.pageObjects.redfishNewEnquirypage;
 import com.redfishCRM.pageObjects.redfishNewRegisterpage;
 import com.redfishCRM.pageObjects.redfishsearchpage;
@@ -945,6 +946,54 @@ public class StepDefination extends Utils {
     	 typekey(redfishsearchenq2.searchboxinform(),EmailId);
     	 keyboardenter(redfishsearchenq2.searchboxinform()); 
     	 clickelement(redfishsearchenq2.clickonsearchresult());
+     }
+     @Then("Verify if user is able to click on management link in the main menu")
+     public void verify_if_user_is_able_to_click_on_management_link_in_the_main_menu() {
+    	 redfishManagementpage redfishmanagementlinkclick=new redfishManagementpage(driver);
+    	 clickelement(redfishmanagementlinkclick.Managementmenulink());
+    	 
+     }
+     @Then("Verify if is able to click on Automatic Tasks link in management page")
+     public void verify_if_is_able_to_click_on_automatic_tasks_link_in_management_page() {
+    	 redfishManagementpage redfishmanagementlAutomaticTask=new redfishManagementpage(driver);
+    	 clickelement(redfishmanagementlAutomaticTask.ManagementAutomaticTaskslink());
+     }
+     @Then("Verify if user is able to select the invoice month {string} year {string} and Launch Invoicing")
+     public void verify_if_user_is_able_to_select_the_invoice_month_year_and_launch_invoicing(String InvoiceMonth, String InvoiceYear) {
+    	 redfishManagementpage redfishInvoicePeriod = new redfishManagementpage(driver);
+    	 Select InvoiceMonthSelect=new Select(redfishInvoicePeriod.ManagementInvoiceMonth());
+    	 clickelement(redfishInvoicePeriod.ManagementInvoiceMonth());
+    	 InvoiceMonthSelect.selectByVisibleText(InvoiceMonth);
+    	 Select InvoiceYearSelect=new Select(redfishInvoicePeriod.ManagementInvoiceYear());
+    	 clickelement(redfishInvoicePeriod.ManagementInvoiceYear());
+    	 InvoiceYearSelect.selectByVisibleText(InvoiceYear);
+    	 clickelement(redfishInvoicePeriod.ManagementLaunchInvoiceing());
+    	 String parentWindowHandler = driver.getWindowHandle();// Store your parent window
+			String subWindowHandler = null;
+			Set<String> handles = driver.getWindowHandles();// get all window handles
+			Iterator<String> iterator = handles.iterator();
+			while (iterator.hasNext()){
+			    subWindowHandler = iterator.next();
+			}
+			driver.switchTo().window(subWindowHandler);// switch to popup window`
+			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
+			driver.switchTo().window(parentWindowHandler); // switch back to parent window
+    	 
+     }
+     @Then("Verify if user is able click on Absence Credit Note Task")
+     public void verify_if_user_is_able_click_on_absence_credit_note_task() {
+    	 redfishManagementpage redfishAbsenceLink = new redfishManagementpage(driver);
+    	 clickelement(redfishAbsenceLink.ManagementLaunchAbsenceCreditNote());
+    	 String parentWindowHandler = driver.getWindowHandle();// Store your parent window
+			String subWindowHandler = null;
+			Set<String> handles = driver.getWindowHandles();// get all window handles
+			Iterator<String> iterator = handles.iterator();
+			while (iterator.hasNext()){
+			    subWindowHandler = iterator.next();
+			}
+			driver.switchTo().window(subWindowHandler);// switch to popup window`
+			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
+			driver.switchTo().window(parentWindowHandler); // switch back to parent window
      }
      @Then("Verify if user is able to add {string} in nursery preferred")
      public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {
