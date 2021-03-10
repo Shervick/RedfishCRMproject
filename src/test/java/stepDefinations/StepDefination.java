@@ -40,6 +40,7 @@ import com.redfishCRM.pageObjects.crmEnquirypage;
 import com.redfishCRM.pageObjects.crmHomepage;
 import com.redfishCRM.pageObjects.crmNurseryPreference;
 import com.redfishCRM.pageObjects.redfishEnquiryManagementpage;
+import com.redfishCRM.pageObjects.redfishExtraSessionspage;
 import com.redfishCRM.pageObjects.redfishHomepage;
 import com.redfishCRM.pageObjects.redfishLoginpage;
 import com.redfishCRM.pageObjects.redfishManagementpage;
@@ -994,6 +995,23 @@ public class StepDefination extends Utils {
 			driver.switchTo().window(subWindowHandler);// switch to popup window`
 			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
 			driver.switchTo().window(parentWindowHandler); // switch back to parent window
+     }
+     @Then("Verify if user is able to click on Extra Sesssion link")
+     public void verify_if_user_is_able_to_click_on_extra_sesssion_link() {
+    	 redfishExtraSessionspage redfishExtraSessionclick=new redfishExtraSessionspage(driver);
+    	 clickelement(redfishExtraSessionclick.ExtraSessionslink());
+     }
+     @Then("Verify if user is able to type the Extra Sessions Date {string} Booking Pattern {string} and click on Add")
+     public void verify_if_user_is_able_to_type_the_extra_sessions_date_booking_pattern_and_click_on_add(String ExtraSessionsDate, String ExtraSessionsBookingPattern) {
+    	 redfishExtraSessionspage redfishExtraSessionAdd=new redfishExtraSessionspage(driver);
+    	 clickelement(redfishExtraSessionAdd.AddExtraSessionslink());
+    	 clearinputfield(redfishExtraSessionAdd.ExtraSessionsDate());
+    	 typekey(redfishExtraSessionAdd.ExtraSessionsDate(),ExtraSessionsDate);
+    	 keyboardenter(redfishExtraSessionAdd.ExtraSessionsDate()); 
+    	 Select ExtraBookingPattern=new Select(redfishExtraSessionAdd.ExtraSessionsBookingPattern());
+    	 clickelement(redfishExtraSessionAdd.ExtraSessionsBookingPattern());
+    	 ExtraBookingPattern.selectByVisibleText(ExtraSessionsBookingPattern);
+    	 clickelement(redfishExtraSessionAdd.ExtraSessionsAddSession());    	 
      }
      @Then("Verify if user is able to add {string} in nursery preferred")
      public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {

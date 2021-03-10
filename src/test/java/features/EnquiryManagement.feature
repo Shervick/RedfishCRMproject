@@ -306,7 +306,7 @@ Feature: 03.1 Enquiry Management
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Janith          | Streets          | Janith Streets    | jstreetsk@guardian.com           | 19/01/2021       | 19/01/2021     | COVID-19 Family Choice Non-Chargeable       |
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Meryl           | Larroway         | Meryl Larroway    | mlarrowayl@nyu.com               | 11/01/2021       | 15/01/2021     | COVID-19 Nursery Restriction Non-Chargeable |
 
-  @ManagementLaunchInvoicing 
+  @ManagementLaunchInvoicing
   Scenario Outline: Verify if user is able to run the Automatic Task for Launch Invoicing
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -315,13 +315,13 @@ Feature: 03.1 Enquiry Management
     Then Verify if is able to click on Automatic Tasks link in management page
     Then Verify if user is able to select the invoice month "<InvoiceMonth>" year "<InvoiceYear>" and Launch Invoicing
     Then Logout from redfish and close browser
-    
+
     Examples: 
       | UserName | Password   | application | InvoiceMonth | InvoiceYear |
-      | 99160101 | Password01 | redfishUAT  |            2 |        2021 |
-    
-    @AbsenceCreditNoteTask  
-    Scenario Outline: Verify if user is able to run the Automatic Task for Launch Invoicing
+      | 99160101 | Password01 | redfishUAT  |            3 |        2021 |
+
+  @AbsenceCreditNoteTask
+  Scenario Outline: Verify if user is able to run the Automatic Task for Launch Invoicing
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
     When User enters User Name "<UserName>" and Password "<Password>"
@@ -329,7 +329,22 @@ Feature: 03.1 Enquiry Management
     Then Verify if is able to click on Automatic Tasks link in management page
     Then Verify if user is able click on Absence Credit Note Task
     Then Logout from redfish and close browser
-    
+
     Examples: 
       | UserName | Password   | application | InvoiceMonth | InvoiceYear |
       | 99160101 | Password01 | redfishUAT  |            1 |        2021 |
+
+  @AddExtraSessions @NewCode
+  Scenario Outline: Verify if user is able to add Extra Session for a child
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify search functionality with only Parent Name "<EmailId>" in search page
+    Then Verify Child search functionality with only Parent Email id "<EmailId>" in search page
+    Then Verify if user is able to click on Extra Sesssion link
+    Then Verify if user is able to type the Extra Sessions Date "<ExtraSessionsDate>" Booking Pattern "<ExtraSessionsBookingPattern>" and click on Add
+    Then Logout from redfish and close browser
+
+    Examples: 
+      | UserName | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName  | EmailId        | AbsenceStartDate | AbsenceEndDate | AbsenceReason                         | ExtraSessionsDate | ExtraSessionsBookingPattern |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Layne           | Tuohy            | Layne Tuohy | ltuohy0@ox.com | 04/01/2021       | 08/01/2021     | COVID-19 Family Choice Non-Chargeable | 11/03/2021        | Full day                    |

@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-09T10:59:50.365Z",
-        "line": 335,
-        "name": "Verify if user is able to run the Automatic Task for Launch Invoicing",
+        "start_timestamp": "2021-03-10T11:57:04.572Z",
+        "line": 350,
+        "name": "Verify if user is able to add Extra Session for a child",
         "description": "",
-        "id": "03.1-enquiry-management;verify-if-user-is-able-to-run-the-automatic-task-for-launch-invoicing;;2",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-extra-session-for-a-child;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2489192300,
+              "duration": 2478159500,
               "status": "passed"
             },
-            "line": 325,
+            "line": 339,
             "name": "Initialize the browser with chrome",
             "match": {
               "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
@@ -25,10 +25,10 @@
           },
           {
             "result": {
-              "duration": 7899500400,
+              "duration": 5311338400,
               "status": "passed"
             },
-            "line": 326,
+            "line": 340,
             "name": "Open Web Application \"redfishUAT\"",
             "match": {
               "arguments": [
@@ -43,10 +43,10 @@
           },
           {
             "result": {
-              "duration": 1521096700,
+              "duration": 1447091200,
               "status": "passed"
             },
-            "line": 327,
+            "line": 341,
             "name": "User enters User Name \"99160101\" and Password \"Password01\"",
             "match": {
               "arguments": [
@@ -65,46 +65,80 @@
           },
           {
             "result": {
-              "duration": 1177077900,
+              "duration": 4548289000,
               "status": "passed"
             },
-            "line": 328,
-            "name": "Verify if user is able to click on management link in the main menu",
+            "line": 342,
+            "name": "Verify search functionality with only Parent Name \"ltuohy0@ox.com\" in search page",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_management_link_in_the_main_menu()"
+              "arguments": [
+                {
+                  "val": "\"ltuohy0@ox.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 917056600,
+              "duration": 5767369100,
               "status": "passed"
             },
-            "line": 329,
-            "name": "Verify if is able to click on Automatic Tasks link in management page",
+            "line": 343,
+            "name": "Verify Child search functionality with only Parent Email id \"ltuohy0@ox.com\" in search page",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_is_able_to_click_on_automatic_tasks_link_in_management_page()"
+              "arguments": [
+                {
+                  "val": "\"ltuohy0@ox.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 134006600,
+              "duration": 98006200,
               "status": "passed"
             },
-            "line": 330,
-            "name": "Verify if user is able click on Absence Credit Note Task",
+            "line": 344,
+            "name": "Verify if user is able to click on Extra Sesssion link",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_user_is_able_click_on_absence_credit_note_task()"
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_extra_sesssion_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3431227700,
+              "duration": 9839626400,
               "status": "passed"
             },
-            "line": 331,
+            "line": 345,
+            "name": "Verify if user is able to type the Extra Sessions Date \"11/03/2021\" Booking Pattern \"Full day\" and click on Add",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"11/03/2021\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"Full day\"",
+                  "offset": 84
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_type_the_extra_sessions_date_booking_pattern_and_click_on_add(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4326282200,
+              "status": "passed"
+            },
+            "line": 346,
             "name": "Logout from redfish and close browser",
             "match": {
               "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
@@ -114,7 +148,10 @@
         ],
         "tags": [
           {
-            "name": "@AbsenceCreditNoteTask"
+            "name": "@AddExtraSessions"
+          },
+          {
+            "name": "@NewCode"
           }
         ]
       }
