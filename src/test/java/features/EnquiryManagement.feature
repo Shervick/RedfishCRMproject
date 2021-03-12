@@ -334,7 +334,7 @@ Feature: 03.1 Enquiry Management
       | UserName | Password   | application | InvoiceMonth | InvoiceYear |
       | 99160101 | Password01 | redfishUAT  |            1 |        2021 |
 
-  @AddExtraSessions @NewCode
+  @AddExtraSessions
   Scenario Outline: Verify if user is able to add Extra Session for a child
     Given Initialize the browser with chrome
     And Open Web Application "<application>"
@@ -348,3 +348,18 @@ Feature: 03.1 Enquiry Management
     Examples: 
       | UserName | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName  | EmailId        | AbsenceStartDate | AbsenceEndDate | AbsenceReason                         | ExtraSessionsDate | ExtraSessionsBookingPattern |
       | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Layne           | Tuohy            | Layne Tuohy | ltuohy0@ox.com | 04/01/2021       | 08/01/2021     | COVID-19 Family Choice Non-Chargeable | 11/03/2021        | Full day                    |
+
+  @AddDiscounts @NewCode
+  Scenario Outline: Verify if user is able to add Add Discounts for a child
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify search functionality with only Parent Name "<EmailId>" in search page
+    Then Verify Child search functionality with only Parent Email id "<EmailId>" in search page
+    Then Verify if user is able to click on Discount link
+    Then Verify if user is able to add a discount with Start Date "<DiscountStartDate>" End Date "<DiscountEndDate>" NameRate "<NameRate>" and Order "<Order>"
+    Then Logout from redfish and close browser
+
+    Examples: 
+      | UserName | Password   | application | expectedtitle | MainMenuItem | SubMenuItem | expectedenqtitle | ParentFirstName | ParentSecondName | ParentName  | EmailId        | AbsenceStartDate | AbsenceEndDate | AbsenceReason                         | ExtraSessionsDate | ExtraSessionsBookingPattern | DiscountStartDate | DiscountEndDate | NameRate                 | Order |
+      | 99160101 | Password01 | redfishUAT  | Home          | Enquiries    | Enquiry     | New enquiry      | Layne           | Tuohy            | Layne Tuohy | ltuohy0@ox.com | 04/01/2021       | 08/01/2021     | COVID-19 Family Choice Non-Chargeable | 11/03/2021        | Full day                    | 01/03/2021        | 31/03/2021      | 5% Sibling Discount / 5% |     1 |

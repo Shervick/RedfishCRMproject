@@ -35,6 +35,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.redfishCRM.pageObjects.crmloginpage;
 import com.redfishCRM.pageObjects.redfishAbsencepage;
+import com.redfishCRM.pageObjects.redfishDiscountspage;
 import com.redfishCRM.pageObjects.crmContactpage;
 import com.redfishCRM.pageObjects.crmEnquirypage;
 import com.redfishCRM.pageObjects.crmHomepage;
@@ -1012,6 +1013,28 @@ public class StepDefination extends Utils {
     	 clickelement(redfishExtraSessionAdd.ExtraSessionsBookingPattern());
     	 ExtraBookingPattern.selectByVisibleText(ExtraSessionsBookingPattern);
     	 clickelement(redfishExtraSessionAdd.ExtraSessionsAddSession());    	 
+     }
+     @Then("Verify if user is able to click on Discount link")
+     public void verify_if_user_is_able_to_click_on_discount_link() {
+    	 redfishDiscountspage redfishDiscountlinkclick=new redfishDiscountspage(driver);
+    	 clickelement(redfishDiscountlinkclick.Discountslink());
+     }
+     @Then("Verify if user is able to add a discount with Start Date {string} End Date {string} NameRate {string} and Order {string}")
+     public void verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(String DiscountStartDate, String DiscountEndDate, String NameRate, String Order) {
+    	 redfishDiscountspage redfishAddDiscount=new redfishDiscountspage(driver);
+    	 clearinputfield(redfishAddDiscount.DiscountsStartDate());
+    	 typekey(redfishAddDiscount.DiscountsStartDate(),DiscountStartDate);
+    	 keyboardenter(redfishAddDiscount.DiscountsStartDate()); 
+    	 clearinputfield(redfishAddDiscount.DiscountsEndDate());
+    	 typekey(redfishAddDiscount.DiscountsEndDate(),DiscountEndDate);
+    	 keyboardenter(redfishAddDiscount.DiscountsEndDate());
+    	 Select DiscountNameRate=new Select(redfishAddDiscount.DiscountsNameRate());
+    	 clickelement(redfishAddDiscount.DiscountsNameRate());
+    	 DiscountNameRate.selectByVisibleText(NameRate);
+    	 clickelement(redfishAddDiscount.DiscountsNameRate()); 
+    	 clearinputfield(redfishAddDiscount.DiscountsOrder());
+    	 typekey(redfishAddDiscount.DiscountsOrder(),Order);
+    	 clickelement(redfishAddDiscount.DiscountsAdd());
      }
      @Then("Verify if user is able to add {string} in nursery preferred")
      public void verify_if_user_is_able_to_add_in_nursery_preferred(String Nursery) {
