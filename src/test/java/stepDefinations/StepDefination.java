@@ -324,16 +324,7 @@ public class StepDefination extends Utils {
  		//relation.selectByValue(Relationship);
  		if (ParentalResponsibility.equalsIgnoreCase("Yes")) {
  			clickelement(repprrep.parentalresponsibility());
-			String parentWindowHandler = driver.getWindowHandle();// Store your parent window
-			String subWindowHandler = null;
-			Set<String> handles = driver.getWindowHandles();// get all window handles
-			Iterator<String> iterator = handles.iterator();
-			while (iterator.hasNext()){
-			    subWindowHandler = iterator.next();
-			}
-			driver.switchTo().window(subWindowHandler);// switch to popup window`
-			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
-			driver.switchTo().window(parentWindowHandler); // switch back to parent window
+ 			popupwindowhandleAccept();
 		} else {
 			 System.out.println(driver.getTitle());
 		}
@@ -970,32 +961,14 @@ public class StepDefination extends Utils {
     	 clickelement(redfishInvoicePeriod.ManagementInvoiceYear());
     	 InvoiceYearSelect.selectByVisibleText(InvoiceYear);
     	 clickelement(redfishInvoicePeriod.ManagementLaunchInvoiceing());
-    	 String parentWindowHandler = driver.getWindowHandle();// Store your parent window
-			String subWindowHandler = null;
-			Set<String> handles = driver.getWindowHandles();// get all window handles
-			Iterator<String> iterator = handles.iterator();
-			while (iterator.hasNext()){
-			    subWindowHandler = iterator.next();
-			}
-			driver.switchTo().window(subWindowHandler);// switch to popup window`
-			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
-			driver.switchTo().window(parentWindowHandler); // switch back to parent window
+    	 popupwindowhandleAccept();
     	 
      }
      @Then("Verify if user is able click on Absence Credit Note Task")
      public void verify_if_user_is_able_click_on_absence_credit_note_task() {
     	 redfishManagementpage redfishAbsenceLink = new redfishManagementpage(driver);
     	 clickelement(redfishAbsenceLink.ManagementLaunchAbsenceCreditNote());
-    	 String parentWindowHandler = driver.getWindowHandle();// Store your parent window
-			String subWindowHandler = null;
-			Set<String> handles = driver.getWindowHandles();// get all window handles
-			Iterator<String> iterator = handles.iterator();
-			while (iterator.hasNext()){
-			    subWindowHandler = iterator.next();
-			}
-			driver.switchTo().window(subWindowHandler);// switch to popup window`
-			driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
-			driver.switchTo().window(parentWindowHandler); // switch back to parent window
+    	 popupwindowhandleAccept();
      }
      @Then("Verify if user is able to click on Extra Sesssion link")
      public void verify_if_user_is_able_to_click_on_extra_sesssion_link() {

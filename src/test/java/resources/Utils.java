@@ -5,8 +5,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
@@ -130,5 +132,30 @@ public class Utils {
 		WebElement loc=locator;
 		loc.submit();
 	}
+    public void popupwindowhandleAccept() {
+    	String parentWindowHandler = driver.getWindowHandle();// Store your parent window
+		String subWindowHandler = null;
+		Set<String> handles = driver.getWindowHandles();// get all window handles
+		Iterator<String> iterator = handles.iterator();
+		while (iterator.hasNext()){
+		    subWindowHandler = iterator.next();
+		}
+		driver.switchTo().window(subWindowHandler);// switch to popup window`
+		driver.switchTo().window(subWindowHandler).switchTo().alert().accept();
+		driver.switchTo().window(parentWindowHandler); // switch back to parent window
+	}
+    public void popupwindowhandle() {
+    	String parentWindowHandler = driver.getWindowHandle();// Store your parent window
+		String subWindowHandler = null;
+		Set<String> handles = driver.getWindowHandles();// get all window handles
+		Iterator<String> iterator = handles.iterator();
+		while (iterator.hasNext()){
+		    subWindowHandler = iterator.next();
+		}
+		driver.switchTo().window(subWindowHandler);// switch to popup window`
+		
+	}
+
+    
 
 }
