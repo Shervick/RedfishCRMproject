@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-11T12:14:45.983Z",
-        "line": 335,
-        "name": "Verify if user is able to run the Automatic Task for Launch Invoicing",
+        "start_timestamp": "2021-03-16T07:45:46.297Z",
+        "line": 354,
+        "name": "Verify if user is able to add Add Discounts for a child",
         "description": "",
-        "id": "03.1-enquiry-management;verify-if-user-is-able-to-run-the-automatic-task-for-launch-invoicing;;2",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3042196300,
+              "duration": 2342147500,
               "status": "passed"
             },
-            "line": 325,
+            "line": 343,
             "name": "Initialize the browser with chrome",
             "match": {
               "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
@@ -25,10 +25,10 @@
           },
           {
             "result": {
-              "duration": 8549540800,
+              "duration": 3544226400,
               "status": "passed"
             },
-            "line": 326,
+            "line": 344,
             "name": "Open Web Application \"redfishUAT\"",
             "match": {
               "arguments": [
@@ -43,10 +43,10 @@
           },
           {
             "result": {
-              "duration": 1705107400,
+              "duration": 1693106000,
               "status": "passed"
             },
-            "line": 327,
+            "line": 345,
             "name": "User enters User Name \"99160101\" and Password \"Password01\"",
             "match": {
               "arguments": [
@@ -65,46 +65,87 @@
           },
           {
             "result": {
-              "duration": 928058900,
+              "duration": 4698298900,
               "status": "passed"
             },
-            "line": 328,
-            "name": "Verify if user is able to click on management link in the main menu",
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"opendrigh1y@phpbb.com\" in search page",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_management_link_in_the_main_menu()"
+              "arguments": [
+                {
+                  "val": "\"opendrigh1y@phpbb.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1006065800,
+              "duration": 15267972300,
               "status": "passed"
             },
-            "line": 329,
-            "name": "Verify if is able to click on Automatic Tasks link in management page",
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"opendrigh1y@phpbb.com\" in search page",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_is_able_to_click_on_automatic_tasks_link_in_management_page()"
+              "arguments": [
+                {
+                  "val": "\"opendrigh1y@phpbb.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 198011300,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:385)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:235)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishDiscountspage.Discountslink(redfishDiscountspage.java:23)\r\n\tat stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link(StepDefination.java:1284)\r\n\tat ✽.Verify if user is able to click on Discount link(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:348)\r\n",
+              "duration": 6002500,
+              "status": "failed"
             },
-            "line": 330,
-            "name": "Verify if user is able click on Absence Credit Note Task",
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
             "match": {
-              "location": "stepDefinations.StepDefination.verify_if_user_is_able_click_on_absence_credit_note_task()"
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3910254600,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 331,
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"5% Sibling Discount / 5%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"5% Sibling Discount / 5%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 350,
             "name": "Logout from redfish and close browser",
             "match": {
               "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
@@ -114,7 +155,2106 @@
         ],
         "tags": [
           {
-            "name": "@AbsenceCreditNoteTask"
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:46:14.137Z",
+        "line": 355,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1505138100,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5231293000,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1565102800,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4729298700,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"achawkley1z@skyrock.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"achawkley1z@skyrock.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5327340700,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"achawkley1z@skyrock.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"achawkley1z@skyrock.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 96004800,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9463603400,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2775184800,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:46:44.847Z",
+        "line": 356,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1428090500,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3125200100,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1564100200,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4741301100,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"gvansaltsberg20@canalblog.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gvansaltsberg20@canalblog.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5409345500,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"gvansaltsberg20@canalblog.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gvansaltsberg20@canalblog.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 94003400,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8639552000,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"100% COVID Government Closure / 100%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"100% COVID Government Closure / 100%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 148
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4277277900,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:47:14.156Z",
+        "line": 357,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1416087700,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6491412900,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1585087500,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4405280100,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"ggordongiles21@economist.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ggordongiles21@economist.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5748367000,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"ggordongiles21@economist.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ggordongiles21@economist.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 93005500,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19181240400,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"10% Sibling Discount  / 10%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"10% Sibling Discount  / 10%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 139
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)\r\n\tat stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:475)\r\n\tat ✽.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)\r\n",
+              "duration": 981000,
+              "status": "failed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:47:53.093Z",
+        "line": 358,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1521099700,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5194326600,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1470094300,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4690296900,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"tloudian22@moonfruit.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tloudian22@moonfruit.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5261333200,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"tloudian22@moonfruit.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tloudian22@moonfruit.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86006600,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8931571100,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4800309300,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:48:25.079Z",
+        "line": 359,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1456095400,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5026320100,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1598100100,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4632331700,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"kpick23@twitter.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kpick23@twitter.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5645324400,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"kpick23@twitter.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kpick23@twitter.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89007200,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8301526000,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2834189200,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:48:54.672Z",
+        "line": 360,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1510093900,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6736429500,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1540097600,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4508285700,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"rlount24@nbcnews.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rlount24@nbcnews.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5725364500,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"rlount24@nbcnews.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rlount24@nbcnews.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 79005500,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17852155200,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"10% Sibling Discount  / 10%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"10% Sibling Discount  / 10%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 139
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)\r\n\tat stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:475)\r\n\tat ✽.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)\r\n",
+              "status": "failed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:49:32.636Z",
+        "line": 361,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1481092300,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3135200300,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1468095500,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4500286500,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"etinton25@over-blog.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"etinton25@over-blog.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6061386200,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"etinton25@over-blog.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"etinton25@over-blog.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2466158200,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7501475300,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2841236700,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:50:02.102Z",
+        "line": 362,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1456090700,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6568417600,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1390090600,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4384278600,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"gsidlow26@theatlantic.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gsidlow26@theatlantic.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6072386100,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"gsidlow26@theatlantic.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gsidlow26@theatlantic.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 76007100,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9451600800,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2774181200,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:50:34.287Z",
+        "line": 363,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1425090300,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3196203000,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1526098100,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4632293100,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"lvallentine27@360.cn\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"lvallentine27@360.cn\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6010383400,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"lvallentine27@360.cn\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"lvallentine27@360.cn\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 77035000,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20295053900,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"10% Sibling Discount  / 10%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"10% Sibling Discount  / 10%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 139
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)\r\n\tat stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:475)\r\n\tat ✽.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)\r\n",
+              "duration": 1007400,
+              "status": "failed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:51:11.461Z",
+        "line": 364,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1512063700,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3054192500,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1571098300,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4604294700,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"dthaine28@alibaba.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dthaine28@alibaba.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5487347600,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"dthaine28@alibaba.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dthaine28@alibaba.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89007600,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9847625600,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2753175100,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:51:40.397Z",
+        "line": 365,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1360089300,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3095193400,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1562099300,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4403279800,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"clandreth29@is.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"clandreth29@is.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5155328700,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"clandreth29@is.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"clandreth29@is.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 83006400,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9271587600,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2819184900,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:52:08.157Z",
+        "line": 366,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1491091800,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5290338800,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1511096800,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4679296700,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"edozdill2a@sohu.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"edozdill2a@sohu.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6080388100,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"edozdill2a@sohu.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"edozdill2a@sohu.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78005900,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9355622700,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"40% Staff Discount / 40%\" and Order \"99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"40% Staff Discount / 40%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"99\"",
+                  "offset": 136
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2768149400,
+              "status": "passed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-16T07:52:39.420Z",
+        "line": 367,
+        "name": "Verify if user is able to add Add Discounts for a child",
+        "description": "",
+        "id": "03.1-enquiry-management;verify-if-user-is-able-to-add-add-discounts-for-a-child;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1549096600,
+              "status": "passed"
+            },
+            "line": 343,
+            "name": "Initialize the browser with chrome",
+            "match": {
+              "location": "stepDefinations.StepDefination.initialize_the_browser_with_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5932380400,
+              "status": "passed"
+            },
+            "line": 344,
+            "name": "Open Web Application \"redfishUAT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"redfishUAT\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinations.StepDefination.open_web_application(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1492093100,
+              "status": "passed"
+            },
+            "line": 345,
+            "name": "User enters User Name \"99160101\" and Password \"Password01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99160101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Password01\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_enters_user_name_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4743303600,
+              "status": "passed"
+            },
+            "line": 346,
+            "name": "Verify search functionality with only Parent Name \"rgethings2b@usnews.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rgethings2b@usnews.com\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_search_functionality_with_only_parent_name_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5795367800,
+              "status": "passed"
+            },
+            "line": 347,
+            "name": "Verify Child search functionality with only Parent Email id \"rgethings2b@usnews.com\" in search page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rgethings2b@usnews.com\"",
+                  "offset": 60
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_child_search_functionality_with_only_parent_email_id_in_search_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 84006200,
+              "status": "passed"
+            },
+            "line": 348,
+            "name": "Verify if user is able to click on Discount link",
+            "match": {
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_discount_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18462196200,
+              "status": "passed"
+            },
+            "line": 349,
+            "name": "Verify if user is able to add a discount with Start Date \"1/3/2021\" End Date \"31/03/2021\" NameRate \"10% Sibling Discount  / 10%\" and Order \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1/3/2021\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"31/03/2021\"",
+                  "offset": 77
+                },
+                {
+                  "val": "\"10% Sibling Discount  / 10%\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 139
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verify_if_user_is_able_to_add_a_discount_with_start_date_end_date_name_rate_and_order(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)\r\n\tat stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:475)\r\n\tat ✽.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)\r\n",
+              "duration": 982800,
+              "status": "failed"
+            },
+            "line": 350,
+            "name": "Logout from redfish and close browser",
+            "match": {
+              "location": "stepDefinations.StepDefination.Logout_from_redfish_and_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddDiscounts"
+          },
+          {
+            "name": "@AbsenceCN"
           }
         ]
       }
