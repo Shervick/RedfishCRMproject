@@ -17,6 +17,7 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.8.1</version>
 </dependency>
+
   <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-test</artifactId>
@@ -56,7 +57,7 @@
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>5.0.4</version>
+    <version>5.0.7</version>
 </dependency>
 
 <dependency>
@@ -101,8 +102,8 @@
 </dependency>
 <dependency>
     <groupId>net.masterthought</groupId>
-    <artifactId>maven-cucumber-reporting</artifactId>
-    <version>5.3.0</version>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>5.5.2</version>
 </dependency>
 <dependency>
     <groupId>org.assertj</groupId>
@@ -145,7 +146,7 @@
 <dependency>
     <groupId>org.freemarker</groupId>
     <artifactId>freemarker</artifactId>
-    <version>2.3.30</version>
+    <version>2.3.31</version>
 </dependency>
 <dependency>
     <groupId>com.cedarsoftware</groupId>
@@ -155,12 +156,17 @@
   </dependencies>
   <build>
         <plugins>
-           
-            
+          <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.3.0</version>
+                <version>5.5.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
@@ -168,6 +174,7 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
+                        
                         <configuration>
                             <projectName>RedfishAutomation</projectName>
                             <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->

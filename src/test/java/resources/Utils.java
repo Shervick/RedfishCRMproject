@@ -16,6 +16,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
@@ -25,6 +26,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.redfishCRM.pageObjects.crmEnquirypage;
+import java.nio.file.Files;
+import cucumber.api.Scenario;
 
 
 public class Utils {
@@ -66,6 +69,27 @@ public class Utils {
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src,new File(path));
 		return src;
+	}
+	public void errorscreeshot(Scenario scenario) {
+		if(scenario.isFailed()) {
+			
+			try {
+				final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+				scenario.embed(screenshot, "image/png");
+			} catch (WebDriverException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				driver.close();
+	 	 		driver.quit(); 
+			}
+			catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				driver.close();
+	 	 		driver.quit(); 
+			}
+		}
+		
 	}
 	public void partpagescreenshot(String path,WebElement pageSection) throws IOException {
 		File src=pageSection.getScreenshotAs(OutputType.FILE);

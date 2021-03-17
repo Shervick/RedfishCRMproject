@@ -50,6 +50,8 @@ import com.redfishCRM.pageObjects.redfishManagementpage;
 import com.redfishCRM.pageObjects.redfishNewEnquirypage;
 import com.redfishCRM.pageObjects.redfishNewRegisterpage;
 import com.redfishCRM.pageObjects.redfishsearchpage;
+
+import cucumber.api.Scenario;
 public class StepDefination extends Utils {	
 	
 	
@@ -1276,6 +1278,7 @@ public class StepDefination extends Utils {
     		 driver.close();
  	 		 driver.quit(); 
     	 }
+    	 
      }
      @Then("Verify if user is able to click on Discount link")
      public void verify_if_user_is_able_to_click_on_discount_link() {
