@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="TestSuite" time="0.003" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="TestSuite" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="JOB_NAME" value="RedfishCRMproject"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/4/display/redirect?page=tests"/>
+    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/6/display/redirect?page=tests"/>
     <property name="NUMBER_OF_PROCESSORS" value="2"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="JENKINS_HOME" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins"/>
@@ -26,8 +26,8 @@
     <property name="ProgramFiles" value="C:\Program Files"/>
     <property name="user.language" value="en"/>
     <property name="JOB_BASE_NAME" value="RedfishCRMproject"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/4/display/redirect?page=changes"/>
-    <property name="BUILD_DISPLAY_NAME" value="#4"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/6/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#6"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.10\bin"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
@@ -37,7 +37,7 @@
     <property name="USERNAME" value="MAMISWKSWX11$"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="NODE_NAME" value="master"/>
-    <property name="BUILD_ID" value="4"/>
+    <property name="BUILD_ID" value="6"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="STTASKFOLDERPATH" value="\LANDESK\Protect\Deployments"/>
@@ -52,11 +52,11 @@
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.10"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="os.version" value="10.0"/>
-    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/4/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/6/display/redirect"/>
     <property name="POM_VERSION" value="1.0-SNAPSHOT"/>
     <property name="TMP" value="C:\WINDOWS\TEMP"/>
     <property name="path.separator" value=";"/>
-    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/4/display/redirect?page=artifacts"/>
+    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/RedfishCRMproject/6/display/redirect?page=artifacts"/>
     <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
     <property name="user.variant" value=""/>
     <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
@@ -74,7 +74,7 @@
     <property name="POM_GROUPID" value="com.QERedfishRegression.app"/>
     <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-RedfishCRMproject-4"/>
+    <property name="BUILD_TAG" value="jenkins-RedfishCRMproject-6"/>
     <property name="JENKINS_SERVER_COOKIE" value="abb39023b70e21f0"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -89,7 +89,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven"/>
     <property name="java.class.path" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.13.jar;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven\boot\plexus-classworlds-2.6.0.jar;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\war\WEB-INF\lib\remoting-4.6.jar C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar 3344"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\war\WEB-INF\lib\remoting-4.6.jar C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar 3388"/>
     <property name="Path" value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Java\jdk-15\bin;C:\Users\99160101\Desktop\BH\RedFish\RedfishAutomation\Maven\apache-maven-3.6.3\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-11.0.10\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
     <property name="jdk.debug" value="release"/>
     <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
@@ -105,7 +105,7 @@
     <property name="PATH+MAVEN" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\TestMaven/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/RedfishCRMproject/4/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/RedfishCRMproject/6/"/>
     <property name="SystemRoot" value="C:\WINDOWS"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -117,7 +117,7 @@
 "/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="BASE" value="C:\Program Files\Jenkins"/>
-    <property name="BUILD_NUMBER" value="4"/>
+    <property name="BUILD_NUMBER" value="6"/>
     <property name="PROCESSOR_REVISION" value="2501"/>
     <property name="JENKINS_URL" value="http://localhost:8080/"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
@@ -133,5 +133,5 @@
     <property name="java.specification.version" value="11"/>
     <property name="java.vendor.version" value="18.9"/>
   </properties>
-  <testcase classname="com.QERedfishRegression.app.AppTest" name="testApp on testApp(com.QERedfishRegression.app.AppTest)" time="0.003"/>
+  <testcase classname="com.QERedfishRegression.app.AppTest" name="testApp on testApp(com.QERedfishRegression.app.AppTest)" time="0.002"/>
 </testsuite>
