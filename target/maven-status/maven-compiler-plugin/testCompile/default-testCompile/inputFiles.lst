@@ -6,9 +6,13 @@ C:\Users\99160101\git\RedfishCRMproject\src\test\java\resources\Utils.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\stepDefinations\StepDefination.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishLoginpage.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\cucumber\Options\RedFishCRMWorkflowRunnerTest.java
+C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishExtraSessionspage.java
+C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishManagementpage.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\crmNurseryPreference.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\cucumber\Options\RedFishCRMWorkflowTestRunner.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\resources\TestDataBuild.java
+C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishDiscountspage.java
+C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishFundingpage.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\cucumber\Options\RedFishWorkflowRunnerTest.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\crmEnquirypage.java
 C:\Users\99160101\git\RedfishCRMproject\src\test\java\com\redfishCRM\pageObjects\redfishsearchpage.java
