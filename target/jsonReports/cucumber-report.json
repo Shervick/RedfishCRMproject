@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-17T14:15:09.433Z",
+        "start_timestamp": "2021-03-18T04:17:49.923Z",
         "line": 326,
         "name": "Verify if user is able to add Extra Session for a child",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3257208100,
+              "duration": 4142262000,
               "status": "passed"
             },
             "line": 315,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2209139600,
+              "duration": 2659169300,
               "status": "passed"
             },
             "line": 316,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 1396088600,
+              "duration": 1566100200,
               "status": "passed"
             },
             "line": 317,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 4459286000,
+              "duration": 4530288300,
               "status": "passed"
             },
             "line": 318,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 13056837000,
+              "duration": 12963828500,
               "status": "passed"
             },
             "line": 319,
@@ -102,7 +102,7 @@
           {
             "result": {
               "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.0.0-alpha-3\u0027, revision: \u00278c567de6dc\u0027\nSystem info: host: \u0027MAMISWKSWX11\u0027, ip: \u002710.37.114.48\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:385)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:235)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat com.redfishCRM.pageObjects.redfishExtraSessionspage.ExtraSessionslink(redfishExtraSessionspage.java:23)\r\n\tat stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_extra_sesssion_link(StepDefination.java:1259)\r\n\tat ✽.Verify if user is able to click on Extra Sesssion link(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:320)\r\n",
-              "duration": 5008100,
+              "duration": 6997100,
               "status": "failed"
             },
             "line": 320,

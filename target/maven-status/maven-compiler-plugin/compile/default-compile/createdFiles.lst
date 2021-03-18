@@ -1,2 +1,4 @@
+.cucumber\cucumber.stepDefinitions.tmp
 pojo\loginWebApp.class
+.cucumber\cucumber.glue.tmp
 com\QERedfishRegression\app\App.class
