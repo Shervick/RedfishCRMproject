@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>RedfishAutomation</td>
         <td>1</td>
-      <td>18 Mar 2021, 05:15</td>
+      <td>26 Mar 2021, 09:55</td>
     </tr>
   </tbody>
 </table>
@@ -123,19 +123,20 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4014801419.html">@AddExtraSessions</a>
+       <a href="report-tag_454751248.html">@AddDiscounts</a>
        <a href="report-tag_1911707399.html">@AbsenceCN</a>
+       <a href="report-tag_2388167675.html">@RegressionMar21</a>
 </div>
 
 
-  <span class="lead-duration duration">25.868</span>
+  <span class="lead-duration duration">36.209</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Verify if user is able to add Extra Session for a child</span>
+  <span class="name">Verify if user is able to add Add Discounts for a child</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -171,7 +172,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">Initialize the browser with chrome</span>
 
-  <span class="lead-duration duration">4.142</span>
+  <span class="lead-duration duration">1.749</span>
 
 </div>
 
@@ -198,7 +199,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">Open Web Application <span class="argument">&quot;redfishUAT&quot;</span></span>
 
-  <span class="lead-duration duration">2.659</span>
+  <span class="lead-duration duration">5.867</span>
 
 </div>
 
@@ -225,7 +226,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters User Name <span class="argument">&quot;99160101&quot;</span> and Password <span class="argument">&quot;Password01&quot;</span></span>
 
-  <span class="lead-duration duration">1.566</span>
+  <span class="lead-duration duration">1.284</span>
 
 </div>
 
@@ -250,9 +251,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">Verify search functionality with only Parent Name <span class="argument">&quot;opendrigh1y@phpbb.com&quot;</span> in search page</span>
+  <span class="name">Verify search functionality with only Parent Name <span class="argument">&quot;ghexum2m@blinklist.com&quot;</span> in search page</span>
 
-  <span class="lead-duration duration">4.530</span>
+  <span class="lead-duration duration">4.458</span>
 
 </div>
 
@@ -277,9 +278,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">Verify Child search functionality with only Parent Email id <span class="argument">&quot;opendrigh1y@phpbb.com&quot;</span> in search page</span>
+  <span class="name">Verify Child search functionality with only Parent Email id <span class="argument">&quot;ghexum2m@blinklist.com&quot;</span> in search page</span>
 
-  <span class="lead-duration duration">12.963</span>
+  <span class="lead-duration duration">4.841</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to click on Discount link</span>
+
+  <span class="lead-duration duration">0.100</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to add a discount with Start Date <span class="argument">&quot;1/3/2021&quot;</span> End Date <span class="argument">&quot;31/03/2021&quot;</span> NameRate <span class="argument">&quot;10% Sibling Discount  / 10%&quot;</span> and Order <span class="argument">&quot;&lt;Order&gt;&quot;</span></span>
+
+  <span class="lead-duration duration">17.901</span>
 
 </div>
 
@@ -304,9 +359,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">Verify if user is able to click on Extra Sesssion link</span>
+  <span class="name">Logout from redfish and close browser</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -329,12 +384,12 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:385)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:235)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at com.redfishCRM.pageObjects.redfishExtraSessionspage.ExtraSessionslink(redfishExtraSessionspage.java:23)
-	at stepDefinations.StepDefination.verify_if_user_is_able_to_click_on_extra_sesssion_link(StepDefination.java:1259)
-	at &#10045;.Verify if user is able to click on Extra Sesssion link(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:320)
+	at com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)
+	at stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:478)
+	at &#10045;.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)
 </pre>
       </div>
     </div>
@@ -351,14 +406,76 @@ Driver info: driver.version: RemoteWebDriver
 
 
       </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1691774484.html">03.1 Enquiry Management</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_454751248.html">@AddDiscounts</a>
+       <a href="report-tag_1911707399.html">@AbsenceCN</a>
+       <a href="report-tag_2388167675.html">@RegressionMar21</a>
+</div>
+
+
+  <span class="lead-duration duration">32.699</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify if user is able to add Add Discounts for a child</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">Verify if user is able to type the Extra Sessions Date <span class="argument">&quot;4/1/2021&quot;</span> Booking Pattern <span class="argument">&quot;Full day&quot;</span> and click on Add</span>
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Initialize the browser with chrome</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.532</span>
 
 </div>
 
@@ -381,7 +498,472 @@ Driver info: driver.version: RemoteWebDriver
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Open Web Application <span class="argument">&quot;redfishUAT&quot;</span></span>
+
+  <span class="lead-duration duration">4.537</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User enters User Name <span class="argument">&quot;99160101&quot;</span> and Password <span class="argument">&quot;Password01&quot;</span></span>
+
+  <span class="lead-duration duration">1.539</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify search functionality with only Parent Name <span class="argument">&quot;veiler2p@yelp.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">4.165</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify Child search functionality with only Parent Email id <span class="argument">&quot;veiler2p@yelp.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">4.965</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to click on Discount link</span>
+
+  <span class="lead-duration duration">1.961</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to add a discount with Start Date <span class="argument">&quot;1/3/2021&quot;</span> End Date <span class="argument">&quot;31/03/2021&quot;</span> NameRate <span class="argument">&quot;10% Sibling Discount  / 10%&quot;</span> and Order <span class="argument">&quot;&lt;Order&gt;&quot;</span></span>
+
+  <span class="lead-duration duration">13.998</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Logout from redfish and close browser</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>org.openqa.selenium.NoSuchSessionException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'MAMISWKSWX11', ip: '10.37.114.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)
+	at stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:478)
+	at &#10045;.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1691774484.html">03.1 Enquiry Management</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_454751248.html">@AddDiscounts</a>
+       <a href="report-tag_1911707399.html">@AbsenceCN</a>
+       <a href="report-tag_2388167675.html">@RegressionMar21</a>
+</div>
+
+
+  <span class="lead-duration duration">34.819</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify if user is able to add Add Discounts for a child</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Initialize the browser with chrome</span>
+
+  <span class="lead-duration duration">1.528</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Open Web Application <span class="argument">&quot;redfishUAT&quot;</span></span>
+
+  <span class="lead-duration duration">4.214</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User enters User Name <span class="argument">&quot;99160101&quot;</span> and Password <span class="argument">&quot;Password01&quot;</span></span>
+
+  <span class="lead-duration duration">1.643</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify search functionality with only Parent Name <span class="argument">&quot;creinmar2s@netvibes.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">4.186</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify Child search functionality with only Parent Email id <span class="argument">&quot;creinmar2s@netvibes.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">5.024</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to click on Discount link</span>
+
+  <span class="lead-duration duration">0.094</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to add a discount with Start Date <span class="argument">&quot;1/3/2021&quot;</span> End Date <span class="argument">&quot;31/03/2021&quot;</span> NameRate <span class="argument">&quot;10% Sibling Discount  / 10%&quot;</span> and Order <span class="argument">&quot;&lt;Order&gt;&quot;</span></span>
+
+  <span class="lead-duration duration">18.129</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">Logout from redfish and close browser</span>
 
@@ -393,6 +975,334 @@ Driver info: driver.version: RemoteWebDriver
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>org.openqa.selenium.NoSuchSessionException:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'MAMISWKSWX11', ip: '10.37.114.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)
+	at stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:478)
+	at &#10045;.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1691774484.html">03.1 Enquiry Management</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_454751248.html">@AddDiscounts</a>
+       <a href="report-tag_1911707399.html">@AbsenceCN</a>
+       <a href="report-tag_2388167675.html">@RegressionMar21</a>
+</div>
+
+
+  <span class="lead-duration duration">36.324</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify if user is able to add Add Discounts for a child</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Initialize the browser with chrome</span>
+
+  <span class="lead-duration duration">1.509</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Open Web Application <span class="argument">&quot;redfishUAT&quot;</span></span>
+
+  <span class="lead-duration duration">2.722</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User enters User Name <span class="argument">&quot;99160101&quot;</span> and Password <span class="argument">&quot;Password01&quot;</span></span>
+
+  <span class="lead-duration duration">1.211</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify search functionality with only Parent Name <span class="argument">&quot;vberzins2v@diigo.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">4.551</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify Child search functionality with only Parent Email id <span class="argument">&quot;vberzins2v@diigo.com&quot;</span> in search page</span>
+
+  <span class="lead-duration duration">5.757</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to click on Discount link</span>
+
+  <span class="lead-duration duration">0.113</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify if user is able to add a discount with Start Date <span class="argument">&quot;1/3/2021&quot;</span> End Date <span class="argument">&quot;31/03/2021&quot;</span> NameRate <span class="argument">&quot;10% Sibling Discount  / 10%&quot;</span> and Order <span class="argument">&quot;&lt;Order&gt;&quot;</span></span>
+
+  <span class="lead-duration duration">20.459</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Logout from redfish and close browser</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>org.openqa.selenium.NoSuchSessionException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'MAMISWKSWX11', ip: '10.37.114.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at com.redfishCRM.pageObjects.redfishNewRegisterpage.logout(redfishNewRegisterpage.java:71)
+	at stepDefinations.StepDefination.Logout_from_redfish_and_close_browser(StepDefination.java:478)
+	at &#10045;.Logout from redfish and close browser(file:///C:/Users/99160101/git/RedfishCRMproject/src/test/java/features/EnquiryManagement.feature:350)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 

@@ -28,9 +28,14 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.redfishCRM.pageObjects.crmEnquirypage;
 import java.nio.file.Files;
 import cucumber.api.Scenario;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
 
 
 public class Utils {
+
+	
 	public static Properties prop =new Properties();
 	public WebDriver driver;
 	public static String getGlobalValue(String application) throws IOException

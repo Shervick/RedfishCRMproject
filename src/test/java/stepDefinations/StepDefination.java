@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import resources.TestDataBuild;
 import resources.Utils;
-
+import com.Redfish.Hooks.GeneralHooks;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -63,6 +63,7 @@ public class StepDefination extends Utils {
 			driver=initializerDriver("chrome");
 		} catch (InvalidArgumentException e1) {
 			driver.close();
+			
 	 		driver.quit();
 		}
 		

@@ -1,11 +1,10 @@
 Feature: Validate Search Function Page
 @RedfishSearch @Regression 
-Scenario Outline: Verify if user is able to use search function
-Given Initialize the browser with chrome
-And Open Web Application "<application>" 
-When User enters User Name "<UserName>" and Password "<Password>"
-Then Verify if the web page title actual "<expectedtitle>"
-Then Verify search functionality with "<ChildName>" and "<ParentName>"
+Scenario Outline: Verify if user is able to register the 2nd Child
+    Given Initialize the browser with chrome
+    And Open Web Application "<application>"
+    When User enters User Name "<UserName>" and Password "<Password>"
+    Then Verify if the web page title actual "<expectedtitle>"
 
 
 Examples:

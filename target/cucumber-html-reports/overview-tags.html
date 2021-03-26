@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@AbsenceCN",  "@AddExtraSessions", ] ,
+        labels:  [ "@AbsenceCN",  "@AddAbsenceSingleChild",  "@AddDiscounts",  "@AddExtraSessions",  "@Regiser1Child",  "@RegisterSingleChild",  "@RegressionMar21",  "@SingleChildEnquiry", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 62.50,  62.50, ] 
+                data:  [ 99.44,  100.00,  96.43,  100.00,  100.00,  100.00,  99.44,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 12.50,  12.50, ] 
+                data:  [ 0.56,  0.00,  3.57,  0.00,  0.00,  0.00,  0.56,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 25.00,  25.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>RedfishAutomation</td>
         <td>1</td>
-      <td>18 Mar 2021, 05:15</td>
+      <td>26 Mar 2021, 09:55</td>
     </tr>
   </tbody>
 </table>
@@ -199,66 +199,168 @@ $(document).ready(function() {
       <tr>
         <td class="tagname"><a href="report-tag_1911707399.html">@AbsenceCN</a></td>
 
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td      class="passed"    >710</td>
+        <td      class="failed"    >4</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td >0</td>
+        <td class="total">714</td>
 
-        <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="passed"    >66</td>
+        <td  class="failed"    >4</td>
+        <td class="total">70</td>
 
-        <td class="duration" data-value="25868645400">25.868</td>
+        <td class="duration" data-value="2679001798000">44:39.001</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_98820439.html">@AddAbsenceSingleChild</a></td>
+
+        <td      class="passed"    >112</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">112</td>
+
+        <td  class="passed"    >14</td>
+        <td >0</td>
+        <td class="total">14</td>
+
+        <td class="duration" data-value="424503305600">7:4.503</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_454751248.html">@AddDiscounts</a></td>
+
+        <td      class="passed"    >108</td>
+        <td      class="failed"    >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">112</td>
+
+        <td  class="passed"    >10</td>
+        <td  class="failed"    >4</td>
+        <td class="total">14</td>
+
+        <td class="duration" data-value="409604469000">6:49.604</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-tag_4014801419.html">@AddExtraSessions</a></td>
 
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td      class="passed"    >112</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">112</td>
 
+        <td  class="passed"    >14</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td class="total">14</td>
 
-        <td class="duration" data-value="25868645400">25.868</td>
+        <td class="duration" data-value="396700764900">6:36.700</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_4248665269.html">@Regiser1Child</a></td>
+
+        <td      class="passed"    >378</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">378</td>
+
+        <td  class="passed"    >28</td>
+        <td >0</td>
+        <td class="total">28</td>
+
+        <td class="duration" data-value="1448193258500">24:8.193</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_121787056.html">@RegisterSingleChild</a></td>
+
+        <td      class="passed"    >182</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">182</td>
+
+        <td  class="passed"    >14</td>
+        <td >0</td>
+        <td class="total">14</td>
+
+        <td class="duration" data-value="953652896700">15:53.652</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2388167675.html">@RegressionMar21</a></td>
+
+        <td      class="passed"    >710</td>
+        <td      class="failed"    >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">714</td>
+
+        <td  class="passed"    >66</td>
+        <td  class="failed"    >4</td>
+        <td class="total">70</td>
+
+        <td class="duration" data-value="2679001798000">44:39.001</td>
         <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_173367502.html">@SingleChildEnquiry</a></td>
+
+        <td      class="passed"    >196</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">196</td>
+
+        <td  class="passed"    >14</td>
+        <td >0</td>
+        <td class="total">14</td>
+
+        <td class="duration" data-value="494540361800">8:14.540</td>
+        <td class="passed">Passed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>10</td>
-      <td>2</td>
-      <td>4</td>
+      <td>2508</td>
+      <td>12</td>
       <td>0</td>
       <td>0</td>
-      <td>16</td>
+      <td>0</td>
+      <td>2520</td>
 
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
+      <td>226</td>
+      <td>12</td>
+      <td>238</td>
 
-      <td class="duration">51.737</td>
-      <td>2</td>
+      <td class="duration">2:38:5.198</td>
+      <td>8</td>
     </tr>
     <tr>
       <td></td>
-      <td>62.50%</td>
-      <td>12.50%</td>
-      <td>25.00%</td>
+      <td>99.52%</td>
+      <td>0.48%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>0.00%</td>
-      <td>100.00%</td>
+      <td>94.96%</td>
+      <td>5.04%</td>
       <td></td>
       <td></td>
       <td>0.00%</td>
