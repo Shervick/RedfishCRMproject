@@ -14,10 +14,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features="src/test/java/features/EnquiryManagement.feature"
+features="src/test/java/features_1"
 ,plugin="json:target/jsonReports/cucumber-report.json"
 ,glue= "stepDefinations"
-,tags = ("@RegressionMar21")
+//,tags = ("@ADPTesting")
 )
 public class RedFishWorkflowRunnerTest {
 	
