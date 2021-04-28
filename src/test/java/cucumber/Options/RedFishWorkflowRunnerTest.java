@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 features="src/test/java/features_1"
 ,plugin="json:target/jsonReports/cucumber-report.json"
 ,glue= "stepDefinations"
-//,tags = ("@ADPTesting")
+,tags = ("@Bug-2591")
 )
 public class RedFishWorkflowRunnerTest {
 	
